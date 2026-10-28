@@ -70,6 +70,7 @@ if [[ -e "$REPO/pgos.db" || -e "$REPO/pgos.db.tar.zst" ]]; then
 fi
 
 msg "Building ISO (downloads a few GB the first time — make coffee)"
+rm -rf "$WORK"     # mkarchiso skips builds when its done-marker from a previous run remains
 mkarchiso -v -w "$WORK" -o "$OUT" "$PROFILE"
 
 ISO="$(ls -t "$OUT"/*.iso | head -n1)"

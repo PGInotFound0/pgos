@@ -51,7 +51,7 @@ for pkg_dir in "$ROOT"/*/; do
         fi
         makepkg -sf --noconfirm
     )
-    cp -v "$pkg_dir"/*.pkg.tar.zst "$REPO"/
+    cp -v "$pkg_dir"/"$name"-*.pkg.tar.zst "$REPO"/
 done
 
 cd "$REPO"
