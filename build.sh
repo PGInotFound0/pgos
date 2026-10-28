@@ -47,6 +47,12 @@ find "$PROFILE/efiboot" "$PROFILE/syslinux" -type f \( -name '*.conf' -o -name '
                      -e 's/^title   Arch Linux/title   pgOS/g' \
                      -e 's/^MENU TITLE Arch Linux/MENU TITLE pgOS/g'
 
+# Add serial console to every boot entry: tty0 stays the primary,
+# ttyS0 mirrors it so headless CI (qemu -serial) can see the journal.
+find "$PROFILE/efiboot/loader" "$PROFILE/syslinux" -type f \( -name '*.conf' -o -name '*.cfg' \) -print0 |
+  xargs -0 -r sed -i -e 's/^\(options .*\)$/\1 console=tty0 console=ttyS0,115200n8/' \
+                     -e 's/^\(APPEND .*\)$/\1 console=tty0 console=ttyS0,115200n8/'
+
 # Enable the [pgos] custom repo if it has been built (make-repo.sh)
 REPO="$PGOS_ROOT/repo/x86_64"
 if [[ -e "$REPO/pgos.db" || -e "$REPO/pgos.db.tar.zst" ]]; then
