@@ -151,6 +151,7 @@ info "Laying down the pgOS rice + branding"
 mkdir -p "$MOUNT/home/$USERNAME"
 rsync -a /etc/skel/ "$MOUNT/home/$USERNAME/"
 chroot "$MOUNT" chown -R "$USERNAME:$USERNAME" "/home/$USERNAME"
+[[ -f /usr/local/bin/pg ]] && install -Dm755 /usr/local/bin/pg "$MOUNT/usr/local/bin/pg"
 
 # Single source of truth: the live ISO's own /etc branding files
 cp /etc/os-release "$MOUNT/etc/os-release"

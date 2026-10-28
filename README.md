@@ -58,6 +58,15 @@ pg-install -d /dev/vda -u pg -n mybox          # pre-answered
 pg-install --ssh -d /dev/vda                   # also enable sshd
 ```
 
+After install, drive the system with the `pg` control panel:
+
+```bash
+pg update        # full system upgrade
+pg clean         # sweep the pacman cache
+pg installed     # explicitly installed packages
+pg info          # fastfetch summary
+```
+
 The installer: wipes the disk → GPT (1 GiB ESP + ext4 root) → `pacstrap`
 the pgOS package manifest → systemd-boot → users → dotfiles → branding.
 UEFI systems only in v1. Plain ext4 v1 (no LUKS yet — roadmap).

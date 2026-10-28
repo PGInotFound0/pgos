@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# pg — the pgOS control panel
+set -uo pipefail
+
+case "${1:-help}" in
+    update|up)
+        exec sudo pacman -Syu ;;
+    clean)
+        # keeps versions of currently installed packages, sweeps the rest
+        exec sudo pacman -Sc ;;
+    installed)
+        exec pacman -Qe ;;
+    info)
+        exec fastfetch ;;
+    404)
+        shift
+        echo "404: ${*:-this} not found. pgOS, however, was always right here." ;;
+    help|--help|-h|*)
+        cat <<EOF
+pg — the pgOS control panel
+
+    pg update      full system upgrade
+    pg clean       sweep the pacman cache (keeps installed versions)
+    pg installed   explicitly installed packages
+    pg info        system summary (fastfetch)
+    pg 404 <x>     emotionally resonant error reporting
+EOF
+        ;;
+esac
