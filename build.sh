@@ -57,6 +57,10 @@ if [[ -e "$REPO/pgos.db" || -e "$REPO/pgos.db.tar.zst" ]]; then
     -e "s|^#Server = file:///absolute/path/to/pgos/repo/x86_64$|Server = file://$REPO|" \
     "$PROFILE/pacman.conf"
   printf 'pgos-wlogout\n' >> "$PROFILE/packages.x86_64"
+  # Ship the custom package ON the ISO so pg-install can apply it
+  # offline (pacman -U) even when no repo server is configured.
+  mkdir -p "$PROFILE/airootfs/opt/pgos/packages"
+  cp "$REPO"/pgos-wlogout-*.pkg.tar.zst "$PROFILE/airootfs/opt/pgos/packages/"
 fi
 
 msg "Building ISO (downloads a few GB the first time — make coffee)"

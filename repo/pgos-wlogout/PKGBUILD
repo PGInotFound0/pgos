@@ -2,14 +2,14 @@
 # (wlogout was removed from the official Arch repos; pgOS ships it.)
 # NOTE: upstream GPG sig verification dropped for container friendliness.
 #       Re-enable validpgpkeys + the .sig source before public release.
-pkgname='wlogout'
+pkgname='pgos-wlogout'
 pkgver=1.2.2
 pkgrel=1
 pkgdesc="Logout menu for wayland"
 arch=('x86_64')
 license=("MIT")
 url="https://github.com/ArtsyMacaw/wlogout"
-source=("$pkgname-$pkgver.tar.gz::https://github.com/ArtsyMacaw/$pkgname/releases/download/$pkgver/$pkgname.tar.gz")
+source=("wlogout-${pkgver}.tar.gz::https://github.com/ArtsyMacaw/wlogout/releases/download/${pkgver}/wlogout.tar.gz")
 makedepends=("meson" "git" "scdoc")
 depends=("gtk3" "gobject-introspection" "gtk-layer-shell")
 build() {

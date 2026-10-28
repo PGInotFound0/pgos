@@ -32,6 +32,7 @@ PACKAGES=(
     amd-ucode intel-ucode
     sudo git rsync nano vim
     networkmanager network-manager-applet wpa_supplicant
+    gtk3 gtk-layer-shell gobject-introspection   # wlogout runtime deps
     gptfdisk parted dosfstools e2fsprogs btrfs-progs cryptsetup os-prober
     openssh
     hyprland hypridle hyprlock hyprpaper hyprpolkitagent
@@ -44,9 +45,9 @@ PACKAGES=(
     qt5-wayland qt6-wayland
     fastfetch starship bash-completion man-db man-pages jq
 )
-# wlogout was dropped from official Arch repos; include it only when it's
-# resolvable (i.e. once the [pgos] repo exists on the medium or via --repo).
-pacman -Si wlogout >/dev/null 2>&1 && PACKAGES+=(wlogout)
+# wlogout was dropped from official Arch repos — it ships on the ISO at
+# /opt/pgos/packages/ (see build.sh) and is applied below, right after
+# pacstrap.
 
 usage() { sed -rn '/^# Usage:/,/^# Wipes/p' "$0"; exit 0; }
 
@@ -143,6 +144,12 @@ cp -L /etc/resolv.conf "$MOUNT/etc/resolv.conf" 2>/dev/null || true
 
 info "Installing the pgOS package set (several GB — this is the long step)"
 pacstrap -K "$MOUNT" "${PACKAGES[@]}" || die "pacstrap failed."
+
+for p in /opt/pgos/packages/*.pkg.tar.zst; do
+    [[ -e $p ]] || continue
+    info "Installing bundled custom package: $(basename "$p")"
+    pacman -U --root "$MOUNT" --noconfirm "$p"
+done
 
 info "Writing fstab"
 genfstab -U "$MOUNT" >> "$MOUNT/etc/fstab"
