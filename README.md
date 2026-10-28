@@ -18,10 +18,10 @@ it doesn't fork the Arch package repos — it ships an opinionated layer on top:
 ```
 pgos/
 ├── build.sh              # one command → one ISO (see Quickstart)
-├── profiledef.sh         # archiso profile options (ISO name, bootmodes…)
-├── pacman.conf           # repo config used when building the ISO
-├── packages.x86_64       # the definitive package manifest of pgOS
 ├── iso/
+│   ├── profiledef.sh     # archiso profile options (ISO name, bootmodes…)
+│   ├── pacman.conf       # repo config used when building the ISO
+│   ├── packages.x86_64   # the definitive package manifest of pgOS
 │   ├── airootfs/
 │   │   ├── etc/          # branding + live-system config (single source of truth)
 │   │   │   ├── os-release, issue, motd, pacman.conf
@@ -77,7 +77,7 @@ dotfiles → branding. UEFI systems only.
 
 | Want to change…                        | Edit                                        |
 | -------------------------------------- | ------------------------------------------- |
-| Installed packages                     | `packages.x86_64` **and** `iso/airootfs/root/pg-install` |
+| Installed packages                     | `iso/packages.x86_64` **and** `iso/airootfs/root/pg-install` |
 | The rice (Hyprland, waybar, fuzzel…)   | `iso/airootfs/etc/skel/.config/…`           |
 | `pg` control panel commands            | `iso/airootfs/usr/local/bin/pg`             |
 | Branding (motd, os-release, issue)     | `iso/airootfs/etc/{motd,os-release,issue}`  |

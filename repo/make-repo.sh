@@ -14,6 +14,16 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO="$ROOT/x86_64"
+
+if [[ $EUID -eq 0 ]]; then
+    # makepkg refuses to run as root — hand off to an unprivileged
+    # builder user and recurse (PGOS_GPG_KEY survives as env).
+    id builder &>/dev/null || useradd -m builder
+    mkdir -p "$REPO"
+    chown -R builder:builder "$ROOT"
+    exec runuser -u builder -- "$(realpath "$0")"
+fi
+
 mkdir -p "$REPO"
 
 for pkg_dir in "$ROOT"/*/; do
