@@ -113,15 +113,18 @@ control. That's the fun part.
 
 ## Status
 
-✅ **v0.1.1** — boot-tested release, 2026-10-29. Serial-verified end-to-end:
-archiso hooks mount the live root, switch_root succeeds, userspace starts.
+✅ **v0.1.2** — boot-tested release, 2026-10-29. Serial-verified end-to-end:
+archiso hooks mount the live root, switch_root succeeds, userspace starts,
+`systemd-firstboot` prompts on the brand.
 
 ```
-ad98ec44f6c7d9a67cf598d98498631078aba51690692e835b988cda164533f4  pgos-2026.10.28-x86_64.iso
+f4684f0c38f004423d631e170e772684c409f795fdfb5701ed529b18907dc466  pgos-2026.10.28-x86_64.iso
 ```
 
 Notable: the ISO carries the custom `[pgos]` repository — including
 `pgos-wlogout 1.2.2-1`, shipped the day Arch dropped it from the official
 repos, and applied offline during install via `/opt/pgos/packages/`.
-v0.1.1: fixed live-root unlock, added archiso initramfs hooks (the missing
-`archiso` hook caused initrd emergency in v0.1.0) + serial console for CI.
+v0.1.1: fixed live-root unlock + missing archiso initramfs hooks + serial
+console for CI.
+v0.1.2: complete initramfs (nbd, mkinitcpio-nfs-utils, pv for the PXE
+hook suite — no more "image may not be complete" warnings).
