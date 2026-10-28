@@ -1,0 +1,96 @@
+#
+# pgOS live ISO package list
+#
+
+# Base of the base
+base
+base-devel
+linux
+linux-firmware
+linux-headers
+
+# CPU microcode
+amd-ucode
+intel-ucode
+
+# What makes it boot as an ISO
+mkinitcpio-archiso
+syslinux
+efibootmgr
+
+# The installer toolchain on the live medium
+arch-install-scripts
+rsync
+sudo
+gptfdisk
+parted
+dosfstools
+e2fsprogs
+btrfs-progs
+cryptsetup
+os-prober
+mtools
+
+# Network
+networkmanager
+network-manager-applet
+wpa_supplicant
+curl
+wget
+git
+
+# Desktop: Hyprland stack
+hyprland
+hypridle
+hyprlock
+hyprpaper
+hyprpolkitagent
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+xdg-user-dirs
+waybar
+fuzzel
+foot
+
+# Desktop: utilities
+grim
+slurp
+wl-clipboard
+cliphist
+brightnessctl
+playerctl
+pavucontrol
+xdg-utils
+
+# Audio
+pipewire
+pipewire-audio
+pipewire-pulse
+pipewire-alsa
+wireplumber
+alsa-utils
+sof-firmware
+
+# Browser + files
+firefox
+thunar
+tumbler
+
+# Fonts (nerd font for waybar/fuzzel glyphs)
+noto-fonts
+ttf-dejavu
+ttf-jetbrains-mono-nerd
+
+# Wayland compat libs
+qt5-wayland
+qt6-wayland
+
+# Engine-room comfort
+fastfetch
+starship
+bash-completion
+man-db
+man-pages
+nano
+vim
+jq

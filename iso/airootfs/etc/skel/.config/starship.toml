@@ -1,0 +1,18 @@
+add_newline = true
+
+format = "$username$hostname$directory$git_branch$git_status$python$rust$golang$nodejs$cmd_duration$line_break$character "
+
+[character]
+success_symbol = "[→](bold #3b82f6)"
+error_symbol = "[→](bold #f87171)"
+
+[directory]
+style = "bold #93c5fd"
+truncation_length = 4
+
+[cmd_duration]
+min_time = 2000
+style = "bold yellow"
+
+[git_branch]
+style = "bold magenta"

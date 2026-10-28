@@ -1,0 +1,210 @@
+#!/usr/bin/env bash
+#
+# pg-install — the pgOS system installer (v1.0)
+#
+# Usage:  pg-install [-d /dev/sdX] [-u username] [-n hostname] [-t timezone] [--ssh]
+#
+# Wipes -d (asks interactively if not given), creates a GPT layout
+# (1 GiB EFI + rest ext4), pacstraps the pgOS package manifest,
+# configures systemd-boot, creates the user, and lays down the
+# pgOS rice + branding. UEFI systems only.
+#
+set -u
+
+BLU='\e[1;34m'; GRN='\e[0;32m'; YLW='\e[0;33m'; RED='\e[0;31m'; NC='\e[0m'
+info() { printf "${BLU}==> ${NC}%s\n" "$*"; }
+warn() { printf "${YLW} !  ${NC}%s\n" "$*"; }
+die()  { printf "${RED} XX ${NC}%s\n" "$*" >&2; exit 1; }
+confirm() {
+    read -r -p "$1 [y/N] " ans
+    [[ $ans =~ ^[Yy] ]]
+}
+
+MOUNT=/mnt
+DISK="" USERNAME="" HOSTNAME="" TZ="" WITH_SSH=0
+
+# The pgOS package manifest for installed systems.
+# Keep in sync with packages.x86_64 (that one is the ISO, this is target).
+PACKAGES=(
+    base base-devel
+    linux linux-firmware linux-headers
+    amd-ucode intel-ucode
+    sudo git rsync nano vim
+    networkmanager network-manager-applet wpa_supplicant
+    gptfdisk parted dosfstools e2fsprogs btrfs-progs os-prober
+    openssh
+    hyprland hypridle hyprlock hyprpaper hyprpolkitagent
+    xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs
+    waybar fuzzel foot
+    grim slurp wl-clipboard cliphist brightnessctl playerctl pavucontrol xdg-utils
+    pipewire pipewire-audio pipewire-pulse pipewire-alsa wireplumber alsa-utils sof-firmware
+    firefox thunar tumbler
+    noto-fonts ttf-dejavu ttf-jetbrains-mono-nerd
+    qt5-wayland qt6-wayland
+    fastfetch starship bash-completion man-db man-pages jq
+)
+
+usage() { sed -rn '/^# Usage:/,/^# Wipes/p' "$0"; exit 0; }
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        -d|--disk)     DISK="$2"; shift 2 ;;
+        -u|--user)     USERNAME="$2"; shift 2 ;;
+        -n|--hostname) HOSTNAME="$2"; shift 2 ;;
+        -t|--timezone) TZ="$2"; shift 2 ;;
+        --ssh)         WITH_SSH=1; shift ;;
+        -h|--help)     usage ;;
+        *) die "unknown argument: $1 (see --help)" ;;
+    esac
+done
+
+[[ $EUID -eq 0 ]] || die "Run as root (you are auto-logged-in on the pgOS live ISO)."
+[[ -d /sys/firmware/efi ]] || die "pgOS v1 supports UEFI systems only."
+[[ -z $(findmnt -M "$MOUNT") ]] || die "Something is already mounted at $MOUNT."
+
+if [[ -z $DISK ]]; then
+    info "Available disks:"
+    lsblk -dio KNAME,SIZE,TYPE,MODEL,ROTA
+    echo
+    read -r -p "Install to disk (e.g. vda): " d
+    [[ -n $d ]] || die "No disk given."
+    [[ $d == /dev/* ]] || d="/dev/$d"
+    DISK="$d"
+fi
+[[ -b $DISK ]] || die "$DISK is not a block device."
+
+if [[ -z $USERNAME ]]; then
+    read -r -p "Username (default: pg): " u
+    USERNAME="${u:-pg}"
+fi
+if [[ -z $HOSTNAME ]]; then
+    read -r -p "Hostname (default: ${USERNAME}-box): " h
+    HOSTNAME="${h:-${USERNAME}-box}"
+fi
+if [[ -z $TZ ]]; then
+    TZ="$(readlink -f /etc/localtime | sed 's|.*zoneinfo/||')"
+    TZ="${TZ:-UTC}"
+fi
+
+info "About to ERASE $DISK and install pgOS:"
+lsblk -d -o KNAME,SIZE,TYPE,MODEL "$DISK"
+echo
+printf '  user      : %s\n' "$USERNAME"
+printf '  hostname  : %s\n' "$HOSTNAME"
+printf '  timezone  : %s\n' "$TZ"
+printf '  sshd      : %s\n\n' "$([[ $WITH_SSH -eq 1 ]] && echo enabled || echo disabled)"
+confirm "Really wipe $DISK and install?" || die "Aborted — nothing was changed."
+
+info "Partitioning $DISK (GPT: 1 GiB EFI + rest)"
+sgdisk --zap-all "$DISK"
+sgdisk -n 1:0:+1G -t 1:ef00 -c 1:"pgOS EFI" "$DISK"
+sgdisk -n 2:0:0     -t 2:8300 -c 2:"pgOS root" "$DISK"
+sync
+
+info "Formatting"
+mkfs.vfat -F32 -n PGOS-EFI "${DISK}1"
+mkfs.ext4 -F -L PGOS-ROOT "${DISK}2"
+
+info "Mounting onto $MOUNT"
+mount "${DISK}2" "$MOUNT" || die "Mount of root failed."
+mkdir -p "$MOUNT/boot"
+mount "${DISK}1" "$MOUNT/boot" || die "Mount of EFI partition failed."
+cp -L /etc/resolv.conf "$MOUNT/etc/resolv.conf" 2>/dev/null || true
+
+info "Installing the pgOS package set (several GB — this is the long step)"
+pacstrap -K "$MOUNT" "${PACKAGES[@]}" || die "pacstrap failed."
+
+info "Writing fstab"
+genfstab -U "$MOUNT" >> "$MOUNT/etc/fstab"
+
+info "Configuring the base system"
+echo "$HOSTNAME" > "$MOUNT/etc/hostname"
+cat > "$MOUNT/etc/hosts" <<EOF
+127.0.0.1  localhost
+::1        localhost
+127.0.1.1  $HOSTNAME.localdomain $HOSTNAME
+EOF
+
+sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' "$MOUNT/etc/locale.gen"
+arch-chroot "$MOUNT" ln -sf "/usr/share/zoneinfo/$TZ" /etc/localtime
+arch-chroot "$MOUNT" locale-gen
+echo "LANG=en_US.UTF-8" > "$MOUNT/etc/locale.conf"
+arch-chroot "$MOUNT" hwclock --systohc
+rm -f "$MOUNT/etc/machine-id"   # systemd generates a fresh one at first boot
+
+printf '%%wheel ALL=(ALL:ALL) ALL\n' > "$MOUNT/etc/sudoers.d/10-pgos-wheel"
+chmod 440 "$MOUNT/etc/sudoers.d/10-pgos-wheel"
+
+info "Creating users"
+read -rs -p "root password    : " p1; echo
+read -rs -p "again            : " p2; echo
+[[ -n $p1 && $p1 == "$p2" ]] || die "Root passwords do not match."
+printf 'root:%s\n' "$p1" | chroot "$MOUNT" chpasswd
+
+arch-chroot "$MOUNT" useradd -m -G wheel -s /bin/bash "$USERNAME"
+read -rs -p "password for $USERNAME : " u1; echo
+read -rs -p "again                  : " u2; echo
+[[ -n $u1 && $u1 == "$u2" ]] || die "User passwords do not match."
+printf '%s:%s\n' "$USERNAME" "$u1" | chroot "$MOUNT" chpasswd
+
+info "Laying down the pgOS rice + branding"
+mkdir -p "$MOUNT/home/$USERNAME"
+rsync -a /etc/skel/ "$MOUNT/home/$USERNAME/"
+chroot "$MOUNT" chown -R "$USERNAME:$USERNAME" "/home/$USERNAME"
+
+# Single source of truth: the live ISO's own /etc branding files
+cp /etc/os-release "$MOUNT/etc/os-release"
+cp /etc/issue      "$MOUNT/etc/issue"
+printf ' pgOS — installed by pg-install on %s\n' "$(date -I)" > "$MOUNT/etc/motd"
+
+if [[ ! -f $MOUNT/usr/share/backgrounds/pgos/default.png ]]; then
+    warn "Wallpaper missing from ISO — disabling hyprpaper for this user"
+    rm -f "$MOUNT/home/$USERNAME/.config/hypr/hyprpaper.conf"
+    sed -i '/^exec-once = hyprpaper$/ s/^/# /' \
+        "$MOUNT/home/$USERNAME/.config/hypr/hyprland.conf"
+fi
+
+info "Installing bootloader (systemd-boot)"
+arch-chroot "$MOUNT" bootctl --esp-path=/boot install
+
+ROOT_UUID="$(blkid -s UUID -o value "${DISK}2")"
+[[ -n $ROOT_UUID ]] || die "Could not read root UUID."
+
+UCODE=""
+if grep -q 'GenuineIntel' /proc/cpuinfo; then
+    UCODE='initrd  /intel-ucode.img'
+elif grep -q 'AuthenticAMD' /proc/cpuinfo; then
+    UCODE='initrd  /amd-ucode.img'
+fi
+
+cat > "$MOUNT/boot/loader/loader.conf" <<EOF
+default   pgos
+timeout   3
+EOF
+mkdir -p "$MOUNT/boot/loader/entries"
+cat > "$MOUNT/boot/loader/entries/pgos.conf" <<EOF
+title   pgOS
+linux   /vmlinuz-linux
+$UCODE
+initrd  /initramfs-linux.img
+options root=UUID=$ROOT_UUID rw
+EOF
+cat > "$MOUNT/boot/loader/entries/pgos-fallback.conf" <<EOF
+title   pgOS (fallback initramfs)
+linux   /vmlinuz-linux
+$UCODE
+initrd  /initramfs-linux-fallback.img
+options root=UUID=$ROOT_UUID rw
+EOF
+
+info "Enabling services"
+arch-chroot "$MOUNT" systemctl enable NetworkManager.service
+if [[ $WITH_SSH -eq 1 ]]; then
+    arch-chroot "$MOUNT" systemctl enable sshd.service
+fi
+
+umount -R "$MOUNT"
+
+echo
+printf "${GRN}  pb ^v^ ${NC} pgOS is installed. Reboot and meet yourself.\n"
+confirm "Reboot now?" && reboot

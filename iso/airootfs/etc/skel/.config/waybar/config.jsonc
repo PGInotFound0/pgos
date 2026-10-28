@@ -1,0 +1,57 @@
+{
+  "layer": "top",
+  "height": 34,
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": [],
+  "modules-right": ["tray", "network", "cpu", "memory", "pulseaudio", "battery", "clock"],
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate"
+  },
+  "hyprland/window": {
+    "max-length": 42,
+    "separate-outputs": true
+  },
+
+  "clock": {
+    "format": " {:%H:%M}  {:%a %d %b}",
+    "tooltip-format": "<big>{:%A, %d %B %Y}</big>\n<tt>{calendar}</tt>"
+  },
+
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": " wired",
+    "format-disconnected": " offline",
+    "tooltip-format-wifi": "{essid} — {signalStrength}%"
+  },
+
+  "cpu": {
+    "format": " {}%"
+  },
+  "memory": {
+    "format": " {}%"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "format-muted": " muted"
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%"
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 6
+  }
+}

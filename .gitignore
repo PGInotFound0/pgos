@@ -1,0 +1,11 @@
+# pgOS build artifacts
+build/
+out/
+*.iso
+*.sha256sum
+
+# pacman package build residue
+repo/*/pkg/
+repo/*/src/
+repo/*/*.pkg.tar.zst
+repo/x86_64/

@@ -1,0 +1,10 @@
+NAME="pgOS"
+PRETTY_NAME="pgOS"
+ID=pgos
+ID_LIKE=arch
+BUILD_ID=rolling
+HOME_URL="https://github.com/pginotfound/pgos"
+DOCUMENTATION_URL="https://github.com/pginotfound/pgos/wiki"
+SUPPORT_URL="https://github.com/pginotfound/pgos/issues"
+BUG_REPORT_URL="https://github.com/pginotfound/pgos/issues"
+ANSI_COLOR="38;2;59;130;246"

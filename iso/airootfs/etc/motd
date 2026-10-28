@@ -1,0 +1,11 @@
+ ██████╗  ██████╗  ██████╗ ███████╗
+ ██╔══██╗██╔═══██╗██╔════╝ ██╔════╝
+ ██████╔╝██║   ██║██║  ███╗███████╗
+ ██╔══██╗██║   ██║██║   ██║╚════██║
+ ██║  ██║╚██████╔╝╚██████╔╝███████║
+ ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚══════╝
+
+ An Arch-based personal distro by pginotfound
+
+ • install onto a disk:   pg-install
+ • pre-answered:          pg-install -d /dev/vda -u pg -n mybox

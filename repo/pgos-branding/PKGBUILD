@@ -1,0 +1,15 @@
+# Maintainer: pginotfound
+pkgname=pgos-branding
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="pgOS system branding: 404-themed shell helpers"
+arch=(any)
+url="https://github.com/pginotfound/pgos"
+license=(MIT)
+depends=(bash)
+source=(pgos.sh)
+sha256sums=('SKIP')
+
+package() {
+    install -Dm644 pgos.sh "$pkgdir/etc/profile.d/pgos-branding.sh"
+}
