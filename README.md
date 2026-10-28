@@ -113,14 +113,15 @@ control. That's the fun part.
 
 ## Status
 
-✅ **v0.1.1** — boot-tested release, 2026-10-29.
+✅ **v0.1.1** — boot-tested release, 2026-10-29. Serial-verified end-to-end:
+archiso hooks mount the live root, switch_root succeeds, userspace starts.
 
 ```
-ef6c210f87e6cbcf95c2eecae5b57be9d9ea3523a25ae76ef61c81b5930db284  pgos-2026.10.28-x86_64.iso
+ad98ec44f6c7d9a67cf598d98498631078aba51690692e835b988cda164533f4  pgos-2026.10.28-x86_64.iso
 ```
 
 Notable: the ISO carries the custom `[pgos]` repository — including
 `pgos-wlogout 1.2.2-1`, shipped the day Arch dropped it from the official
 repos, and applied offline during install via `/opt/pgos/packages/`.
-v0.1.1: fixed live-root unlock (`/etc/shadow`), added `console=ttyS0` to
-boot entries so every build self-verifies via headless serial boot.
+v0.1.1: fixed live-root unlock, added archiso initramfs hooks (the missing
+`archiso` hook caused initrd emergency in v0.1.0) + serial console for CI.
