@@ -2,12 +2,12 @@
 #
 # pg-install — the pgOS system installer (v1.0)
 #
-# Usage:  pg-install [-d /dev/sdX] [-u username] [-n hostname] [-t timezone] [--ssh]
+# Usage:  pg-install [-d /dev/sdX] [-u username] [-n hostname] [-t timezone] [--ssh] [--luks] [--repo URL]
 #
 # Wipes -d (asks interactively if not given), creates a GPT layout
-# (1 GiB EFI + rest ext4), pacstraps the pgOS package manifest,
-# configures systemd-boot, creates the user, and lays down the
-# pgOS rice + branding. UEFI systems only.
+# (1 GiB EFI + rest — ext4 or LUKS2-encrypted), pacstraps the pgOS
+# package manifest, configures systemd-boot, creates the user, and
+# lays down the pgOS rice + branding. UEFI systems only.
 #
 set -u
 
@@ -22,6 +22,7 @@ confirm() {
 
 MOUNT=/mnt
 DISK="" USERNAME="" HOSTNAME="" TZ="" WITH_SSH=0
+LUKS="" REPO_URL=""
 
 # The pgOS package manifest for installed systems.
 # Keep in sync with packages.x86_64 (that one is the ISO, this is target).
@@ -31,11 +32,11 @@ PACKAGES=(
     amd-ucode intel-ucode
     sudo git rsync nano vim
     networkmanager network-manager-applet wpa_supplicant
-    gptfdisk parted dosfstools e2fsprogs btrfs-progs os-prober
+    gptfdisk parted dosfstools e2fsprogs btrfs-progs cryptsetup os-prober
     openssh
     hyprland hypridle hyprlock hyprpaper hyprpolkitagent
     xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs
-    waybar fuzzel foot
+    waybar fuzzel foot wlogout
     grim slurp wl-clipboard cliphist brightnessctl playerctl pavucontrol xdg-utils
     pipewire pipewire-audio pipewire-pulse pipewire-alsa wireplumber alsa-utils sof-firmware
     firefox thunar tumbler
@@ -53,6 +54,8 @@ while [[ $# -gt 0 ]]; do
         -n|--hostname) HOSTNAME="$2"; shift 2 ;;
         -t|--timezone) TZ="$2"; shift 2 ;;
         --ssh)         WITH_SSH=1; shift ;;
+        --luks)        LUKS=1; shift ;;
+        -r|--repo)     REPO_URL="$2"; shift 2 ;;
         -h|--help)     usage ;;
         *) die "unknown argument: $1 (see --help)" ;;
     esac
@@ -85,6 +88,13 @@ if [[ -z $TZ ]]; then
     TZ="$(readlink -f /etc/localtime | sed 's|.*zoneinfo/||')"
     TZ="${TZ:-UTC}"
 fi
+if [[ -z $LUKS ]]; then
+    if confirm "Encrypt root with LUKS (recommended)?"; then
+        LUKS=1
+    else
+        LUKS=0
+    fi
+fi
 
 info "About to ERASE $DISK and install pgOS:"
 lsblk -d -o KNAME,SIZE,TYPE,MODEL "$DISK"
@@ -92,7 +102,12 @@ echo
 printf '  user      : %s\n' "$USERNAME"
 printf '  hostname  : %s\n' "$HOSTNAME"
 printf '  timezone  : %s\n' "$TZ"
-printf '  sshd      : %s\n\n' "$([[ $WITH_SSH -eq 1 ]] && echo enabled || echo disabled)"
+printf '  sshd      : %s\n' "$([[ $WITH_SSH -eq 1 ]] && echo enabled || echo disabled)"
+printf '  encryption: %s\n' "$([[ $LUKS -eq 1 ]] && echo LUKS2 || echo none)"
+if [[ -n $REPO_URL ]]; then
+    printf '  [pgos]    : %s\n' "$REPO_URL"
+fi
+echo
 confirm "Really wipe $DISK and install?" || die "Aborted — nothing was changed."
 
 info "Partitioning $DISK (GPT: 1 GiB EFI + rest)"
@@ -102,11 +117,23 @@ sgdisk -n 2:0:0     -t 2:8300 -c 2:"pgOS root" "$DISK"
 sync
 
 info "Formatting"
-mkfs.vfat -F32 -n PGOS-EFI "${DISK}1"
-mkfs.ext4 -F -L PGOS-ROOT "${DISK}2"
+if [[ $LUKS -eq 1 ]]; then
+    mkfs.vfat -F32 -n PGOS-EFI "${DISK}1"
+    warn "LUKS2: you will be asked for a passphrase while formatting and opening"
+    cryptsetup luksFormat --type luks2 --batch-mode "${DISK}2"
+    cryptsetup open "${DISK}2" pgos-root
+    mkfs.ext4 -F -L PGOS-ROOT /dev/mapper/pgos-root
+else
+    mkfs.vfat -F32 -n PGOS-EFI "${DISK}1"
+    mkfs.ext4 -F -L PGOS-ROOT "${DISK}2"
+fi
 
 info "Mounting onto $MOUNT"
-mount "${DISK}2" "$MOUNT" || die "Mount of root failed."
+if [[ $LUKS -eq 1 ]]; then
+    mount /dev/mapper/pgos-root "$MOUNT" || die "Mount of LUKS root failed."
+else
+    mount "${DISK}2" "$MOUNT" || die "Mount of root failed."
+fi
 mkdir -p "$MOUNT/boot"
 mount "${DISK}1" "$MOUNT/boot" || die "Mount of EFI partition failed."
 cp -L /etc/resolv.conf "$MOUNT/etc/resolv.conf" 2>/dev/null || true
@@ -134,6 +161,28 @@ rm -f "$MOUNT/etc/machine-id"   # systemd generates a fresh one at first boot
 
 printf '%%wheel ALL=(ALL:ALL) ALL\n' > "$MOUNT/etc/sudoers.d/10-pgos-wheel"
 chmod 440 "$MOUNT/etc/sudoers.d/10-pgos-wheel"
+
+if [[ $LUKS -eq 1 ]]; then
+    sed -i 's/ block filesystems/ block encrypt filesystems/' "$MOUNT/etc/mkinitcpio.conf"
+    arch-chroot "$MOUNT" mkinitcpio -P   # rebuild initramfs with the encrypt hook
+fi
+
+info "Deploying pgOS pacman.conf to the target"
+cp /etc/pacman.conf "$MOUNT/etc/pacman.conf"
+sed -i 's/inside the live ISO/installed system/' "$MOUNT/etc/pacman.conf"
+if [[ -n $REPO_URL ]]; then
+    sed -i \
+        -e 's/^#\[pgos\]/[pgos]/' \
+        -e 's/^#SigLevel = Optional TrustAll/SigLevel = Optional TrustAll/' \
+        -e "s|https://REPLACE-ME/path/to/repo/x86_64|$REPO_URL|" \
+        "$MOUNT/etc/pacman.conf"
+    warn "Repo is unsigned for now — ready for your GPG key whenever."
+fi
+cat > "$MOUNT/etc/lsb-release" <<EOF
+DISTRIB_ID=pgOS
+DISTRIB_RELEASE=1.0
+DISTRIB_DESCRIPTION="pgOS"
+EOF
 
 info "Creating users"
 read -rs -p "root password    : " p1; echo
@@ -171,6 +220,12 @@ arch-chroot "$MOUNT" bootctl --esp-path=/boot install
 ROOT_UUID="$(blkid -s UUID -o value "${DISK}2")"
 [[ -n $ROOT_UUID ]] || die "Could not read root UUID."
 
+if [[ $LUKS -eq 1 ]]; then
+    OPTIONS="cryptdevice=UUID=$ROOT_UUID:pgos-root root=/dev/mapper/pgos-root rw"
+else
+    OPTIONS="root=UUID=$ROOT_UUID rw"
+fi
+
 UCODE=""
 if grep -q 'GenuineIntel' /proc/cpuinfo; then
     UCODE='initrd  /intel-ucode.img'
@@ -188,14 +243,14 @@ title   pgOS
 linux   /vmlinuz-linux
 $UCODE
 initrd  /initramfs-linux.img
-options root=UUID=$ROOT_UUID rw
+options $OPTIONS
 EOF
 cat > "$MOUNT/boot/loader/entries/pgos-fallback.conf" <<EOF
 title   pgOS (fallback initramfs)
 linux   /vmlinuz-linux
 $UCODE
 initrd  /initramfs-linux-fallback.img
-options root=UUID=$ROOT_UUID rw
+options $OPTIONS
 EOF
 
 info "Enabling services"

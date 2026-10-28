@@ -60,6 +60,7 @@ cliphist
 brightnessctl
 playerctl
 pavucontrol
+wlogout
 xdg-utils
 
 # Audio

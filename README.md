@@ -56,6 +56,8 @@ Boot the ISO → autologins as root on tty1 → run:
 pg-install              # fully interactive
 pg-install -d /dev/vda -u pg -n mybox          # pre-answered
 pg-install --ssh -d /dev/vda                   # also enable sshd
+pg-install --luks -d /dev/vda -u pg            # LUKS2-encrypted root
+pg-install --repo http://host:8000 -d /dev/vda # auto-wire your [pgos] repo
 ```
 
 After install, drive the system with the `pg` control panel:
@@ -67,9 +69,9 @@ pg installed     # explicitly installed packages
 pg info          # fastfetch summary
 ```
 
-The installer: wipes the disk → GPT (1 GiB ESP + ext4 root) → `pacstrap`
-the pgOS package manifest → systemd-boot → users → dotfiles → branding.
-UEFI systems only in v1. Plain ext4 v1 (no LUKS yet — roadmap).
+The installer: wipes the disk → GPT (1 GiB ESP + ext4 or LUKS2-encrypted
+root) → `pacstrap` the pgOS package manifest → systemd-boot → users →
+dotfiles → branding. UEFI systems only.
 
 ## Where to customize what
 
@@ -77,6 +79,7 @@ UEFI systems only in v1. Plain ext4 v1 (no LUKS yet — roadmap).
 | -------------------------------------- | ------------------------------------------- |
 | Installed packages                     | `packages.x86_64` **and** `iso/airootfs/root/pg-install` |
 | The rice (Hyprland, waybar, fuzzel…)   | `iso/airootfs/etc/skel/.config/…`           |
+| `pg` control panel commands            | `iso/airootfs/usr/local/bin/pg`             |
 | Branding (motd, os-release, issue)     | `iso/airootfs/etc/{motd,os-release,issue}`  |
 | Boot menu text / kernel cmdline        | `iso/{efiboot,syslinux}` (copied at build)  |
 | Your own packages                      | `repo/` → `make-repo.sh` → publish → enable `[pgos]` in `pacman.conf` |
@@ -90,7 +93,8 @@ sudo docker run --privileged --rm -it -v "$(pwd)":/pgos pgos-builder
 
 ## Roadmap
 
-- [ ] LUKS-encrypted root in pg-install (v2)
+- [x] LUKS-encrypted root in pg-install
+- [ ] swap + hibernate (swapfile vs partition still worth deciding)
 - [ ] Sign the `[pgos]` repo (gpg keyring + SigLevel TrustedOnly)
 - [ ] A pgOS keyring package (rebrand pacman/mirrorlist fully)
 - [ ] GitHub Actions: build + release the ISO on push
