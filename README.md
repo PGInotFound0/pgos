@@ -110,3 +110,15 @@ only needed when you fork *glibc*; nobody does that before breakfast.
 **Why not archinstall?**
 You already have your own installer. It's ~200 lines of bash you fully
 control. That's the fun part.
+
+## Status
+
+✅ **v0.1.0** — first bootable release, built 2026-10-28.
+
+```
+2bb37418641305a32edd0c28182922922467204f17cdb23521bd2b98aa70f7ee  pgos-2026.10.28-x86_64.iso
+```
+
+Notable: the ISO carries the custom `[pgos]` repository — including
+`pgos-wlogout 1.2.2-1`, shipped the day Arch dropped it from the official
+repos, and applied offline during install via `/opt/pgos/packages/`.

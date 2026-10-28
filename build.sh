@@ -67,7 +67,7 @@ msg "Building ISO (downloads a few GB the first time — make coffee)"
 mkarchiso -v -w "$WORK" -o "$OUT" "$PROFILE"
 
 ISO="$(ls -t "$OUT"/*.iso | head -n1)"
-sha256sum "$ISO" | tee "$ISO.sha256sum"
+(cd "$OUT" && sha256sum "$(basename "$ISO")") | tee "$ISO.sha256sum"
 msg "ISO ready: $ISO"
 msg "Burn it:   cat $ISO > /dev/sdX && sync"
 msg "Test it:   qemu-system-x86_64 -enable-kvm -cpu host -m 4G -cdrom \"$ISO\""
