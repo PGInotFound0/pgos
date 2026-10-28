@@ -17,6 +17,9 @@ intel-ucode
 mkinitcpio-archiso
 syslinux
 efibootmgr
+nbd
+mkinitcpio-nfs-utils
+pv
 
 # The installer toolchain on the live medium
 arch-install-scripts
