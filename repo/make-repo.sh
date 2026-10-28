@@ -18,9 +18,23 @@ REPO="$ROOT/x86_64"
 if [[ $EUID -eq 0 ]]; then
     # makepkg refuses to run as root — hand off to an unprivileged
     # builder user and recurse (PGOS_GPG_KEY survives as env).
+    # First: makepkg's -s can't sudo any deps up, so resolve the
+    # depends+makedepends of every PKGBUILD here as root.
     id builder &>/dev/null || useradd -m builder
     mkdir -p "$REPO"
     chown -R builder:builder "$ROOT"
+    for pkg_dir in "$ROOT"/*/; do
+        [[ -f $pkg_dir/PKGBUILD ]] || continue
+        deps="$(
+            (cd "$pkg_dir" && bash -c '
+                source ./PKGBUILD 2>/dev/null
+                printf "%s\n" "${depends[@]-}" "${makedepends[@]-}"
+            ')
+        )"
+        if [[ -n $deps ]]; then
+            pacman -Sy --needed --noconfirm $(uniq <(echo "$deps")) >/dev/null
+        fi
+    done
     exec runuser -u builder -- "$(realpath "$0")"
 fi
 
