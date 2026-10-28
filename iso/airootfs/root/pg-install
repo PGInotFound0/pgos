@@ -36,7 +36,7 @@ PACKAGES=(
     openssh
     hyprland hypridle hyprlock hyprpaper hyprpolkitagent
     xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs
-    waybar fuzzel foot wlogout
+    waybar fuzzel foot
     grim slurp wl-clipboard cliphist brightnessctl playerctl pavucontrol xdg-utils
     pipewire pipewire-audio pipewire-pulse pipewire-alsa wireplumber alsa-utils sof-firmware
     firefox thunar tumbler
@@ -44,6 +44,9 @@ PACKAGES=(
     qt5-wayland qt6-wayland
     fastfetch starship bash-completion man-db man-pages jq
 )
+# wlogout was dropped from official Arch repos; include it only when it's
+# resolvable (i.e. once the [pgos] repo exists on the medium or via --repo).
+pacman -Si wlogout >/dev/null 2>&1 && PACKAGES+=(wlogout)
 
 usage() { sed -rn '/^# Usage:/,/^# Wipes/p' "$0"; exit 0; }
 

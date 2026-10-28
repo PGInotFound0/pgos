@@ -47,6 +47,18 @@ find "$PROFILE/efiboot" "$PROFILE/syslinux" -type f \( -name '*.conf' -o -name '
                      -e 's/^title   Arch Linux/title   pgOS/g' \
                      -e 's/^MENU TITLE Arch Linux/MENU TITLE pgOS/g'
 
+# Enable the [pgos] custom repo if it has been built (make-repo.sh)
+REPO="$PGOS_ROOT/repo/x86_64"
+if [[ -e "$REPO/pgos.db" || -e "$REPO/pgos.db.tar.zst" ]]; then
+  msg "Enabling [pgos] custom repo -> $REPO"
+  sed -i \
+    -e 's|^#\[pgos\]$|[pgos]|' \
+    -e 's|^#SigLevel = Optional TrustAll$|SigLevel = Optional TrustAll|' \
+    -e "s|^#Server = file:///absolute/path/to/pgos/repo/x86_64$|Server = file://$REPO|" \
+    "$PROFILE/pacman.conf"
+  printf 'pgos-wlogout\n' >> "$PROFILE/packages.x86_64"
+fi
+
 msg "Building ISO (downloads a few GB the first time — make coffee)"
 mkarchiso -v -w "$WORK" -o "$OUT" "$PROFILE"
 

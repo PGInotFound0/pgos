@@ -5,4 +5,6 @@ RUN pacman-key --init && \
     pacman -Syu --noconfirm archiso rsync git
 
 WORKDIR /pgos
-CMD ["./build.sh"]
+# Build the custom repo first (may fail harmlessly -> ISO without [pgos]),
+# then build the ISO.
+CMD ["/bin/bash", "-c", "./repo/make-repo.sh || echo '[pgos] repo build failed — continuing without custom packages'; exec ./build.sh"]
