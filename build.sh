@@ -35,7 +35,7 @@ msg "Preparing profile (releng boot machinery + pgOS overlay)"
 rm -rf "$PROFILE"
 mkdir -p "$PROFILE"
 cp -r "$RELENG"/efiboot "$RELENG"/syslinux "$PROFILE"/
-rsync -a "$PGOS_ROOT/iso/" "$PROFILE"/
+rsync -a --chown=0:0 "$PGOS_ROOT/iso/" "$PROFILE"/
 
 # Rebrand the boot menu. Templates (%INSTALL_DIR% etc.) are left alone;
 # only human-visible text is replaced.
