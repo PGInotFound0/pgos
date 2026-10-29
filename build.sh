@@ -47,13 +47,13 @@ find "$PROFILE/efiboot" "$PROFILE/syslinux" -type f \( -name '*.conf' -o -name '
                      -e 's/^title   Arch Linux/title   pgOS/g' \
                      -e 's/^MENU TITLE Arch Linux/MENU TITLE pgOS/g'
 
-# Poll-mode serial witness for headless CI (immune to the 8250-IRQ hang
-# VirtualBox triggers with console=ttyS0); NO console= parameters —
-# /dev/console falls back to tty0 so systemd + the Initial Setup TUI
-# paint on VGA, exactly like upstream releng ships it.
+# Headless-CI serial witness (poll-mode earlyprintk, immune to console
+# handover and to the console-muter) + skip systemd-firstboot so the
+# live boot goes straight to root autologin (pg-install asks its own
+# questions; no unattended TUI to hang on a serial console).
 find "$PROFILE/efiboot/loader" "$PROFILE/syslinux" -type f \( -name '*.conf' -o -name '*.cfg' \) -print0 |
-  xargs -0 -r sed -i -e 's/^\(options .*\)$/\1 earlyprintk=serial,ttyS0,115200 keep_bootcon/' \
-                     -e 's/^\(APPEND .*\)$/\1 earlyprintk=serial,ttyS0,115200 keep_bootcon/'
+  xargs -0 -r sed -i -e 's/^\(options .*\)$/\1 earlyprintk=serial,ttyS0,115200 keep_bootcon loglevel=7 systemd.firstboot=0/' \
+                     -e 's/^\(APPEND .*\)$/\1 earlyprintk=serial,ttyS0,115200 keep_bootcon loglevel=7 systemd.firstboot=0/'
 # tty0 LAST → /dev/console lands on VGA: systemd + the Initial Setup TUI
 # paint where human eyes are. ttyS0 earlier still carries the kernel log
 # for headless CI.
