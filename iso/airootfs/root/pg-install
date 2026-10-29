@@ -220,6 +220,7 @@ chroot "$MOUNT" chown -R "$USERNAME:$USERNAME" "/home/$USERNAME"
 # Single source of truth: the live ISO's own /etc branding files
 cp /etc/os-release "$MOUNT/etc/os-release"
 cp /etc/issue      "$MOUNT/etc/issue"
+cp -L /etc/vconsole.conf "$MOUNT/etc/vconsole.conf"   # German keymap everywhere
 printf ' pgOS — installed by pg-install on %s\n' "$(date -I)" > "$MOUNT/etc/motd"
 
 if [[ ! -f $MOUNT/usr/share/backgrounds/pgos/default.png ]]; then
