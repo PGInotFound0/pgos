@@ -28,3 +28,13 @@ round 24 : PASS : fw=efi  type=gui      : boot reached userspace (142 systemd ev
 round 25 : FAIL : fw=efi  type=gui      : startvm refused
 round 26 : PASS : fw=efi  type=gui      : boot reached userspace (142 systemd events)
 round 27 : PASS : fw=efi  type=gui      : boot reached userspace (144 systemd events)
+round 28 : FAIL : fw=efi  type=gui      : no userspace markers in 0 serial lines
+round 29 : PASS : fw=efi  type=gui      : boot reached userspace (142 systemd events)
+round 30 : PASS : fw=efi  type=gui      : boot reached userspace (143 systemd events)
+=== total ===
+PASS=27 FAIL=3 of 30
+[divergence] round 22 : FAIL : fw=efi  type=gui      : startvm refused
+[divergence] round 25 : FAIL : fw=efi  type=gui      : startvm refused
+[divergence] round 28 : FAIL : fw=efi  type=gui      : no userspace markers in 0 serial lines
+[divergence] PASS=27 FAIL=3 of 30
+=== campaign end 2026-10-29T03:04:13+01:00 ===

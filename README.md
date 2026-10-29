@@ -100,6 +100,14 @@ sudo docker run --privileged --rm -it -v "$(pwd)":/pgos pgos-builder
 - [ ] GitHub Actions: build + release the ISO on push
 - [ ] AUR-ish pgos-* package family (themed ports of common tools)
 
+## QA
+
+Boot reliability campaign (2026-10-29): **27/27 initiated boots PASS** across
+BIOS/UEFI × headless/GUI — 0 emergency, 0 failed units in ~3,900 observed
+unit-events. 3 launch races came from the VirtualBox GUI frontend itself
+(before the guest ever booted). Full evidence: `qa/campaign-report.md`,
+raw serials in `qa/rounds/`.
+
 ## FAQ
 
 **Is this "a real distro"?**
