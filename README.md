@@ -113,12 +113,12 @@ control. That's the fun part.
 
 ## Status
 
-✅ **v0.1.2** — boot-tested release, 2026-10-29. Serial-verified end-to-end:
-archiso hooks mount the live root, switch_root succeeds, userspace starts,
-`systemd-firstboot` prompts on the brand.
+✅ **v0.1.3** — boot-tested release, 2026-10-29. Serial-verified end-to-end;
+`console=tty0` last so systemd + the Initial Setup TUI paint on VGA
+(VirtualBox verified live: pgOS firstboot prompts visible in-window).
 
 ```
-f4684f0c38f004423d631e170e772684c409f795fdfb5701ed529b18907dc466  pgos-2026.10.28-x86_64.iso
+953ff28025dc43159b3e9c3f85a2e6311de9c467043ff1a5751d1b0b192732d3  pgos-2026.10.29-x86_64.iso
 ```
 
 Notable: the ISO carries the custom `[pgos]` repository — including
@@ -128,3 +128,4 @@ v0.1.1: fixed live-root unlock + missing archiso initramfs hooks + serial
 console for CI.
 v0.1.2: complete initramfs (nbd, mkinitcpio-nfs-utils, pv for the PXE
 hook suite — no more "image may not be complete" warnings).
+v0.1.3: console order fix (tty0 last) — visible boot in VirtualBox/QEMU GUI.
