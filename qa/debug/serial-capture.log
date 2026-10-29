@@ -1473,3 +1473,106 @@ Poking KASLR using RDRAND RDTSC...
 [   59.673480] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
 [   59.687311] snd_intel8x0 0000:00:05.0: clocking to 49267
 [   59.839124] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   63.247488] kauditd_printk_skb: 58 callbacks suppressed
+[   63.247491] audit: type=1130 audit(1793245027.504:87): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=ldconfig comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   63.648422] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   63.696835] audit: type=1130 audit(1793245027.953:88): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-update-done comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   63.784314] audit: type=1334 audit(1793245028.020:89): prog-id=57 op=LOAD
+[   63.831980] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   63.898992] audit: type=1130 audit(1793245028.156:90): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=dbus-broker comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   63.970511] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   63.991573] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   64.015877] audit: type=1334 audit(1793245028.268:91): prog-id=58 op=LOAD
+[   64.044062] audit: type=1334 audit(1793245028.300:92): prog-id=59 op=LOAD
+[   64.057447] audit: type=1334 audit(1793245028.300:93): prog-id=60 op=LOAD
+[   64.057455] audit: type=1334 audit(1793245028.300:94): prog-id=61 op=LOAD
+[   64.080719] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   64.104280] audit: type=1130 audit(1793245028.361:95): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=alsa-restore comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   64.136206] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   64.235526] audit: type=1130 audit(1793245028.491:96): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-homed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   64.504842] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   64.564769] systemd-journald[500]: Data hash table of /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal has a fill level at 75.0 (4375 of 5831 items, 3358720 file size, 767 bytes per hash table item), suggesting rotation.
+[   64.593659] systemd-journald[500]: /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   64.630353] systemd-journald[500]: Rotating journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   64.637762] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000005895-00065ef2649b5dde.journal is synchronously transitioning to archived.
+[   64.642735] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000005895-00065ef2649b5dde.journal is already archived, waiting for offlining thread.
+[   64.665543] systemd-journald[500]: Joining journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000005895-00065ef2649b5dde.journal.
+[   64.675759] systemd-journald[500]: Journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000005895-00065ef2649b5dde.journal joined.
+[   64.700069] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[   64.712903] systemd-journald[500]: Reserving 5831 entries in data hash table.
+[   64.718016] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000005f6f-00065ef264a2ba6a.journal is asynchronously transitioning to archived.
+[   64.735771] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000005f6f-00065ef264a2ba6a.journal.
+[   64.753603] systemd-journald[500]: Vacuuming...
+[   64.757924] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   64.911412] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[   64.976479] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   69.451229] kauditd_printk_skb: 16 callbacks suppressed
+[   69.451234] audit: type=1100 audit(1793245035.074:109): pid=698 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_shells,pam_faillock,pam_permit,pam_faillock acct="root" exe="/usr/bin/login" hostname=archlinux addr=? terminal=/dev/tty1 res=success'
+[   69.475165] audit: type=1101 audit(1793245035.085:110): pid=698 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_access,pam_unix,pam_permit,pam_time acct="root" exe="/usr/bin/login" hostname=archlinux addr=? terminal=/dev/tty1 res=success'
+[   69.494686] audit: type=1103 audit(1793245035.089:111): pid=698 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_shells,pam_faillock,pam_permit,pam_faillock acct="root" exe="/usr/bin/login" hostname=archlinux addr=? terminal=/dev/tty1 res=success'
+[   69.494693] audit: type=1006 audit(1793245035.089:112): pid=698 uid=0 old-auid=4294967295 auid=0 tty=tty1 old-ses=4294967295 ses=1 res=1
+[   69.494696] audit: type=1300 audit(1793245035.089:112): arch=c000003e syscall=1 success=yes exit=1 a0=4 a1=7ffd169ba3b0 a2=1 a3=0 items=0 ppid=1 pid=698 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=tty1 ses=1 comm="login" exe="/usr/bin/login" key=(null)
+[   69.494700] audit: type=1327 audit(1793245035.089:112): proctitle=2F62696E2F6C6F67696E000000000000726F6F74
+[   69.607243] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   69.628981] systemd-journald[500]: Data hash table of /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal has a fill level at 75.0 (4375 of 5831 items, 3358720 file size, 767 bytes per hash table item), suggesting rotation.
+[   69.657173] systemd-journald[500]: /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   69.677808] systemd-journald[500]: Rotating journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   69.683960] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000005f6f-00065ef264a2ba6a.journal is synchronously transitioning to archived.
+[   69.693103] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000005f6f-00065ef264a2ba6a.journal is already archived, waiting for offlining thread.
+[   69.702346] systemd-journald[500]: Joining journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000005f6f-00065ef264a2ba6a.journal.
+[   69.706323] audit: type=1130 audit(1793245035.328:113): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=user-runtime-dir@0 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   69.718213] systemd-journald[500]: Journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000005f6f-00065ef264a2ba6a.journal joined.
+[   69.728767] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[   69.738549] systemd-journald[500]: Reserving 5831 entries in data hash table.
+[   69.743196] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000668a-00065ef264f02fbc.journal is asynchronously transitioning to archived.
+[   69.750505] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000668a-00065ef264f02fbc.journal.
+[   69.773138] systemd-journald[500]: Vacuuming...
+[   69.782178] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   69.799803] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   69.815998] audit: type=1101 audit(1793245035.438:114): pid=708 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_access,pam_unix,pam_permit,pam_time acct="root" exe="/usr/lib/systemd/systemd-executor" hostname=? addr=? terminal=? res=success'
+[   69.837362] audit: type=1103 audit(1793245035.438:115): pid=708 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=? acct="root" exe="/usr/lib/systemd/systemd-executor" hostname=? addr=? terminal=? res=failed'
+[   69.856999] audit: type=1006 audit(1793245035.439:116): pid=708 uid=0 old-auid=4294967295 auid=0 tty=(none) old-ses=4294967295 ses=2 res=1
+[   69.920344] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   69.942549] loop1: detected capacity change from 0 to 4079680
+[   69.964549] loop1: detected capacity change from 0 to 4079680
+[   70.009313]  loop1: p1 p2
+[   70.349128] systemd-journald[500]: Data hash table of /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal has a fill level at 75.0 (4375 of 5831 items, 3358720 file size, 767 bytes per hash table item), suggesting rotation.
+[   70.365404] systemd-journald[500]: /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   70.369922] systemd-journald[500]: Rotating journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   70.374033] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000668a-00065ef264f02fbc.journal is synchronously transitioning to archived.
+[   70.381798] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000668a-00065ef264f02fbc.journal is already archived, waiting for offlining thread.
+[   70.388021] systemd-journald[500]: Joining journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000668a-00065ef264f02fbc.journal.
+[   70.393363] systemd-journald[500]: Journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000668a-00065ef264f02fbc.journal joined.
+[   70.401423] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[   70.407630] systemd-journald[500]: Reserving 5831 entries in data hash table.
+[   70.409588] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000006d3a-00065ef265524f85.journal is asynchronously transitioning to archived.
+[   70.415832] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000006d3a-00065ef265524f85.journal.
+[   70.426021] systemd-journald[500]: Vacuuming...
+[   70.431788] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   70.469772] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   94.995984] kauditd_printk_skb: 97 callbacks suppressed
+[   94.995988] audit: type=1131 audit(1793245060.618:152): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   95.038796] audit: type=1334 audit(1793245060.659:153): prog-id=62 op=UNLOAD
+[  109.512367]  sda: sda1
+[  111.320906]  sda: sda1 sda2
+[  111.453581] systemd-journald[500]: Data hash table of /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal has a fill level at 75.0 (4374 of 5831 items, 3358720 file size, 767 bytes per hash table item), suggesting rotation.
+[  111.473221] systemd-journald[500]: /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal: Journal header limits reached or header out-of-date, rotating.
+[  111.486668] systemd-journald[500]: Rotating journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[  111.502690] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000006d3a-00065ef265524f85.journal is synchronously transitioning to archived.
+[  111.513377] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000006d3a-00065ef265524f85.journal is already archived, waiting for offlining thread.
+[  111.529704] systemd-journald[500]: Joining journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000006d3a-00065ef265524f85.journal.
+[  111.546257] systemd-journald[500]: Journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000006d3a-00065ef265524f85.journal joined.
+[  111.570506] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[  111.585383] systemd-journald[500]: Reserving 5831 entries in data hash table.
+[  111.594412] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-00000000000073d7-00065ef2655d4c77.journal is asynchronously transitioning to archived.
+[  111.610708] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-00000000000073d7-00065ef2655d4c77.journal.
+[  111.630900] systemd-journald[500]: Vacuuming...
+[  111.638546] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[  112.472993] EXT4-fs (sda2): mounted filesystem 34f84ddd-1b4a-40e3-b839-0367e38dd983 r/w with ordered data mode. Quota mode: none.
+[  153.267340] systemd-journald[500]: Sent WATCHDOG=1 notification.
+[  245.365362] systemd-journald[500]: Sent WATCHDOG=1 notification.
+[  333.406079] systemd-journald[500]: Sent WATCHDOG=1 notification.
+[  350.830166] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal is asynchronously transitioning to offline.
+[  350.841625] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[  426.833224] systemd-journald[500]: Sent WATCHDOG=1 notification.
+[  513.291453] systemd-journald[500]: Sent WATCHDOG=1 notification.

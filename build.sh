@@ -42,6 +42,18 @@ mkdir -p "$PROFILE"
 cp -r "$RELENG"/efiboot "$RELENG"/syslinux "$PROFILE"/
 rsync -a --chown=0:0 "$PGOS_ROOT/iso/" "$PROFILE"/
 
+# releng keeps live-system machinery in airootfs extras: pacman-init.service
+# (pacman-key --init --populate at boot) and the writable gnupg tmpfs mount.
+# Without them the live env has no initialized, writable pacman keyring and
+# pg-install's pacstrap dies with "keyring is not writable".
+install -Dm644 "$RELENG/airootfs/etc/systemd/system/pacman-init.service" \
+  "$PROFILE/airootfs/etc/systemd/system/pacman-init.service"
+install -Dm644 "$RELENG/airootfs/etc/systemd/system/etc-pacman.d-gnupg.mount" \
+  "$PROFILE/airootfs/etc/systemd/system/etc-pacman.d-gnupg.mount"
+mkdir -p "$PROFILE/airootfs/etc/systemd/system/multi-user.target.wants"
+ln -sf ../pacman-init.service \
+  "$PROFILE/airootfs/etc/systemd/system/multi-user.target.wants/pacman-init.service"
+
 # Rebrand the boot menu. Templates (%INSTALL_DIR% etc.) are left alone;
 # only human-visible text is replaced.
 find "$PROFILE/efiboot" "$PROFILE/syslinux" -type f \( -name '*.conf' -o -name '*.cfg' \) -print0 |
