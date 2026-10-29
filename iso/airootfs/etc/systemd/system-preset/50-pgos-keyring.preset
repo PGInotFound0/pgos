@@ -1,0 +1,6 @@
+# pgOS live-system keyring presets. systemd applies preset policy on first
+# boot; before this file existed, 99-default.preset ("disable *") disabled
+# the releng-derived keyring units and pg-install died with
+# "error: keyring is not writable". Lower number = evaluated first.
+enable pacman-init.service
+enable etc-pacman.d-gnupg.mount
