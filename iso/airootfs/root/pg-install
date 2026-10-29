@@ -151,6 +151,11 @@ for p in /opt/pgos/packages/*.pkg.tar.zst; do
     pacman -U --root "$MOUNT" --noconfirm "$p"
 done
 
+# The target's /etc/pacman.d/mirrorlist comes from pacman-mirrorlist with
+# every server commented out — overwrite it with the live system's active
+# list so `pg update` works on first boot.
+cp -L /etc/pacman.d/mirrorlist "$MOUNT/etc/pacman.d/mirrorlist"
+
 info "Writing fstab"
 genfstab -U "$MOUNT" >> "$MOUNT/etc/fstab"
 

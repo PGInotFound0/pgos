@@ -1,0 +1,4 @@
+# pgOS live-mirror list — same set releng ships; upstream geo first.
+Server = https://geo.mirror.pkgbuild.com/$repo/os/$arch
+Server = https://mirror.rackspace.com/archlinux/$repo/os/$arch
+Server = https://mirror.osbeck.com/archlinux/$repo/os/$arch
