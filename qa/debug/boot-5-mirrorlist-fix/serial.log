@@ -1,0 +1,1475 @@
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H [1m[37m[40m[0m[37m[40m[2J[01;01H[15;25H[1m[30m[47m[0m[30m[47m         pgOS install medium (x86_64, UEFI)         [16;25H[1m[37m[40m[0m[37m[40m   pgOS install medium (x86_64, UEFI) with speech   [17;25H[1m[37m[40m[0m[37m[40m           Reboot Into Firmware Interface           [19;01H[1m[37m[40m[0m[37m[40m                                            Boot in 15s.                                           [18;22H[1m[37m[40m[0m[37m[40m──────────────────────────────────────────────────────────[19;01H[1m[37m[40m[0m[37m[40m                                            Boot in 14s.                                           [18;22H[1m[37m[40m[0m[37m[40m──────────────────────────────────────────────────────────[19;01H[1m[37m[40m[0m[37m[40m                                            Boot in 13s.                                           [18;22H[1m[37m[40m[0m[37m[40m──────────────────────────────────────────────────────────[19;01H[1m[37m[40m[0m[37m[40m                                            Boot in 12s.                                           [18;22H[1m[37m[40m[0m[37m[40m──────────────────────────────────────────────────────────[19;01H[1m[37m[40m[0m[37m[40m                                            Boot in 11s.                                           [18;22H[1m[37m[40m[0m[37m[40m──────────────────────────────────────────────────────────[15;25H[1m[37m[40m[0m[37m[40m         pgOS install medium (x86_64, UEFI)         [16;25H[1m[30m[47m[0m[30m[47m   pgOS install medium (x86_64, UEFI) with speech   [18;01H[1m[37m[40m[0m[37m[40m                                                                                                    [19;01H[1m[37m[40m[0m[37m[40m                                                                                                   [16;25H[1m[37m[40m[0m[37m[40m   pgOS install medium (x86_64, UEFI) with speech   [15;25H[1m[30m[47m[0m[30m[47m         pgOS install medium (x86_64, UEFI)         [18;01H[1m[37m[40m[0m[37m[40m                                                                                                    [19;01H[1m[37m[40m[0m[37m[40m                                                                                                   [1m[37m[40m[0m[37m[40m[2J[01;01H[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] APIC: Static calls initialized
+[    0.000000] efi: EFI v2.7 by EDK II
+[    0.000000] efi: ACPI=0xba17e000 ACPI 2.0=0xba17e014 SMBIOS=0xba1fd000 INITRD=0xb8346b18 RNG=0xba175018 
+[    0.000000] random: crng init done
+[    0.000000] efi: Remove mem113: MMIO range=[0xffc00000-0xffffffff] (4MB) from e820 map
+[    0.000000] e820: remove [mem 0xffc00000-0xffffffff] device reserved
+[    0.000000] DMI: SMBIOS 2.5 present.
+[    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[    0.000000] DMI: Memory slots populated: 0/0
+[    0.000000] Hypervisor detected: KVM
+[    0.000000] last_pfn = 0xba96e max_arch_pfn = 0x400000000
+[    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000013] kvm-clock: using sched offset of 9275648357 cycles
+[    0.001603] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.007131] tsc: Detected 3493.438 MHz processor
+[    0.009396] e820: update [mem 0x00000000-0x00000fff] System RAM ==> device reserved
+[    0.012628] e820: remove [mem 0x000a0000-0x000fffff] System RAM
+[    0.015100] last_pfn = 0xba96e max_arch_pfn = 0x400000000
+[    0.016190] MTRR map: 5 entries (3 fixed + 2 variable; max 35), built from 16 variable MTRRs
+[    0.018468] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+Memory KASLR using RDRAND RDTSC...
+[    0.021456] found SMP MP-table at [mem 0x0009fff0-0x0009ffff]
+[    0.023007] Secure boot disabled
+[    0.023681] RAMDISK: [mem 0xab433000-0xb0362fff]
+[    0.026847] ACPI: Early table checksum verification disabled
+[    0.028477] ACPI: RSDP 0x00000000BA17E014 000024 (v02 VBOX  )
+[    0.029627] ACPI: XSDT 0x00000000BA17D0E8 000044 (v01 VBOX   VBOXFACP 00000001      01000013)
+[    0.031873] ACPI: FACP 0x00000000BA179000 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+[    0.049244] ACPI: DSDT 0x00000000BA17A000 002353 (v02 VBOX   VBOXBIOS 00000002 VBOX 0002AC8D)
+[    0.054664] ACPI: FACS 0x00000000BA1FE000 000040
+[    0.057962] ACPI: APIC 0x00000000BA178000 000064 (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+[    0.069409] ACPI: SSDT 0x00000000BA177000 000052 (v01 VBOX   VBOXCPUT 00000002 VBOX 0002AC8D)
+[    0.071059] ACPI: BGRT 0x00000000BA176000 000038 (v01 INTEL  EDK2     00000002      01000013)
+[    0.072668] ACPI: Reserving FACP table memory at [mem 0xba179000-0xba1790f3]
+[    0.074415] ACPI: Reserving DSDT table memory at [mem 0xba17a000-0xba17c352]
+[    0.076633] ACPI: Reserving FACS table memory at [mem 0xba1fe000-0xba1fe03f]
+[    0.078089] ACPI: Reserving APIC table memory at [mem 0xba178000-0xba178063]
+[    0.079505] ACPI: Reserving SSDT table memory at [mem 0xba177000-0xba177051]
+[    0.081323] ACPI: Reserving BGRT table memory at [mem 0xba176000-0xba176037]
+[    0.083962] No NUMA configuration found
+[    0.084702] Faking a node at [mem 0x0000000000000000-0x00000000ba96dfff]
+[    0.086024] NODE_DATA(0) allocated [mem 0xba89cf80-0xba8c7fff]
+[    0.087666] ACPI: PM-Timer IO Port: 0xb008
+[    0.088558] IOAPIC[0]: apic_id 3, version 32, address 0xfec00000, GSI 0-23
+[    0.089964] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.091166] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+[    0.092550] ACPI: Using ACPI (MADT) for SMP configuration information
+[    0.095472] e820: update [mem 0xb8306000-0xb8326fff] System RAM ==> device reserved
+[    0.097592] CPU topo: Max. logical packages:   1
+[    0.098541] CPU topo: Max. logical nodes:      1
+[    0.099467] CPU topo: Num. nodes per package:  1
+[    0.100567] CPU topo: Max. logical dies:       1
+[    0.101469] CPU topo: Max. dies per package:   1
+[    0.102375] CPU topo: Max. threads per core:   1
+[    0.103333] CPU topo: Num. cores per package:     3
+[    0.104300] CPU topo: Num. threads per package:   3
+[    0.105282] CPU topo: Allowing 3 present CPUs plus 0 hotplug CPUs
+[    0.106729] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.108209] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000fffff]
+[    0.109740] PM: hibernation: Registered nosave memory: [mem 0xb8306000-0xb8326fff]
+[    0.111192] PM: hibernation: Registered nosave memory: [mem 0xb92a3000-0xb93b6fff]
+[    0.113520] PM: hibernation: Registered nosave memory: [mem 0xb9eed000-0xba1fefff]
+[    0.114940] PM: hibernation: Registered nosave memory: [mem 0xba925000-0xba92afff]
+[    0.116378] [gap 0xbb7f0000-0xffffffff] available for PCI devices
+[    0.118522] Booting paravirtualized kernel on KVM
+[    0.119500] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+[    0.130456] Zone ranges:
+[    0.131079]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.132463]   DMA32    [mem 0x0000000001000000-0x00000000ba96dfff]
+[    0.134132]   Normal   empty
+[    0.135044]   Device   empty
+[    0.135583] Movable zone start for each node
+[    0.136392] Early memory node ranges
+[    0.137613]   node   0: [mem 0x0000000000001000-0x000000000009ffff]
+[    0.138877]   node   0: [mem 0x0000000000100000-0x00000000b92a2fff]
+[    0.141344]   node   0: [mem 0x00000000b93b7000-0x00000000b9eecfff]
+[    0.143150]   node   0: [mem 0x00000000ba1ff000-0x00000000ba924fff]
+[    0.144346]   node   0: [mem 0x00000000ba92b000-0x00000000ba96dfff]
+[    0.145675] Initmem setup node 0 [mem 0x0000000000001000-0x00000000ba96dfff]
+[    0.147862] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.148955] On node 0, zone DMA: 96 pages in unavailable ranges
+[    0.165867] On node 0, zone DMA32: 276 pages in unavailable ranges
+[    0.167773] On node 0, zone DMA32: 786 pages in unavailable ranges
+[    0.169588] On node 0, zone DMA32: 6 pages in unavailable ranges
+[    0.171123] On node 0, zone DMA32: 22162 pages in unavailable ranges
+[    0.172497] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:3 nr_cpu_ids:3 nr_node_ids:1
+[    0.175225] percpu: Embedded 63 pages/cpu s221184 r8192 d28672 u524288
+[    0.177594] pcpu-alloc: s221184 r8192 d28672 u524288 alloc=1*2097152
+[    0.178873] pcpu-alloc: [0] 0 1 2 - 
+[    0.181088] kvm-guest: PV spinlocks enabled
+[    0.182488] PV qspinlock hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.183493] Kernel command line: initrd=\pgos\boot\x86_64\initramfs-linux.img archisobasedir=pgos archisosearchuuid=2026-10-29-03-28-23-00  earlyprintk=serial,ttyS0,115200 keep_bootcon loglevel=7 systemd.firstboot=0 debug systemd.log_level=debug systemd.log_target=console+kmsg udev.log_level=debug rd.udev.debug=1
+[    0.192777] Unknown kernel command line parameters "archisobasedir=pgos archisosearchuuid=2026-10-29-03-28-23-00", will be passed to user space.
+[    0.195781] printk: log buffer data + meta data: 131072 + 557056 = 688128 bytes
+[    0.198723] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.202079] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.203843] Fallback order for Node 0: 0 
+[    0.203850] Built 1 zonelists, mobility grouping on.  Total pages: 763105
+[    0.205358] Policy zone: DMA32
+[    0.206020] mem auto-init: stack:all(zero), heap alloc:on, heap free:off
+[    0.222086] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=3, Nodes=1
+Poking KASLR using RDRAND RDTSC...
+[    0.238761] ftrace: allocating 58783 entries in 232 pages
+[    0.239542] ftrace: allocated 232 pages with 4 groups
+[    0.240285] Dynamic Preempt: full
+[    0.241246] rcu: Preemptible hierarchical RCU implementation.
+[    0.242113] rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=3.
+[    0.242956] rcu: 	RCU priority boosting: priority 1 delay 500 ms.
+[    0.244739] 	Trampoline variant of Tasks RCU enabled.
+[    0.245499] 	Rude variant of Tasks RCU enabled.
+[    0.246187] 	Tracing variant of Tasks RCU enabled.
+[    0.246822] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    0.247703] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=3
+[    0.248569] RCU Tasks: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=3.
+[    0.249959] RCU Tasks Rude: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=3.
+[    0.261622] NR_IRQS: 524544, nr_irqs: 448, preallocated irqs: 16
+[    0.262889] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.264092] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.267657] kfence: initialized - using 2097152 bytes for 255 objects at 0x(____ptrval____)-0x(____ptrval____)
+[    0.269192] Console: colour dummy device 160x50
+[    0.269855] printk: legacy console [tty0] enabled
+[    0.270668] ACPI: Core revision 20260408
+[    0.271362] APIC: Switch to symmetric I/O mode setup
+[    0.272326] x2apic enabled
+[    0.273041] APIC: Switched APIC routing to: physical x2apic
+[    0.274917] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.277942] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x325b1a3dfbf, max_idle_ns: 440795265304 ns
+[    0.280207] Calibrating delay loop (skipped) preset value.. 6986.87 BogoMIPS (lpj=3493438)
+[    0.281342] AMD Zen1 DIV0 bug detected. Disable SMT for full protection.
+[    0.282210] AMD Zen1 FPDSS bug detected, enabling mitigation.
+[    0.283395] Last level iTLB entries: 4KB 1024, 2MB 1024, 4MB 512
+[    0.284210] Last level dTLB entries: 4KB 1536, 2MB 1536, 4MB 768, 1GB 0
+[    0.285249] mitigations: Enabled attack vectors: user_kernel, user_user, guest_host, guest_guest, SMT mitigations: auto
+[    0.286213] Spectre V2 : Mitigation: Retpolines
+[    0.286801] RETBleed: Mitigation: untrained return thunk
+[    0.287207] Speculative Return Stack Overflow: Mitigation: SMT disabled
+[    0.288207] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.289213] Spectre V2 : Spectre v2 / SpectreRSB: Filling RSB on context switch and VMEXIT
+[    0.290214] active return thunk: retbleed_return_thunk
+[    0.291269] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.292207] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.293207] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.294216] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.295212] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+[    0.343371] pid_max: default: 32768 minimum: 301
+[    0.345358] landlock: Up and running.
+[    0.346226] Yama: becoming mindful.
+[    0.347482] LSM support for eBPF active
+[    0.348282] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.349222] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.350325] VFS: Finished mounting rootfs on nullfs
+[    0.455143] APIC calibration not consistent with PM-Timer: 102ms instead of 100ms
+[    0.455201] APIC delta adjusted to PM-Timer: 6286573 (6432167)
+[    0.455252] smpboot: CPU0: AMD Ryzen 3 2200G with Radeon Vega Graphics (family: 0x17, model: 0x11, stepping: 0x0)
+[    0.456568] Performance Events: PMU not available due to virtualization, using software events only.
+[    0.457250] signal: max sigframe size: 1776
+[    0.458309] rcu: Hierarchical SRCU implementation.
+[    0.459204] rcu: 	Max phase no-delay instances is 400.
+[    0.460261] Timer migration: 1 hierarchy levels; 8 children per group; 1 crossnode level
+[    0.472461] NMI watchdog: Perf NMI watchdog permanently disabled
+[    0.473329] smp: Bringing up secondary CPUs ...
+[    0.474314] smpboot: x86: Booting SMP configuration:
+[    0.474967] .... node  #0, CPUs:      #1 #2
+[    0.480566] smp: Brought up 1 node, 3 CPUs
+[    0.482224] smpboot: Total of 3 processors activated (20960.62 BogoMIPS)
+[    0.484504] Memory: 2811944K/3052420K available (22238K kernel code, 3070K rwdata, 17592K rodata, 4940K init, 5004K bss, 234196K reserved, 0K cma-reserved)
+[    0.486339] devtmpfs: initialized
+[    0.486893] x86/mm: Memory block size: 128MB
+[    0.489035] ACPI: PM: Registering ACPI NVS region [mem 0xba17f000-0xba1fefff] (524288 bytes)
+[    0.492242] ACPI: PM: Registering ACPI NVS region [mem 0xba929000-0xba92afff] (8192 bytes)
+[    0.495495] posixtimers hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    0.499282] futex hash table entries: 1024 (65536 bytes on 1 NUMA nodes, total 64 KiB, linear).
+[    0.502576] xor: automatically using best checksumming function   avx       
+[    0.507542] PM: RTC time: 03:36:04, date: 2026-10-29
+[    0.511567] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.513622] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.515280] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.517235] audit: initializing netlink subsys (disabled)
+[    0.519460] audit: type=2000 audit(1793244975.604:1): state=initialized audit_enabled=0 res=1
+[    0.550540] thermal_sys: Registered thermal governor 'fair_share'
+[    0.550545] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.552247] thermal_sys: Registered thermal governor 'step_wise'
+[    0.555245] thermal_sys: Registered thermal governor 'user_space'
+[    0.557208] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.559642] cpuidle: using governor ladder
+[    0.564343] cpuidle: using governor menu
+[    0.567201] Freeing SMP alternatives memory: 60K
+[    0.572201] efi: Freeing EFI boot services memory: 34236K
+[    0.574245] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.577413] PCI: Using configuration type 1 for base access
+[    0.580211] PCI: Using configuration type 1 for extended access
+[    0.583378] virt/tdx: TDX not supported by the host platform
+[    0.585292] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+[    0.593238] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.594209] HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.620407] raid6: using avx2x2 recovery algorithm
+[    0.621205] raid6: skipped pq benchmark and selected avx2x4
+[    0.627220] fbcon: Taking over console
+[    0.629326] ACPI: Added _OSI(Module Device)
+[    0.630206] ACPI: Added _OSI(Processor Device)
+[    0.631288] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.636868] ACPI: 2 ACPI AML tables successfully acquired and loaded
+[    0.640202] ACPI: \_SB_: platform _OSC: OS support mask [006e7eff]
+[    0.642397] ACPI: Interpreter enabled
+[    0.644272] ACPI: PM: (supports S0 S5)
+[    0.645219] ACPI: Using IOAPIC for interrupt routing
+[    0.647580] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.650206] PCI: Using E820 reservations for host bridge windows
+[    0.651327] ACPI: Enabled 2 GPEs in block 00 to 07
+[    0.659329] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.662220] acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    0.664806] acpi PNP0A03:00: _OSC: platform does not support [PCIeCapability LTR DPC]
+[    0.668646] acpi PNP0A03:00: _OSC: not requesting control; platform does not support [PCIeCapability]
+[    0.672213] acpi PNP0A03:00: _OSC: OS requested [PCIeHotplug SHPCHotplug PME AER PCIeCapability LTR DPC]
+[    0.674206] acpi PNP0A03:00: _OSC: platform willing to grant [PCIeHotplug SHPCHotplug PME AER]
+[    0.677210] acpi PNP0A03:00: _OSC: platform retains control of PCIe features (AE_SUPPORT)
+[    0.680537] PCI host bridge to bus 0000:00
+[    0.683236] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.689216] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.695215] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.699226] pci_bus 0000:00: root bus resource [mem 0xbb800000-0xfdffffff window]
+[    0.703297] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.709315] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000 conventional PCI endpoint
+[    0.712803] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100 conventional PCI endpoint
+[    0.718701] pci 0000:00:02.0: [15ad:0405] type 00 class 0x030000 conventional PCI endpoint
+[    0.724250] pci 0000:00:02.0: BAR 0 [io  0xc170-0xc17f]
+[    0.725237] pci 0000:00:02.0: BAR 1 [mem 0xbc000000-0xbdffffff pref]
+[    0.730242] pci 0000:00:02.0: BAR 2 [mem 0xbe400000-0xbe5fffff]
+[    0.733518] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    0.738330] pci 0000:00:03.0: [8086:100e] type 00 class 0x020000 conventional PCI endpoint
+[    0.743513] pci 0000:00:03.0: BAR 0 [mem 0xbe600000-0xbe61ffff]
+[    0.747229] pci 0000:00:03.0: BAR 2 [io  0xc190-0xc197]
+[    0.750298] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000 conventional PCI endpoint
+[    0.753425] pci 0000:00:04.0: BAR 0 [io  0xc140-0xc15f]
+[    0.758231] pci 0000:00:04.0: BAR 1 [mem 0xbe000000-0xbe3fffff]
+[    0.760221] pci 0000:00:04.0: BAR 2 [mem 0xbe620000-0xbe623fff pref]
+[    0.762703] pci 0000:00:05.0: [8086:2415] type 00 class 0x040100 conventional PCI endpoint
+[    0.765447] pci 0000:00:05.0: BAR 0 [io  0xc000-0xc0ff]
+[    0.766213] pci 0000:00:05.0: BAR 1 [io  0xc100-0xc13f]
+[    0.768880] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000 conventional PCI endpoint
+[    0.773342] pci 0000:00:07.0: quirk: [io  0xb000-0xb03f] claimed by PIIX4 ACPI
+[    0.778215] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+[    0.783504] pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601 conventional PCI endpoint
+[    0.787627] pci 0000:00:0d.0: BAR 0 [io  0xc188-0xc18f]
+[    0.790212] pci 0000:00:0d.0: BAR 1 [io  0xc19c-0xc19f]
+[    0.792221] pci 0000:00:0d.0: BAR 2 [io  0xc180-0xc187]
+[    0.794234] pci 0000:00:0d.0: BAR 3 [io  0xc198-0xc19b]
+[    0.795219] pci 0000:00:0d.0: BAR 4 [io  0xc160-0xc16f]
+[    0.796217] pci 0000:00:0d.0: BAR 5 [mem 0xbe624000-0xbe625fff]
+[    0.807260] ACPI: PCI: Interrupt link LNKA configured for IRQ 10
+[    0.810607] ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+[    0.812318] ACPI: PCI: Interrupt link LNKC configured for IRQ 11
+[    0.814321] ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+[    0.818364] iommu: Default domain type: Translated
+[    0.820205] iommu: DMA domain TLB invalidation policy: lazy mode
+[    0.822700] SCSI subsystem initialized
+[    0.825205] libata version 3.00 loaded.
+[    0.826248] ACPI: bus type USB registered
+[    0.827345] usbcore: registered new interface driver usbfs
+[    0.829228] usbcore: registered new interface driver hub
+[    0.831246] usbcore: registered new device driver usb
+[    0.833287] EDAC MC: Ver: 3.0.0
+[    0.834293] efivars: Registered efivars operations
+[    0.836422] NetLabel: Initializing
+[    0.837204] NetLabel:  domain hash size = 128
+[    0.839204] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.841224] NetLabel:  unlabeled traffic allowed by default
+[    0.843379] mctp: management component transport protocol core
+[    0.845212] NET: Registered PF_MCTP protocol family
+[    0.847252] PCI: Using ACPI for IRQ routing
+[    0.849211] PCI: pci_cache_line_size set to 64 bytes
+[    0.850314] e820: register RAM buffer resource [mem 0xb8306000-0xbbffffff]
+[    0.853254] e820: register RAM buffer resource [mem 0xb92a3000-0xbbffffff]
+[    0.858217] e820: register RAM buffer resource [mem 0xb9eed000-0xbbffffff]
+[    0.861210] e820: register RAM buffer resource [mem 0xba925000-0xbbffffff]
+[    0.863205] e820: register RAM buffer resource [mem 0xba96e000-0xbbffffff]
+[    0.864439] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    0.865201] pci 0000:00:02.0: vgaarb: bridge control possible
+[    0.865201] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.869212] vgaarb: loaded
+[    0.874346] clocksource: Switched to clocksource kvm-clock
+[    0.876890] VFS: Disk quotas dquot_6.6.0
+[    0.881647] VFS: Dquot-cache hash table entries: 512 (4096 bytes)
+[    0.882954] pnp: PnP ACPI init
+[    0.886620] pnp: PnP ACPI: found 3 devices
+[    0.903692] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.905655] NET: Registered PF_INET protocol family
+[    0.907007] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.910045] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    0.912054] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.913501] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.915543] TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+[    0.917764] TCP: Hash tables configured (established 32768 bind 32768)
+[    0.919488] MPTCP token hash table entries: 4096 (order: 5, 98304 bytes, linear)
+[    0.921860] UDP hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.923898] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.924699] NET: Registered PF_XDP protocol family
+[    0.924699] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    0.924699] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    0.924699] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    0.924699] pci_bus 0000:00: resource 7 [mem 0xbb800000-0xfdffffff window]
+[    0.924699] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    0.924699] PCI: CLS 0 bytes, default 64
+[    0.936029] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x325b1a3dfbf, max_idle_ns: 440795265304 ns
+[    0.936507] Trying to unpack rootfs image as initramfs...
+[    0.940318] platform rtc_cmos: registered fallback platform RTC device
+[    0.945758] Initialise system trusted keyrings
+[    0.950434] Key type blacklist registered
+[    0.952532] workingset: timestamp_bits=36 (anon: 31) max_order=20 bucket_order=0 (anon: 0)
+[    0.956781] fuse: init (API version 7.45)
+[    0.959879] integrity: Platform Keyring initialized
+[    0.961049] integrity: Machine keyring initialized
+[    0.983422] Key type asymmetric registered
+[    0.989197] Asymmetric key parser 'x509' registered
+[    0.990501] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+[    0.995056] io scheduler mq-deadline registered
+[    1.000092] io scheduler kyber registered
+[    1.001751] io scheduler bfq registered
+[    1.004060] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.009828] ACPI: AC: AC Adapter [AC] (on-line)
+[    1.013306] input: Power Button as /devices/platform/LNXPWRBN:00/input/input0
+[    1.020606] ACPI: button: Power Button [PWRF]
+[    1.023475] input: Sleep Button as /devices/platform/LNXSLPBN:00/input/input1
+[    1.026644] ACPI: button: Sleep Button [SLPF]
+[    1.030762] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    1.033973] 00:02: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    1.047876] Non-volatile memory driver v1.3
+[    1.048941] ACPI: bus type drm_connector registered
+[    1.063619] ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
+[    1.075184] ahci 0000:00:0d.0: AHCI vers 0001.0100, 32 command slots, 3 Gbps, SATA mode
+[    1.080193] ahci 0000:00:0d.0: 30/30 ports implemented (port mask 0x3fffffff)
+[    1.082932] ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
+[    1.103500] scsi host0: ahci
+[    1.105302] scsi host1: ahci
+[    1.106874] scsi host2: ahci
+[    1.108633] scsi host3: ahci
+[    1.111472] scsi host4: ahci
+[    1.113081] scsi host5: ahci
+[    1.115431] scsi host6: ahci
+[    1.119594] scsi host7: ahci
+[    1.123200] scsi host8: ahci
+[    1.126903] scsi host9: ahci
+[    1.128549] scsi host10: ahci
+[    1.129834] scsi host11: ahci
+[    1.131223] scsi host12: ahci
+[    1.132590] scsi host13: ahci
+[    1.133521] scsi host14: ahci
+[    1.135694] scsi host15: ahci
+[    1.137181] scsi host16: ahci
+[    1.138609] scsi host17: ahci
+[    1.139708] scsi host18: ahci
+[    1.140565] scsi host19: ahci
+[    1.143305] scsi host20: ahci
+[    1.144548] scsi host21: ahci
+[    1.148551] scsi host22: ahci
+[    1.150390] scsi host23: ahci
+[    1.152957] scsi host24: ahci
+[    1.153753] scsi host25: ahci
+[    1.154586] scsi host26: ahci
+[    1.156422] scsi host27: ahci
+[    1.158580] scsi host28: ahci
+[    1.160405] scsi host29: ahci
+[    1.161493] ata1: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624100 irq 21 lpm-pol 1
+[    1.162781] ata2: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624180 irq 21 lpm-pol 1
+[    1.164254] ata3: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624200 irq 21 lpm-pol 1 ext
+[    1.165757] ata4: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624280 irq 21 lpm-pol 1 ext
+[    1.169606] ata5: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624300 irq 21 lpm-pol 1 ext
+[    1.171130] ata6: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624380 irq 21 lpm-pol 1 ext
+[    1.172543] ata7: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624400 irq 21 lpm-pol 1 ext
+[    1.173841] ata8: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624480 irq 21 lpm-pol 1 ext
+[    1.175053] ata9: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624500 irq 21 lpm-pol 1 ext
+[    1.177971] ata10: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624580 irq 21 lpm-pol 1 ext
+[    1.179744] ata11: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624600 irq 21 lpm-pol 1 ext
+[    1.181116] ata12: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624680 irq 21 lpm-pol 1 ext
+[    1.182174] ata13: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624700 irq 21 lpm-pol 1 ext
+[    1.183254] ata14: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624780 irq 21 lpm-pol 1 ext
+[    1.184482] ata15: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624800 irq 21 lpm-pol 1 ext
+[    1.186443] ata16: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624880 irq 21 lpm-pol 1 ext
+[    1.188594] ata17: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624900 irq 21 lpm-pol 1 ext
+[    1.190541] ata18: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624980 irq 21 lpm-pol 1 ext
+[    1.192613] ata19: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624a00 irq 21 lpm-pol 1 ext
+[    1.194490] ata20: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624a80 irq 21 lpm-pol 1 ext
+[    1.195904] ata21: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624b00 irq 21 lpm-pol 1 ext
+[    1.199549] ata22: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624b80 irq 21 lpm-pol 1 ext
+[    1.202980] ata23: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624c00 irq 21 lpm-pol 1 ext
+[    1.205225] ata24: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624c80 irq 21 lpm-pol 1 ext
+[    1.206843] ata25: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624d00 irq 21 lpm-pol 1 ext
+[    1.207952] ata26: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624d80 irq 21 lpm-pol 1 ext
+[    1.211439] ata27: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624e00 irq 21 lpm-pol 1 ext
+[    1.212729] ata28: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624e80 irq 21 lpm-pol 1 ext
+[    1.213872] ata29: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624f00 irq 21 lpm-pol 1 ext
+[    1.214981] ata30: SATA max UDMA/133 abar m8192@0xbe624000 port 0xbe624f80 irq 21 lpm-pol 1 ext
+[    1.217507] usbcore: registered new interface driver usbserial_generic
+[    1.221454] usbserial: USB Serial support registered for generic
+[    1.223897] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+[    1.229495] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    1.230925] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    1.234751] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+[    1.235589] rtc_cmos rtc_cmos: registered as rtc0
+[    1.241783] rtc_cmos rtc_cmos: setting system clock to 2026-10-29T03:36:05 UTC (1793244965)
+[    1.245046] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+[    1.248445] simple-framebuffer simple-framebuffer.0: [drm] Registered 1 planes with drm panic
+[    1.253246] [drm] Initialized simpledrm 1.0.0 for simple-framebuffer.0 on minor 0
+[    1.266692] Console: switching to colour frame buffer device 128x48
+[    1.270912] simple-framebuffer simple-framebuffer.0: [drm] fb0: simpledrmdrmfb frame buffer device
+[    1.275685] hid: raw HID events driver (C) Jiri Kosina
+[    1.278360] usbcore: registered new interface driver usbhid
+[    1.279471] usbhid: USB HID core driver
+[    1.283987] drop_monitor: Initializing network drop monitor service
+[    1.287512] NET: Registered PF_INET6 protocol family
+[    1.290686] Segment Routing with IPv6
+[    1.291622] RPL Segment Routing with IPv6
+[    1.293484] In-situ OAM (IOAM) with IPv6
+[    1.296062] NET: Registered PF_PACKET protocol family
+[    1.311949] IPI shorthand broadcast: enabled
+[    1.327815] sched_clock: Marking stable (1312231163, 15110374)->(1385177406, -57835869)
+[    1.353306] registered taskstats version 1
+[    1.367607] Loading compiled-in X.509 certificates
+[    1.742411] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[    1.755988] ata1.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+[    1.761461] ata1.00: applying bridge limits
+[    1.771834] ata1.00: configured for UDMA/100
+[    1.790139] clocksource: Watchdog remote CPU 1 read timed out
+[    1.838205] scsi 0:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+[    2.391697] ata2: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[    2.449423] ata2.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+[    2.482572] ata2.00: 20971520 sectors, multi 128: LBA48 NCQ (depth 32)
+[    2.774576] ata2.00: configured for UDMA/133
+[    2.849929] scsi 1:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+[    2.906785] sd 1:0:0:0: [sda] 20971520 512-byte logical blocks: (10.7 GB/10.0 GiB)
+[    2.928793] sd 1:0:0:0: [sda] Write Protect is off
+[    2.949872] clocksource: Switched to clocksource tsc
+[    2.979121] sd 1:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    3.135497] sd 1:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    3.207096] sd 1:0:0:0: [sda] Preferred minimum I/O size 512 bytes
+[    3.245693] ata3: SATA link down (SStatus 0 SControl 300)
+[    3.555265]  sda: sda1 sda2
+[    3.558444] sd 1:0:0:0: [sda] Attached SCSI disk
+[    3.672649] ata4: SATA link down (SStatus 0 SControl 300)
+[    4.362240] ata5: SATA link down (SStatus 0 SControl 300)
+[    5.540789] ata6: SATA link down (SStatus 0 SControl 300)
+[    6.060651] Freeing initrd memory: 81088K
+[    6.103449] Loaded X.509 cert 'Build time autogenerated kernel key: 696161558daab7a60c3181b5f5b7ad12f3d62e0e'
+[    6.122713] zswap: loaded using pool zstd
+[    6.143081] Demotion targets for Node 0: null
+[    6.156281] Key type .fscrypt registered
+[    6.165286] Key type fscrypt-provisioning registered
+[    6.169789] Btrfs loaded, zoned=yes, fsverity=yes
+[    6.172633] Key type big_key registered
+[    6.177358] PM:   Magic number: 14:102:615
+[    6.181746] RAS: Correctable Errors collector initialized.
+[    6.186361] clk: Disabling unused clocks
+[    6.187994] PM: genpd: Disabling unused power domains
+[    6.613339] ata7: SATA link down (SStatus 0 SControl 300)
+[    7.387255] ata8: SATA link down (SStatus 0 SControl 300)
+[    8.123171] ata9: SATA link down (SStatus 0 SControl 300)
+[    8.582376] ata10: SATA link down (SStatus 0 SControl 300)
+[    9.232812] ata11: SATA link down (SStatus 0 SControl 300)
+[    9.722779] ata12: SATA link down (SStatus 0 SControl 300)
+[   10.784148] ata13: SATA link down (SStatus 0 SControl 300)
+[   12.485852] clocksource: Marking clocksource tsc unstable due to frequency skew
+[   12.489579] clocksource: Watchdog               kvm-clock interval:             2073ns
+[   12.492556] clocksource: Clocksource                  tsc interval:             1953ns
+[   12.495406] tsc: Marking TSC unstable due to clocksource watchdog
+[   12.503938] clocksource: Switched to clocksource kvm-clock
+[   12.657296] ata14: SATA link down (SStatus 0 SControl 300)
+[   13.533394] ata15: SATA link down (SStatus 0 SControl 300)
+[   14.633631] ata16: SATA link down (SStatus 0 SControl 300)
+[   15.657078] ata17: SATA link down (SStatus 0 SControl 300)
+[   16.491639] ata18: SATA link down (SStatus 0 SControl 300)
+[   16.839722] ata19: SATA link down (SStatus 0 SControl 300)
+[   17.491309] ata20: SATA link down (SStatus 0 SControl 300)
+[   19.277975] ata21: SATA link down (SStatus 0 SControl 300)
+[   19.839311] ata22: SATA link down (SStatus 0 SControl 300)
+[   20.864795] ata23: SATA link down (SStatus 0 SControl 300)
+[   21.896007] ata24: SATA link down (SStatus 0 SControl 300)
+[   22.865493] ata25: SATA link down (SStatus 0 SControl 300)
+[   23.751313] ata26: SATA link down (SStatus 0 SControl 300)
+[   24.246296] ata27: SATA link down (SStatus 0 SControl 300)
+[   24.584985] ata28: SATA link down (SStatus 0 SControl 300)
+[   25.658715] ata29: SATA link down (SStatus 0 SControl 300)
+[   26.787517] ata30: SATA link down (SStatus 0 SControl 300)
+[   26.797021] Freeing unused decrypted memory: 2028K
+[   26.802055] Freeing unused kernel image (initmem) memory: 4940K
+[   26.804376] Write protecting the kernel read-only data: 40960k
+[   26.813094] Freeing unused kernel image (text/rodata gap) memory: 288K
+[   26.818661] Freeing unused kernel image (rodata/data gap) memory: 840K
+[   26.880184] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[   26.882353] rodata_test: all tests were successful
+[   26.883631] Run /init as init process
+[   26.885693]   with arguments:
+[   26.886613]     /init
+[   26.887185]   with environment:
+[   26.888710]     HOME=/
+[   26.889621]     TERM=linux
+[   26.890844]     archisobasedir=pgos
+[   26.892181]     archisosearchuuid=2026-10-29-03-28-23-00
+[   32.468026] e1000: Intel(R) PRO/1000 Network Driver
+[   32.468029] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[   32.602450] vboxguest: host-version: 7.2.22r175245 0x8000000f
+[   32.603036] vbg_heartbeat_init: Setting up heartbeat to trigger every 2000 milliseconds
+[   32.603170] input: VirtualBox mouse integration as /devices/pci0000:00/0000:00:04.0/input/input4
+[   32.955397] sr 0:0:0:0: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
+[   32.956757] cdrom: Uniform CD-ROM driver Revision: 3.20
+[   32.972415] sr 0:0:0:0: Attached scsi CD-ROM sr0
+[   33.014780] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:7a:2c:96
+[   33.014795] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+[   35.735438] ACPI: video: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[   35.735759] input: Video Bus as /devices/pci0000:00/acpi.video_bus.0/input/input5
+[   42.665874] ISO 9660 Extensions: Microsoft Joliet Level 3
+[   42.666486] ISO 9660 Extensions: RRIP_1991A
+[   42.751798] loop: module loaded
+[   42.766230] loop0: detected capacity change from 0 to 3663032
+[   42.879428] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[   42.944556] overlayfs: "xino" feature enabled using 2 upper inode bits.
+[   43.207186] systemd[1]: Failed to parse log target 'console+kmsg', ignoring.
+[   43.211598] systemd[1]: Setting '/proc/sys/kernel/printk_devkmsg' to 'on'
+[   43.213549] systemd[1]: Smack is not enabled in the kernel.
+[   43.216781] systemd[1]: Skipping AppArmor initialization: not supported by the kernel, disabled, or libapparmor not installed.
+[   43.220909] systemd[1]: IPE support is disabled in the kernel, ignoring: No such file or directory
+[   43.230115] systemd[1]: Virtualization VirtualBox found in DMI (/sys/class/dmi/id/product_name)
+[   43.238137] systemd[1]: Found VM virtualization oracle
+[   43.277047] systemd[1]: Loaded shared library 'libmount.so.1' via dlopen().
+[   43.281852] systemd[1]: Mounting tmpfs (tmpfs) on /dev/shm (MS_NOSUID|MS_NODEV|MS_STRICTATIME "mode=01777,usrquota")...
+[   43.285359] systemd[1]: Mounting devpts (devpts) on /dev/pts (MS_NOSUID|MS_NOEXEC "mode=0600,gid=5")...
+[   43.287980] systemd[1]: Mounting cgroup2 (cgroup2) on /sys/fs/cgroup (MS_NOSUID|MS_NODEV|MS_NOEXEC "nsdelegate,memory_recursiveprot,memory_hugetlb_accounting")...
+[   43.641599] systemd[1]: Mounting pstore (pstore) on /sys/fs/pstore (MS_NOSUID|MS_NODEV|MS_NOEXEC "")...
+[   43.651164] systemd[1]: Mounting bpf (bpf) on /sys/fs/bpf (MS_NOSUID|MS_NODEV|MS_NOEXEC "mode=0700")...
+[   43.794473] systemd[1]: Failed to symlink /proc/kcore to /dev/core: File exists
+[   43.798787] systemd[1]: Failed to symlink /proc/self/fd to /dev/fd: File exists
+[   43.803534] systemd[1]: Failed to symlink /proc/self/fd/0 to /dev/stdin: File exists
+[   43.809025] systemd[1]: Failed to symlink /proc/self/fd/1 to /dev/stdout: File exists
+[   43.813558] systemd[1]: Failed to symlink /proc/self/fd/2 to /dev/stderr: File exists
+[   43.819260] systemd[1]: Failed to parse log target 'console+kmsg', ignoring.
+[   43.823435] systemd[1]: ProtectSystem=auto selected, but not running in an initrd, skipping.
+[   43.827187] systemd[1]: systemd 262.1-1-arch running in system mode (+PAM +AUDIT -SELINUX +APPARMOR -IMA +IPE +SMACK +SECCOMP +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +BTF +XKBCOMMON +UTMP +LIBARCHIVE)
+[   43.834118] systemd[1]: Detected virtualization oracle.
+[   43.835706] systemd[1]: CPUID func 1 0
+[   43.836618] systemd[1]: CPUID result 810f10 30800 fef83203 178bfbff
+[   43.837838] systemd[1]: CPUID is hypervisor: yes
+[   43.839283] systemd[1]: CPUID func 0 0
+[   43.840149] systemd[1]: CPUID result d 68747541 444d4163 69746e65
+[   43.841197] systemd[1]: CPUID sig 'AuthenticAMD'
+[   43.842482] systemd[1]: CPUID func 80000000 0
+[   43.843561] systemd[1]: CPUID result 8000001f 68747541 444d4163 69746e65
+[   43.846537] systemd[1]: CPUID func 8000001f 0
+[   43.847729] systemd[1]: CPUID result f 16f f 0
+[   43.848920] systemd[1]: MSR 3221291313 result 0
+[   43.850205] systemd[1]: Detected architecture x86-64.
+[   43.856870] systemd[1]: Detected first boot.
+[   43.860568] systemd[1]: Kernel version 7.2.11-arch1-1, our baseline is 5.14
+[   43.864310] systemd[1]: No credentials passed via fw_cfg.
+[   43.866921] systemd[1]: Ignoring OEM string: vboxVer_7.2.22
+[   43.869855] systemd[1]: Ignoring OEM string: vboxRev_175245
+[   43.872630] systemd[1]: No credentials passed from initrd.
+[   43.876656] systemd[1]: Acquired 0 regular credentials, 0 untrusted credentials.
+[   43.889398] systemd[1]: Successfully opened existing '/etc/machine-id' file in writable mode.
+[   43.891046] systemd[1]: Unable to read current machine ID, acquiring new one: Package not installed
+[   43.896608] systemd[1]: Initializing machine ID from random generator.
+[   43.899480] systemd[1]: Bind-mounting /run/machine-id on /proc/self/fd/5 (MS_BIND "")...
+[   43.911505] systemd[1]: Installed transient '/etc/machine-id' file.
+[   43.926316] systemd[1]: Changing mount flags /etc/machine-id (MS_RDONLY|MS_REMOUNT|MS_BIND "")...
+[   43.938531] systemd[1]: No hostname configured, leaving existing hostname <archlinux> in place.
+[   43.946397] systemd[1]: Successfully added address 127.0.0.1 to loopback interface
+[   43.952749] systemd[1]: Successfully added address ::1 to loopback interface
+[   43.957922] systemd[1]: Successfully brought loopback interface up
+[   43.960506] systemd[1]: Setting '/proc/sys/net/unix/max_dgram_qlen' to '512'
+[   43.963783] systemd[1]: Setting '/proc/sys/fs/file-max' to '9223372036854775807'
+[   43.966404] systemd[1]: Setting '/proc/sys/fs/nr_open' to '2147483584'
+[   43.967633] systemd[1]: Successfully bumped fs.nr_open to 2147483584
+[   43.968935] systemd[1]: OSC sequence for boot successfully written: \033]3008;start=65cf84d714154a4c9678f5efa7d71520;user=root;hostname=archlinux;machineid=9123fbe90a5b461e9cbf153ed0738cf8;bootid=3ba685e12ce04e288e85b3d4dd8e028a;pid=1;pidfdid=1;comm=systemd;type=boot\033\\
+[   43.976312] systemd[1]: Reading EFI variable /sys/firmware/efi/efivars/LoaderTimeInitUSec-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f.
+[   43.979364] systemd[1]: open("/sys/firmware/efi/efivars/LoaderTimeInitUSec-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f") failed: No such file or directory
+[   43.982520] systemd[1]: Failed to read LoaderTimeInitUSec: No such file or directory
+[   44.489629] systemd[1]: Loaded shared library 'libbpf.so.1' via dlopen().
+[   44.576431] systemd[1]: libbpf: prog 'sd_bind4': failed to attach to cgroup: -EBADF
+[   44.584825] systemd[1]: libbpf: prog 'sd_restrictif_i': failed to attach to cgroup: -EBADF
+[   44.596929] systemd[1]: libbpf: prog 'sd_bind_interface': failed to attach to cgroup: -EBADF
+[   44.603200] systemd[1]: Controller 'cpu' supported: yes
+[   44.612675] systemd[1]: Controller 'cpuacct' supported: no
+[   44.615470] systemd[1]: Controller 'cpuset' supported: yes
+[   44.619292] systemd[1]: Controller 'io' supported: yes
+[   44.621672] systemd[1]: Controller 'blkio' supported: no
+[   44.625217] systemd[1]: Controller 'memory' supported: yes
+[   44.626730] systemd[1]: Controller 'devices' supported: no
+[   44.629486] systemd[1]: Controller 'pids' supported: yes
+[   44.630877] systemd[1]: Controller 'bpf-firewall' supported: yes
+[   44.633618] systemd[1]: Controller 'bpf-devices' supported: yes
+[   44.637184] systemd[1]: Controller 'bpf-foreign' supported: yes
+[   44.639190] systemd[1]: Controller 'bpf-socket-bind' supported: yes
+[   44.640480] systemd[1]: Controller 'bpf-restrict-network-interfaces' supported: yes
+[   44.641768] systemd[1]: Controller 'bpf-bind-network-interface' supported: yes
+[   44.643418] systemd[1]: Set up TFD_TIMER_CANCEL_ON_SET timerfd.
+[   44.650026] systemd[1]: Failed to stat /etc/localtime, ignoring: No such file or directory
+[   44.653082] systemd[1]: /etc/localtime doesn't exist yet, watching /etc instead.
+[   44.699754] systemd[1]: bpf-restrict-fs: LSM BPF program attached
+[   44.705549] systemd[1]: Using systemd-executor binary /usr/lib/systemd/systemd-executor.
+[   44.708099] systemd[1]: Enabling (yes) showing of status (command line).
+[   44.719037] systemd[1]: Serializing environment-generators to memfd.
+[   44.723605] (environme[464]: Serializing 10-arch to memfd.
+[   44.724052] systemd[1]: Successfully forked off '(environment-generators)' as PID 464.
+[   44.727534] (environme[464]: About to execute /usr/lib/systemd/system-environment-generators/10-arch
+[   44.736872] (environme[464]: Successfully forked off '(exec-inner)' as PID 465.
+[   44.827278] (environme[464]: '/usr/lib/systemd/system-environment-generators/10-arch' succeeded.
+[   44.834291] systemd[1]: '(environment-generators)' succeeded.
+[   44.849965] systemd[1]: Successfully forked off '(sd-gens)' as PID 466.
+[   44.853134] (sd-gens)[466]: Successfully forked off '(generators)' as PID 467.
+[   44.853354] (generato[467]: About to execute /usr/lib/systemd/system-generators/nm-initrd-generator.sh
+[   44.854836] (generato[467]: Successfully forked off '(exec-inner)' as PID 468.
+[   44.855143] (generato[467]: About to execute /usr/lib/systemd/system-generators/systemd-bless-boot-generator
+[   44.855564] (generato[467]: Successfully forked off '(exec-inner)' as PID 469.
+[   44.870370] systemd-bless-boot-generator[469]: Skipping generator, not booted with boot counting in effect.
+[   44.876351] (generato[467]: About to execute /usr/lib/systemd/system-generators/systemd-clonesetup-generator
+[   44.904264] (generato[467]: Successfully forked off '(exec-inner)' as PID 473.
+[   44.911957] (generato[467]: About to execute /usr/lib/systemd/system-generators/systemd-cryptsetup-generator
+[   44.922313] (generato[467]: Successfully forked off '(exec-inner)' as PID 474.
+[   44.929310] (generato[467]: About to execute /usr/lib/systemd/system-generators/systemd-debug-generator
+[   44.938817] (generato[467]: Successfully forked off '(exec-inner)' as PID 475.
+[   44.947602] (generato[467]: About to execute /usr/lib/systemd/system-generators/systemd-factory-reset-generator
+[   44.952878] (generato[467]: Successfully forked off '(exec-inner)' as PID 476.
+[   44.957129] (generato[467]: About to execute /usr/lib/systemd/system-generators/systemd-fstab-generator
+[   44.960498] systemd-factory-reset-generator[476]: Reading EFI variable /sys/firmware/efi/efivars/FactoryResetRequest-8cf2644b-4b0b-428f-9387-6d876050dc67.
+[   44.968122] (generato[467]: Successfully forked off '(exec-inner)' as PID 477.
+[   44.971148] systemd-factory-reset-generator[476]: open("/sys/firmware/efi/efivars/FactoryResetRequest-8cf2644b-4b0b-428f-9387-6d876050dc67") failed: No such file or directory
+[   44.971156] systemd-factory-reset-generator[476]: EFI variable FactoryResetRequest is not set, skipping.
+[   44.971160] systemd-factory-reset-generator[476]: Not in factory reset mode, skipping.
+[   44.983788] systemd-fstab-generator[477]: Parsing /etc/fstab...
+[   44.992440] (generato[467]: About to execute /usr/lib/systemd/system-generators/systemd-getty-generator
+[   44.995145] (generato[467]: Successfully forked off '(exec-inner)' as PID 478.
+[   45.000875] systemd-fstab-generator[477]: Loaded shared library 'libmount.so.1' via dlopen().
+[   45.001643] systemd-getty-generator[478]: Checking credentials for configuration...
+[   45.005812] (generato[467]: About to execute /usr/lib/systemd/system-generators/systemd-gpt-auto-generator
+[   45.036294] (generato[467]: Successfully forked off '(exec-inner)' as PID 479.
+[   45.040650] (generato[467]: About to execute /usr/lib/systemd/system-generators/systemd-hibernate-resume-generator
+[   45.045522] (generato[467]: Successfully forked off '(exec-inner)' as PID 480.
+[   45.050239] systemd-gpt-auto-generator[479]: Reading EFI variable /sys/firmware/efi/efivars/LoaderDevicePartUUID-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f.
+[   45.060618] (generato[467]: About to execute /usr/lib/systemd/system-generators/systemd-imds-generator
+[   45.062272] systemd-gpt-auto-generator[479]: Adding /: /dev/gpt-auto-root fstype=(any)
+[   45.065097] (generato[467]: Successfully forked off '(exec-inner)' as PID 481.
+[   45.069047] systemd-gpt-auto-generator[479]: Failed to open '/usr/.systemd-sysext': No such file or directory
+[   45.073798] systemd-hibernate-resume-generator[480]: Not running in initrd, exiting.
+[   45.075347] systemd-imds-generator[481]: Constructed SMBIOS modalias string: dmi:bvninnotekGmbH:bvrVirtualBox:bd12/01/2006:br0.1:efr0.1:svninnotekGmbH:pnVirtualBox:pvr1.2:rvnOracleCorporation:rnVirtualBox:rvr1.2:cvnOracleCorporation:ct1:cvr:sku:pfaVirtualMachine:
+[   45.075856] systemd-gpt-auto-generator[479]: Neither root nor /usr/ file system are on a (single) block device.
+[   45.077767] systemd-imds-generator[481]: Trying to open "/etc/systemd/hwdb/hwdb.bin"...
+[   45.084873] systemd-gpt-auto-generator[479]: Skipping automatic GPT dissection logic, root file system not backed by a (single) whole block device.
+[   45.086652] (generato[467]: About to execute /usr/lib/systemd/system-generators/systemd-import-generator
+[   45.093413] systemd-imds-generator[481]: Trying to open "/etc/udev/hwdb.bin"...
+[   45.102683] (generato[467]: Successfully forked off '(exec-inner)' as PID 482.
+[   45.105257] systemd-imds-generator[481]: Trying to open "/usr/lib/systemd/hwdb/hwdb.bin"...
+[   45.110783] (generato[467]: About to execute /usr/lib/systemd/system-generators/systemd-integritysetup-generator
+[   45.111606] systemd-imds-generator[481]: Trying to open "/usr/lib/udev/hwdb.bin"...
+[   45.119937] (generato[467]: Successfully forked off '(exec-inner)' as PID 483.
+[   45.133974] systemd-imds-generator[481]: === trie on-disk ===
+[   45.139281] (generato[467]: About to execute /usr/lib/systemd/system-generators/systemd-run-generator
+[   45.139773] systemd-imds-generator[481]: tool version:          262
+[   45.139781] systemd-imds-generator[481]: file size:        14042603 bytes
+[   45.139783] systemd-imds-generator[481]: header size             80 bytes
+[   45.139798] systemd-imds-generator[481]: strings            2902595 bytes
+[   45.139799] systemd-imds-generator[481]: nodes             11139928 bytes
+[   45.175256] (generato[467]: Successfully forked off '(exec-inner)' as PID 484.
+[   45.180658] (generato[467]: About to execute /usr/lib/systemd/system-generators/systemd-ssh-generator
+[   45.183880] (generato[467]: Successfully forked off '(exec-inner)' as PID 485.
+[   45.187683] (generato[467]: About to execute /usr/lib/systemd/system-generators/systemd-system-update-generator
+[   45.196786] (generato[467]: Successfully forked off '(exec-inner)' as PID 486.
+[   45.200899] (generato[467]: About to execute /usr/lib/systemd/system-generators/systemd-tpm2-generator
+[   45.205086] (generato[467]: Successfully forked off '(exec-inner)' as PID 487.
+[   45.208693] (generato[467]: About to execute /usr/lib/systemd/system-generators/systemd-veritysetup-generator
+[   45.209458] systemd-ssh-generator[485]: Virtualization VirtualBox found in DMI (/sys/class/dmi/id/product_name)
+[   45.210458] systemd-tpm2-generator[487]: Reading EFI variable /sys/firmware/efi/efivars/LoaderTpm2ActivePcrBanks-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f.
+[   45.223262] systemd-ssh-generator[485]: Found VM virtualization oracle
+[   45.223280] (generato[467]: Successfully forked off '(exec-inner)' as PID 488.
+[   45.229416] (generato[467]: '/usr/lib/systemd/system-generators/systemd-hibernate-resume-generator' succeeded.
+[   45.231484] systemd-imds-generator[481]: IMDS_VENDOR= property for DMI device not set, assuming IMDS is not available.
+[   45.237318] (generato[467]: '/usr/lib/systemd/system-generators/systemd-gpt-auto-generator' succeeded.
+[   45.243946] systemd-imds-generator[481]: IMDS not enabled, skipping generator.
+[   45.249933] (generato[467]: '/usr/lib/systemd/system-generators/systemd-import-generator' succeeded.
+[   45.271232] systemd-tpm2-generator[487]: Loaded shared library 'libtss2-esys.so.0' via dlopen().
+[   45.280093] systemd-tpm2-generator[487]: Loaded shared library 'libtss2-rc.so.0' via dlopen().
+[   45.284484] systemd-tpm2-generator[487]: Loaded shared library 'libtss2-mu.so.0' via dlopen().
+[   45.287459] systemd-tpm2-generator[487]: Not generating tpm2.target synchronization point, as firmware reports no TPM2 present.
+[   45.291091] Guest personality initialized and is inactive
+[   45.293604] VMCI host device registered (name=vmci, major=10, minor=263)
+[   45.297167] (generato[467]: '/usr/lib/systemd/system-generators/systemd-tpm2-generator' succeeded.
+[   45.300261] Initialized host personality
+[   45.303286] (generato[467]: '/usr/lib/systemd/system-generators/systemd-bless-boot-generator' succeeded.
+[   45.316015] (generato[467]: '/usr/lib/systemd/system-generators/systemd-debug-generator' succeeded.
+[   45.320565] (generato[467]: '/usr/lib/systemd/system-generators/systemd-cryptsetup-generator' succeeded.
+[   45.331921] (generato[467]: '/usr/lib/systemd/system-generators/systemd-integritysetup-generator' succeeded.
+[   45.337128] (generato[467]: '/usr/lib/systemd/system-generators/systemd-fstab-generator' succeeded.
+[   45.341043] NET: Registered PF_VSOCK protocol family
+[   46.335525] systemd-ssh-generator[485]: Local AF_VSOCK CID: 1
+[   46.338214] systemd-ssh-generator[485]: IOCTL_VM_SOCKETS_GET_LOCAL_CID returned special value (1), ignoring.
+[   46.346689] systemd-ssh-generator[485]: Binding SSH to AF_UNIX socket /run/ssh-unix-local/socket.
+[   46.354258] systemd-ssh-generator[485]: → connect via 'ssh .host' locally
+[   46.358356] systemd-ssh-generator[485]: Not running in container, not listening on /run/host/unix-export/ssh
+[   46.367685] (generato[467]: '/usr/lib/systemd/system-generators/systemd-ssh-generator' succeeded.
+[   46.370728] (generato[467]: '/usr/lib/systemd/system-generators/systemd-run-generator' succeeded.
+[   46.375517] (generato[467]: '/usr/lib/systemd/system-generators/systemd-veritysetup-generator' succeeded.
+[   46.379474] (generato[467]: '/usr/lib/systemd/system-generators/systemd-imds-generator' succeeded.
+[   46.383317] (generato[467]: '/usr/lib/systemd/system-generators/systemd-clonesetup-generator' succeeded.
+[   46.388271] (generato[467]: '/usr/lib/systemd/system-generators/systemd-system-update-generator' succeeded.
+[   46.392577] (generato[467]: '/usr/lib/systemd/system-generators/systemd-factory-reset-generator' succeeded.
+[   46.397636] (generato[467]: '/usr/lib/systemd/system-generators/nm-initrd-generator.sh' succeeded.
+[   46.403222] (generato[467]: '/usr/lib/systemd/system-generators/systemd-getty-generator' succeeded.
+[   46.409700] (sd-gens)[466]: '(generators)' succeeded.
+[   46.414311] systemd[1]: '(sd-gens)' succeeded.
+[   46.420664] systemd[1]: Applying preset policy.
+[   46.429546] systemd[1]: Skipping autovt@.service because it is an alias for getty@.service.
+[   46.433350] systemd[1]: Preset files say disable sshd-unix-local.socket.
+[   46.438601] systemd[1]: Skipping sshd-unix-local@.service because it is an alias for sshd@.service.
+[   46.445715] systemd[1]: Linked unit file: /run/systemd/generator/NetworkManager-wait-online-initrd.service → /dev/null
+[   46.451930] systemd[1]: Preset files say disable NetworkManager-wait-online-initrd.service.
+[   46.454179] systemd[1]: Linked unit file: /run/systemd/generator/NetworkManager-wait-online-initrd.service → /dev/null
+[   46.457677] systemd[1]: Linked unit file: /run/systemd/generator/NetworkManager-initrd.service → /dev/null
+[   46.469811] systemd[1]: Preset files say disable NetworkManager-initrd.service.
+[   46.477002] systemd[1]: Linked unit file: /run/systemd/generator/NetworkManager-initrd.service → /dev/null
+[   46.484723] systemd[1]: Linked unit file: /run/systemd/generator/NetworkManager-config-initrd.service → /dev/null
+[   46.487480] systemd[1]: Preset files say disable NetworkManager-config-initrd.service.
+[   46.491385] systemd[1]: Linked unit file: /run/systemd/generator/NetworkManager-config-initrd.service → /dev/null
+[   46.500975] systemd[1]: Preset files say disable NetworkManager-dispatcher.service.
+[   46.513455] systemd[1]: Preset files say disable NetworkManager-wait-online.service.
+[   46.516188] systemd[1]: Preset files say disable NetworkManager.service.
+[   46.518459] systemd[1]: Preset files say disable alsa-card-wait@.service.
+[   46.520836] systemd[1]: Preset files say disable alsa-restore.service.
+[   46.524420] systemd[1]: Preset files say disable alsa-state.service.
+[   46.526509] systemd[1]: Preset files say disable archlinux-keyring-wkd-sync.service.
+[   46.530326] systemd[1]: Preset files say disable archlinux-keyring-wkd-sync.timer.
+[   46.536561] systemd[1]: Preset files say disable arptables.service.
+[   46.539047] systemd[1]: Preset files say disable audit-rules.service.
+[   46.541246] systemd[1]: Preset files say disable auditd.service.
+[   46.544747] systemd[1]: Preset files say disable avahi-daemon.service.
+[   46.547016] systemd[1]: Preset files say disable avahi-daemon.socket.
+[   46.549133] systemd[1]: Preset files say disable avahi-dnsconfd.service.
+[   46.551092] systemd[1]: Preset files say disable basic.target.
+[   46.554828] systemd[1]: Preset files say disable blockdev@.target.
+[   46.557030] systemd[1]: Preset files say disable bluetooth.target.
+[   46.558687] systemd[1]: Preset files say disable boot-complete.target.
+[   46.560127] systemd[1]: Preset files say disable breakpoint-pre-basic.service.
+[   46.562241] systemd[1]: Preset files say disable breakpoint-pre-mount.service.
+[   46.564030] systemd[1]: Preset files say disable breakpoint-pre-switch-root.service.
+[   46.567943] systemd[1]: Preset files say disable breakpoint-pre-udev.service.
+[   46.569908] systemd[1]: Preset files say disable btrfs-scrub@.service.
+[   46.571661] systemd[1]: Preset files say disable btrfs-scrub@.timer.
+[   46.573081] systemd[1]: Preset files say disable canberra-system-bootup.service.
+[   46.577079] systemd[1]: Preset files say disable canberra-system-shutdown-reboot.service.
+[   46.579332] systemd[1]: Preset files say disable canberra-system-shutdown.service.
+[   46.581646] systemd[1]: Preset files say disable capsule.slice.
+[   46.583429] systemd[1]: Preset files say disable capsule@.service.
+[   46.585937] systemd[1]: Preset files say disable clonesetup.target.
+[   46.588094] systemd[1]: Preset files say disable console-getty.service.
+[   46.589975] systemd[1]: Preset files say disable container-getty@.service.
+[   46.591680] systemd[1]: Preset files say disable cryptsetup-pre.target.
+[   46.593169] systemd[1]: Preset files say disable cryptsetup.target.
+[   46.597968] systemd[1]: Skipping ctrl-alt-del.target because it is an alias for reboot.target.
+[   46.604507] systemd[1]: Preset files say disable dbus-broker.service.
+[   46.614521] systemd[1]: Skipping dbus-org.freedesktop.hostname1.service because it is an alias for systemd-hostnamed.service.
+[   46.627138] systemd[1]: Skipping dbus-org.freedesktop.import1.service because it is an alias for systemd-importd.service.
+[   46.634095] systemd[1]: Skipping dbus-org.freedesktop.locale1.service because it is an alias for systemd-localed.service.
+[   46.644497] systemd[1]: Skipping dbus-org.freedesktop.login1.service because it is an alias for systemd-logind.service.
+[   46.651433] systemd[1]: Skipping dbus-org.freedesktop.machine1.service because it is an alias for systemd-machined.service.
+[   46.659010] systemd[1]: Skipping dbus-org.freedesktop.portable1.service because it is an alias for systemd-portabled.service.
+[   46.667015] systemd[1]: Skipping dbus-org.freedesktop.sysupdate1.service because it is an alias for systemd-sysupdated.service.
+[   46.671072] systemd[1]: Skipping dbus-org.freedesktop.timedate1.service because it is an alias for systemd-timedated.service.
+[   46.674602] systemd[1]: Skipping dbus.service because it is an alias for dbus-broker.service.
+[   46.676946] systemd[1]: Preset files say disable dbus.socket.
+[   46.680047] systemd[1]: Preset files say disable debug-shell.service.
+[   46.687077] systemd[1]: Skipping default.target because it is an alias for graphical.target.
+[   46.692459] systemd[1]: Preset files say disable dev-hugepages.mount.
+[   46.697703] systemd[1]: Preset files say disable dev-mqueue.mount.
+[   46.700741] systemd[1]: Preset files say disable dirmngr@.service.
+[   46.704330] systemd[1]: Preset files say disable dirmngr@.socket.
+[   46.706294] systemd[1]: Preset files say disable dm-event.service.
+[   46.708215] systemd[1]: Preset files say disable dm-event.socket.
+[   46.709966] systemd[1]: Preset files say disable e2scrub@.service.
+[   46.711811] systemd[1]: Preset files say disable e2scrub_all.service.
+[   46.715413] systemd[1]: Preset files say disable e2scrub_all.timer.
+[   46.717614] systemd[1]: Preset files say disable e2scrub_fail@.service.
+[   46.720512] systemd[1]: Preset files say disable e2scrub_reap.service.
+[   46.722097] systemd[1]: Preset files say disable ebtables.service.
+[   46.726070] systemd[1]: Preset files say disable emergency.service.
+[   46.728840] systemd[1]: Preset files say disable emergency.target.
+[   46.731329] systemd[1]: Preset files say disable exit.target.
+[   46.734429] systemd[1]: Preset files say disable factory-reset-now.target.
+[   46.739191] systemd[1]: Preset files say disable factory-reset.target.
+[   46.741612] systemd[1]: Preset files say disable fancontrol.service.
+[   46.743834] systemd[1]: Preset files say disable final.target.
+[   46.747449] systemd[1]: Preset files say disable first-boot-complete.target.
+[   46.749380] systemd[1]: Preset files say disable fstrim.service.
+[   46.753256] systemd[1]: Preset files say disable fstrim.timer.
+[   46.755523] systemd[1]: Preset files say disable getty-pre.target.
+[   46.757591] systemd[1]: Preset files say disable getty.target.
+[   46.759537] systemd[1]: Preset files say enable getty@.service.
+[   46.765079] systemd[1]: Preset files say disable git-daemon.socket.
+[   46.773703] systemd[1]: Preset files say disable git-daemon@.service.
+[   46.775891] systemd[1]: Preset files say disable gpg-agent-browser@.socket.
+[   46.778210] systemd[1]: Preset files say disable gpg-agent-extra@.socket.
+[   46.780470] systemd[1]: Preset files say disable gpg-agent-ssh@.socket.
+[   46.782065] systemd[1]: Preset files say disable gpg-agent@.service.
+[   46.783957] systemd[1]: Preset files say disable gpg-agent@.socket.
+[   46.785782] systemd[1]: Preset files say disable gpm.path.
+[   46.788546] systemd[1]: Preset files say disable gpm.service.
+[   46.790464] systemd[1]: Preset files say disable gpsd.service.
+[   46.791921] systemd[1]: Preset files say disable gpsd.socket.
+[   46.793599] systemd[1]: Preset files say disable gpsdctl@.service.
+[   46.795600] systemd[1]: Preset files say disable graphical.target.
+[   46.796995] systemd[1]: Preset files say disable halt.target.
+[   46.799433] systemd[1]: Preset files say disable healthd.service.
+[   46.801878] systemd[1]: Preset files say disable hibernate.target.
+[   46.803390] systemd[1]: Preset files say disable hybrid-sleep.target.
+[   46.805471] systemd[1]: Preset files say disable imports-pre.target.
+[   46.807328] systemd[1]: Preset files say disable imports.target.
+[   46.808914] systemd[1]: Preset files say disable initrd-cleanup.service.
+[   46.811292] systemd[1]: Preset files say disable initrd-fs.target.
+[   46.813499] systemd[1]: Preset files say disable initrd-parse-etc.service.
+[   46.815395] systemd[1]: Preset files say disable initrd-root-device.target.
+[   46.817067] systemd[1]: Preset files say disable initrd-root-fs.target.
+[   46.819027] systemd[1]: Preset files say disable initrd-switch-root.service.
+[   46.822126] systemd[1]: Preset files say disable initrd-switch-root.target.
+[   46.823779] systemd[1]: Too many messages being logged to kmsg, ignoring
+[   47.655744] (mount)[492]: dev-hugepages.mount: Loaded shared library 'libbpf.so.1' via dlopen().
+[   47.655921] (mount)[493]: dev-mqueue.mount: Loaded shared library 'libbpf.so.1' via dlopen().
+[   47.656618] (mount)[494]: sys-kernel-debug.mount: Loaded shared library 'libbpf.so.1' via dlopen().
+[   47.676489] (mount)[495]: sys-kernel-tracing.mount: Loaded shared library 'libbpf.so.1' via dlopen().
+[   47.701707] (mount)[496]: tmp.mount: Loaded shared library 'libbpf.so.1' via dlopen().
+[   47.701739] (mount)[492]: dev-hugepages.mount: Loaded shared library 'libcryptsetup.so.12' via dlopen().
+[   47.708480] (mount)[494]: sys-kernel-debug.mount: Loaded shared library 'libcryptsetup.so.12' via dlopen().
+[   47.711772] (mount)[496]: tmp.mount: Loaded shared library 'libcryptsetup.so.12' via dlopen().
+[   47.712768] (mount)[496]: tmp.mount: Loaded shared library 'libmount.so.1' via dlopen().
+[   47.712871] (mount)[496]: tmp.mount: Loaded shared library 'libseccomp.so.2' via dlopen().
+[   47.714249] (kmod)[497]: kmod-static-nodes.service: Loaded shared library 'libbpf.so.1' via dlopen().
+[   47.714401] (mount)[492]: dev-hugepages.mount: Loaded shared library 'libmount.so.1' via dlopen().
+[   47.714577] (mount)[492]: dev-hugepages.mount: Loaded shared library 'libseccomp.so.2' via dlopen().
+[   47.723553] (mount)[495]: sys-kernel-tracing.mount: Loaded shared library 'libcryptsetup.so.12' via dlopen().
+[   47.725952] (kmod)[497]: kmod-static-nodes.service: Loaded shared library 'libcryptsetup.so.12' via dlopen().
+[   47.730091] (mount)[495]: sys-kernel-tracing.mount: Loaded shared library 'libmount.so.1' via dlopen().
+[   47.733570] (mount)[498]: sys-kernel-config.mount: Loaded shared library 'libbpf.so.1' via dlopen().
+[   47.733738] (kmod)[497]: kmod-static-nodes.service: Loaded shared library 'libmount.so.1' via dlopen().
+[   47.733860] (kmod)[497]: kmod-static-nodes.service: Loaded shared library 'libseccomp.so.2' via dlopen().
+[   47.734663] (mount)[494]: sys-kernel-debug.mount: Loaded shared library 'libmount.so.1' via dlopen().
+[   47.734775] (mount)[494]: sys-kernel-debug.mount: Loaded shared library 'libseccomp.so.2' via dlopen().
+[   47.735125] (mount)[493]: dev-mqueue.mount: Loaded shared library 'libcryptsetup.so.12' via dlopen().
+[   47.735777] (mount)[493]: dev-mqueue.mount: Loaded shared library 'libmount.so.1' via dlopen().
+[   47.742979] (mount)[495]: sys-kernel-tracing.mount: Loaded shared library 'libseccomp.so.2' via dlopen().
+[   47.744643] (mount)[493]: dev-mqueue.mount: Loaded shared library 'libseccomp.so.2' via dlopen().
+[   47.744740] (mount)[498]: sys-kernel-config.mount: Loaded shared library 'libcryptsetup.so.12' via dlopen().
+[   47.746457] (mount)[492]: dev-hugepages.mount: Shared library 'libcrypto.so.4' is not available: libcrypto.so.4: cannot open shared object file: No such file or directory
+[   47.746628] (mount)[496]: tmp.mount: Shared library 'libcrypto.so.4' is not available: libcrypto.so.4: cannot open shared object file: No such file or directory
+[   47.746665] (mount)[496]: tmp.mount: Loaded shared library 'libcrypto.so.3' via dlopen().
+[   47.747498] (mount)[496]: tmp.mount: tmp.mount: Executing: /usr/bin/mount tmpfs /tmp -t tmpfs -o mode=1777,strictatime,nosuid,nodev,size=50%,nr_inodes=1m,usrquota
+[   47.747876] (mount)[492]: dev-hugepages.mount: Loaded shared library 'libcrypto.so.3' via dlopen().
+[   47.750038] (mount)[495]: sys-kernel-tracing.mount: Shared library 'libcrypto.so.4' is not available: libcrypto.so.4: cannot open shared object file: No such file or directory
+[   47.750073] (mount)[495]: sys-kernel-tracing.mount: Loaded shared library 'libcrypto.so.3' via dlopen().
+[   47.750773] (mount)[498]: sys-kernel-config.mount: Loaded shared library 'libmount.so.1' via dlopen().
+[   47.752096] (mount)[495]: sys-kernel-tracing.mount: sys-kernel-tracing.mount: Executing: /usr/bin/mount tracefs /sys/kernel/tracing -t tracefs -o nosuid,nodev,noexec
+[   47.753260] (kmod)[497]: kmod-static-nodes.service: Shared library 'libcrypto.so.4' is not available: libcrypto.so.4: cannot open shared object file: No such file or directory
+[   47.754332] (mount)[498]: sys-kernel-config.mount: Loaded shared library 'libseccomp.so.2' via dlopen().
+[   47.756314] (kmod)[497]: kmod-static-nodes.service: Loaded shared library 'libcrypto.so.3' via dlopen().
+[   47.757372] (mount)[492]: dev-hugepages.mount: dev-hugepages.mount: Executing: /usr/bin/mount hugetlbfs /dev/hugepages -t hugetlbfs -o nosuid,nodev
+[   47.757586] (kmod)[497]: kmod-static-nodes.service: kmod-static-nodes.service: Executing: /usr/bin/kmod static-nodes --format=tmpfiles --output=/run/tmpfiles.d/static-nodes.conf
+[   47.759794] (mount)[498]: sys-kernel-config.mount: Shared library 'libcrypto.so.4' is not available: libcrypto.so.4: cannot open shared object file: No such file or directory
+[   47.764430] (mount)[494]: sys-kernel-debug.mount: Shared library 'libcrypto.so.4' is not available: libcrypto.so.4: cannot open shared object file: No such file or directory
+[   47.767595] (mount)[493]: dev-mqueue.mount: Shared library 'libcrypto.so.4' is not available: libcrypto.so.4: cannot open shared object file: No such file or directory
+[   47.776651] (mount)[494]: sys-kernel-debug.mount: Loaded shared library 'libcrypto.so.3' via dlopen().
+[   47.777296] (mount)[493]: dev-mqueue.mount: Loaded shared library 'libcrypto.so.3' via dlopen().
+[   47.780974] (mount)[494]: sys-kernel-debug.mount: sys-kernel-debug.mount: Executing: /usr/bin/mount debugfs /sys/kernel/debug -t debugfs -o nosuid,nodev,noexec
+[   47.781977] (mount)[493]: dev-mqueue.mount: dev-mqueue.mount: Executing: /usr/bin/mount mqueue /dev/mqueue -t mqueue -o nosuid,nodev,noexec
+[   47.784282] (mount)[498]: sys-kernel-config.mount: Loaded shared library 'libcrypto.so.3' via dlopen().
+[   47.879802] (mount)[498]: sys-kernel-config.mount: sys-kernel-config.mount: Executing: /usr/bin/mount configfs /sys/kernel/config -t configfs -o nosuid,nodev,noexec
+[   48.488861] (mount)[499]: sys-fs-fuse-connections.mount: Loaded shared library 'libbpf.so.1' via dlopen().
+[   48.489916] systemd[1]: systemd-journald.service: Passing 4 fds to service
+[   48.496618] (mount)[499]: sys-fs-fuse-connections.mount: Loaded shared library 'libcryptsetup.so.12' via dlopen().
+[   48.502716] systemd[1]: systemd-journald.service: About to execute: /usr/lib/systemd/systemd-journald
+[   48.508981] (mount)[499]: sys-fs-fuse-connections.mount: Loaded shared library 'libmount.so.1' via dlopen().
+[   48.512782] systemd[1]: Serializing sd-executor-state to memfd.
+[   48.516248] systemd[1]: systemd-journald.service: Forked /usr/lib/systemd/systemd-journald as 500 (via CLONE_INTO_CGROUP)
+[   48.516310] systemd[1]: Closing set fd 99 (socket:[1589])
+[   48.516319] systemd[1]: Closing set fd 98 (socket:[1590])
+[   48.516326] systemd[1]: Closing set fd 101 (socket:[1592])
+[   48.517387] systemd[1]: Closing set fd 100 (socket:[1591])
+[   48.517424] systemd[1]: Closing set fd 104 (socket:[1564])
+[   48.517448] systemd[1]: Closing set fd 103 (socket:[1568])
+[   48.525703] (mount)[499]: sys-fs-fuse-connections.mount: Loaded shared library 'libseccomp.so.2' via dlopen().
+[   48.530377] systemd[1]: Closing set fd 102 (socket:[1566])
+[   48.532615] (mount)[499]: sys-fs-fuse-connections.mount: Shared library 'libcrypto.so.4' is not available: libcrypto.so.4: cannot open shared object file: No such file or directory
+[   48.534912] systemd[1]: systemd-journald.service: Changed dead -> start
+[   48.537814] (mount)[499]: sys-fs-fuse-connections.mount: Loaded shared library 'libcrypto.so.3' via dlopen().
+[   48.538092] (mount)[499]: sys-fs-fuse-connections.mount: sys-fs-fuse-connections.mount: Executing: /usr/bin/mount fusectl /sys/fs/fuse/connections -t fusectl -o nosuid,nodev,noexec
+[   48.582188] systemd[1]: Starting Journal Service...
+[   48.585932] systemd[1]: systemd-logind.service: starting held back, waiting for: systemd-remount-fs.service
+[   48.590744] systemd[1]: systemd-machine-id-commit.service: starting held back, waiting for: local-fs.target
+[   48.592430] (stemd-journald)[500]: systemd-journald.service: Successfully forked off '(sd-mkuserns)' as PID 501.
+[   48.592593] (sd-mkuserns)[501]: systemd-journald.service: PR_SET_MM_ARG_END failed, proceeding without: Operation not permitted
+[   48.596852] systemd[1]: systemd-modules-load.service: ConditionKernelCommandLine=|rd.modules_load failed.
+[   48.622878] (stemd-journald)[500]: systemd-journald.service: ID-mapping is supported for exec directory /run/systemd/journal
+[   48.623424] systemd[1]: systemd-modules-load.service: ConditionKernelCommandLine=|rd.modules-load failed.
+[   48.630444] (stemd-journald)[500]: systemd-journald.service: Credential search path is: /etc/credstore:/run/credstore:/usr/local/lib/credstore:/usr/lib/credstore
+[   48.631552] (stemd-journald)[500]: systemd-journald.service: Credential search path is: /etc/credstore.encrypted:/run/credstore.encrypted:/usr/local/lib/credstore.encrypted:/usr/lib/credstore.encrypted
+[   48.633059] systemd[1]: systemd-modules-load.service: ConditionKernelCommandLine=|modules_load failed.
+[   48.633076] systemd[1]: systemd-modules-load.service: ConditionKernelCommandLine=|modules-load failed.
+[   48.633089] systemd[1]: systemd-modules-load.service: ConditionDirectoryNotEmpty=|/run/modules-load.d failed.
+[   48.636616] systemd[1]: systemd-modules-load.service: ConditionDirectoryNotEmpty=|/etc/modules-load.d failed.
+[   48.651878] (stemd-journald)[500]: systemd-journald.service: Loaded shared library 'libacl.so.1' via dlopen().
+[   48.656902] systemd[1]: systemd-modules-load.service: ConditionDirectoryNotEmpty=|/usr/local/lib/modules-load.d failed.
+[   48.665107] (stemd-journald)[500]: systemd-journald.service: Successfully reconfigured credentials fs to be read only.
+[   48.670002] systemd[1]: systemd-modules-load.service: ConditionDirectoryNotEmpty=|/usr/lib/modules-load.d failed.
+[   48.678276] (stemd-journald)[500]: systemd-journald.service: Loaded shared library 'libbpf.so.1' via dlopen().
+[   48.681557] systemd[1]: systemd-modules-load.service: ConditionDirectoryNotEmpty=|/lib/modules-load.d failed.
+[   48.688583] (stemd-journald)[500]: systemd-journald.service: Loaded shared library 'libcryptsetup.so.12' via dlopen().
+[   48.690925] systemd[1]: systemd-modules-load.service: ConditionCapability=CAP_SYS_MODULE succeeded.
+[   48.696281] (stemd-journald)[500]: systemd-journald.service: Loaded shared library 'libmount.so.1' via dlopen().
+[   48.698388] systemd[1]: systemd-modules-load.service: Starting requested but condition not met. Not starting unit.
+[   48.701117] (stemd-journald)[500]: systemd-journald.service: Loaded shared library 'libseccomp.so.2' via dlopen().
+[   48.702093] systemd[1]: systemd-modules-load.service: Job 35 systemd-modules-load.service/start finished, result=done
+[   48.704116] (stemd-journald)[500]: systemd-journald.service: Shared library 'libcrypto.so.4' is not available: libcrypto.so.4: cannot open shared object file: No such file or directory
+[   48.704162] (stemd-journald)[500]: systemd-journald.service: Loaded shared library 'libcrypto.so.3' via dlopen().
+[   48.706627] (stemd-journald)[500]: systemd-journald.service: Enabled MemoryDenyWriteExecute= with PR_SET_MDWE
+[   48.708482] systemd[1]: Load Kernel Modules skipped, no trigger condition checks were met.
+[   48.708530] systemd[1]: sysinit.target: starting held back, waiting for: sys-kernel-tracing.mount
+[   48.708632] systemd[1]: systemd-network-generator.service: Will spawn child (service_enter_start): /usr/lib/systemd/systemd-network-generator
+[   48.709446] systemd[1]: systemd-network-generator.service: Passing 0 fds to service
+[   48.709462] systemd[1]: systemd-network-generator.service: About to execute: /usr/lib/systemd/systemd-network-generator
+[   48.709480] systemd[1]: Serializing sd-executor-state to memfd.
+[   48.712168] systemd[1]: systemd-network-generator.service: Forked /usr/lib/systemd/systemd-network-generator as 502 (via CLONE_INTO_CGROUP)
+[   48.716950] (stemd-journald)[500]: systemd-journald.service: Restricting namespace to: .
+[   48.724902] systemd[1]: Closing set fd 99 (socket:[1566])
+[   48.728816] (stemd-journald)[500]: systemd-journald.service: SystemCallFilter= allow-list in effect; adding 'write' syscall required for exec handoff.
+[   48.731859] systemd[1]: Closing set fd 101 (socket:[1564])
+[   48.764852] (stemd-journald)[500]: systemd-journald.service: systemd-journald.service: Executing: /usr/lib/systemd/systemd-journald
+[   48.767606] systemd[1]: Closing set fd 100 (socket:[1568])
+[   48.774374] (work-generator)[502]: systemd-network-generator.service: Credential search path is: /etc/credstore:/run/credstore:/usr/local/lib/credstore:/usr/lib/credstore
+[   48.778716] systemd[1]: systemd-network-generator.service: Changed dead -> start
+[   48.779400] (work-generator)[502]: systemd-network-generator.service: Credential search path is: /etc/credstore.encrypted:/run/credstore.encrypted:/usr/local/lib/credstore.encrypted:/usr/lib/credstore.encrypted
+[   48.779434] (work-generator)[502]: systemd-network-generator.service: Credential search path is: /etc/credstore:/run/credstore:/usr/local/lib/credstore:/usr/lib/credstore
+[   48.779454] (work-generator)[502]: systemd-network-generator.service: Credential search path is: /etc/credstore.encrypted:/run/credstore.encrypted:/usr/local/lib/credstore.encrypted:/usr/lib/credstore.encrypted
+[   48.779471] (work-generator)[502]: systemd-network-generator.service: Credential search path is: /etc/credstore:/run/credstore:/usr/local/lib/credstore:/usr/lib/credstore
+[   48.779507] (work-generator)[502]: systemd-network-generator.service: Credential search path is: /etc/credstore.encrypted:/run/credstore.encrypted:/usr/local/lib/credstore.encrypted:/usr/lib/credstore.encrypted
+[   48.779715] (work-generator)[502]: systemd-network-generator.service: Loaded shared library 'libacl.so.1' via dlopen().
+[   48.779764] (work-generator)[502]: systemd-network-generator.service: Successfully reconfigured credentials fs to be read only.
+[   48.782762] systemd[1]: Starting Generate Network Units from Kernel Command Line...
+[   48.788607] (work-generator)[502]: systemd-network-generator.service: Loaded shared library 'libbpf.so.1' via dlopen().
+[   48.791267] systemd-journald[500]: Failed to read credential 'journal.forward_to_socket', ignoring: No such file or directory
+[   48.795579] (work-generator)[502]: systemd-network-generator.service: Loaded shared library 'libcryptsetup.so.12' via dlopen().
+[   48.799751] systemd-journald[500]: Failed to read credential journal.storage, ignoring: No such file or directory
+[   48.801433] (work-generator)[502]: systemd-network-generator.service: Loaded shared library 'libmount.so.1' via dlopen().
+[   48.813873] systemd-journald[500]: Collecting audit messages is enabled.
+[   48.815271] (work-generator)[502]: systemd-network-generator.service: Loaded shared library 'libseccomp.so.2' via dlopen().
+[   48.817329] systemd-journald[500]: Auditing in kernel is enabled.
+[   48.819644] (work-generator)[502]: systemd-network-generator.service: Shared library 'libcrypto.so.4' is not available: libcrypto.so.4: cannot open shared object file: No such file or directory
+[   48.824047] systemd-journald[500]: Fixed min_use=16M max_use=143.6M max_size=17.9M min_size=512K keep_free=71.8M n_max_files=100
+[   48.824315] (work-generator)[502]: systemd-network-generator.service: Loaded shared library 'libcrypto.so.3' via dlopen().
+[   48.827770] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[   48.831610] (work-generator)[502]: systemd-network-generator.service: systemd-network-generator.service: Executing: /usr/lib/systemd/systemd-network-generator
+[   48.917469] systemd[1]: systemd-networkd-persistent-storage.service: starting held back, waiting for: systemd-remount-fs.service
+[   48.928030] systemd-journald[500]: Reserving 32689 entries in data hash table.
+[   48.934437] systemd[1]: systemd-networkd.service: starting held back, waiting for: systemd-udevd.service
+[   48.935212] systemd-journald[500]: Journal effective settings seal=no keyed_hash=yes compress=zstd compress_threshold_bytes=512B
+[   48.935387] systemd-journald[500]: Vacuuming...
+[   48.935400] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /run/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   48.935407] systemd-journald[500]: Flushing /dev/kmsg...
+[   48.969283] systemd[1]: systemd-pcrfs-root.service: starting held back, waiting for: systemd-pcrmachine.service
+[   48.975936] systemd[1]: systemd-pcrmachine.service: ConditionSecurity=measured-os failed.
+[   48.985537] systemd[1]: systemd-pcrmachine.service: Starting requested but condition not met. Not starting unit.
+[   48.992560] systemd-journald[500]: systemd-journald running as PID 500 for the system.
+[   48.992875] systemd-journald[500]: Sent READY=1 notification.
+[   48.996429] systemd[1]: systemd-pcrmachine.service: Job 89 systemd-pcrmachine.service/start finished, result=done
+[   48.998089] systemd-journald[500]: Sent WATCHDOG=1 notification.
+[   49.005061] systemd[1]: TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-os
+[   49.008196] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   49.008707] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   49.011521] systemd[1]: sysinit.target: starting held back, waiting for: sys-kernel-tracing.mount
+[   49.021641] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   49.023848] systemd[1]: systemd-pcrfs-root.service: ConditionSecurity=measured-os failed.
+[   49.027383] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   49.031560] systemd[1]: systemd-pcrfs-root.service: Starting requested but condition not met. Not starting unit.
+[   49.032392] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   49.032649] systemd[1]: systemd-pcrfs-root.service: Job 1 systemd-pcrfs-root.service/start finished, result=done
+[   49.035976] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   49.037760] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   49.040322] systemd[1]: TPM PCR Root File System Measurement skipped, unmet condition check ConditionSecurity=measured-os
+[   49.042083] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   49.046113] systemd[1]: local-fs.target: starting held back, waiting for: var-lib-machines.mount
+[   49.050930] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   49.079124] systemd[1]: systemd-pcrnvdone.service: starting held back, waiting for: systemd-tpm2-setup-early.service
+[   49.087312] systemd[1]: systemd-pcrosseparator.service: ConditionSecurity=measured-os failed.
+[   49.091179] systemd[1]: systemd-pcrosseparator.service: Starting requested but condition not met. Not starting unit.
+[   49.100122] systemd[1]: systemd-pcrosseparator.service: Job 81 systemd-pcrosseparator.service/start finished, result=done
+[   49.107754] systemd[1]: TPM PCR OS Separator skipped, unmet condition check ConditionSecurity=measured-os
+[   49.114509] systemd[1]: cryptsetup.target: starting held back, waiting for: systemd-pcrnvdone.service
+[   49.121405] systemd[1]: sysinit.target: starting held back, waiting for: sys-kernel-tracing.mount
+[   49.126308] systemd[1]: systemd-pcrphase-sysinit.service: starting held back, waiting for: sysinit.target
+[   49.132768] systemd[1]: systemd-pcrphase.service: starting held back, waiting for: basic.target
+[   49.143426] systemd[1]: systemd-pcrproduct.service: starting held back, waiting for: systemd-pcrnvdone.service
+[   49.151704] systemd[1]: systemd-pstore.service: starting held back, waiting for: systemd-remount-fs.service
+[   49.156833] systemd[1]: systemd-random-seed.service: starting held back, waiting for: systemd-remount-fs.service
+[   49.162115] systemd[1]: systemd-remount-fs.service: Will spawn child (service_enter_start): /usr/lib/systemd/systemd-remount-fs
+[   49.171204] systemd[1]: systemd-remount-fs.service: Passing 0 fds to service
+[   49.176023] systemd[1]: systemd-remount-fs.service: About to execute: /usr/lib/systemd/systemd-remount-fs
+[   49.180479] systemd[1]: Serializing sd-executor-state to memfd.
+[   49.185219] systemd[1]: systemd-remount-fs.service: Forked /usr/lib/systemd/systemd-remount-fs as 503 (via CLONE_INTO_CGROUP)
+[   49.190861] systemd[1]: Closing set fd 101 (socket:[1568])
+[   49.194258] systemd[1]: Closing set fd 100 (socket:[1566])
+[   49.199856] systemd[1]: Closing set fd 102 (socket:[1564])
+[   49.204639] systemd[1]: systemd-remount-fs.service: Changed dead -> start
+[   49.208195] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   49.210036] systemd[1]: Starting Remount Root and Kernel File Systems...
+[   49.211285] (emd-remount-fs)[503]: systemd-remount-fs.service: Loaded shared library 'libbpf.so.1' via dlopen().
+[   49.224394] systemd[1]: systemd-repart.service: starting held back, waiting for: systemd-tmpfiles-setup-dev.service
+[   49.229886] (emd-remount-fs)[503]: systemd-remount-fs.service: Loaded shared library 'libcryptsetup.so.12' via dlopen().
+[   49.232218] systemd[1]: systemd-resolved.service: starting held back, waiting for: systemd-sysusers.service
+[   49.235580] (emd-remount-fs)[503]: systemd-remount-fs.service: Loaded shared library 'libmount.so.1' via dlopen().
+[   49.235834] (emd-remount-fs)[503]: systemd-remount-fs.service: Loaded shared library 'libseccomp.so.2' via dlopen().
+[   49.235900] (emd-remount-fs)[503]: systemd-remount-fs.service: Shared library 'libcrypto.so.4' is not available: libcrypto.so.4: cannot open shared object file: No such file or directory
+[   49.235937] (emd-remount-fs)[503]: systemd-remount-fs.service: Loaded shared library 'libcrypto.so.3' via dlopen().
+[   49.236314] (emd-remount-fs)[503]: systemd-remount-fs.service: systemd-remount-fs.service: Executing: /usr/lib/systemd/systemd-remount-fs
+[   49.266481] systemd[1]: systemd-sysctl.service: ConditionPathIsReadWrite=/proc/sys/net succeeded.
+[   49.272753] systemd[1]: systemd-sysctl.service: Will spawn child (service_enter_start): /usr/lib/systemd/systemd-sysctl
+[   49.278430] systemd[1]: systemd-sysctl.service: Passing 0 fds to service
+[   49.282044] systemd[1]: systemd-sysctl.service: About to execute: /usr/lib/systemd/systemd-sysctl
+[   49.286389] systemd[1]: Serializing sd-executor-state to memfd.
+[   49.292285] systemd[1]: systemd-sysctl.service: Forked /usr/lib/systemd/systemd-sysctl as 504 (via CLONE_INTO_CGROUP)
+[   49.297896] systemd[1]: Closing set fd 101 (socket:[1566])
+[   49.302311] systemd[1]: Closing set fd 104 (socket:[1564])
+[   49.306386] systemd[1]: Closing set fd 102 (socket:[1568])
+[   49.311197] systemd[1]: systemd-sysctl.service: Changed dead -> start
+[   49.313162] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   49.314322] systemd[1]: Starting Apply Kernel Variables...
+[   49.314569] (systemd-sysctl)[504]: systemd-sysctl.service: Credential search path is: /etc/credstore:/run/credstore:/usr/local/lib/credstore:/usr/lib/credstore
+[   49.336182] systemd[1]: systemd-sysext.service: starting held back, waiting for: systemd-confext.service
+[   49.339721] (systemd-sysctl)[504]: systemd-sysctl.service: Credential search path is: /etc/credstore.encrypted:/run/credstore.encrypted:/usr/local/lib/credstore.encrypted:/usr/lib/credstore.encrypted
+[   49.341338] systemd[1]: systemd-sysusers.service: starting held back, waiting for: systemd-tmpfiles-setup-dev-early.service
+[   49.341426] systemd[1]: systemd-timesyncd.service: starting held back, waiting for: systemd-remount-fs.service
+[   49.341433] systemd[1]: systemd-tmpfiles-setup-dev-early.service: starting held back, waiting for: kmod-static-nodes.service
+[   49.341440] systemd[1]: systemd-tmpfiles-setup-dev.service: starting held back, waiting for: systemd-tmpfiles-setup-dev-early.service
+[   49.341445] systemd[1]: systemd-tmpfiles-setup.service: starting held back, waiting for: systemd-sysusers.service
+[   49.341478] systemd[1]: systemd-tpm2-setup-early.service: ConditionPathExists=!/run/systemd/tpm2-srk-public-key.pem succeeded.
+[   49.350061] (systemd-sysctl)[504]: systemd-sysctl.service: Loaded shared library 'libacl.so.1' via dlopen().
+[   49.354807] systemd[1]: systemd-tpm2-setup-early.service: ConditionSecurity=measured-os failed.
+[   49.354899] systemd[1]: systemd-tpm2-setup-early.service: Starting requested but condition not met. Not starting unit.
+[   49.354922] systemd[1]: systemd-tpm2-setup-early.service: Job 22 systemd-tpm2-setup-early.service/start finished, result=done
+[   49.354927] systemd[1]: Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-os
+[   49.355087] systemd[1]: sysinit.target: starting held back, waiting for: sys-kernel-tracing.mount
+[   49.355153] systemd[1]: systemd-pcrnvdone.service: ConditionPathExists=/etc/initrd-release failed.
+[   49.358597] (systemd-sysctl)[504]: systemd-sysctl.service: Successfully reconfigured credentials fs to be read only.
+[   49.364589] systemd[1]: systemd-pcrnvdone.service: Starting requested but condition not met. Not starting unit.
+[   49.364607] systemd[1]: systemd-pcrnvdone.service: Job 67 systemd-pcrnvdone.service/start finished, result=done
+[   49.364657] systemd[1]: TPM PCR NvPCR Initialization Separator skipped, unmet condition check ConditionPathExists=/etc/initrd-release
+[   49.364697] systemd[1]: cryptsetup.target: Changed dead -> active
+[   49.364701] systemd[1]: cryptsetup.target: Job 87 cryptsetup.target/start finished, result=done
+[   49.364712] systemd[1]: Reached target Local Encrypted Volumes.
+[   49.461064] (systemd-sysctl)[504]: systemd-sysctl.service: Loaded shared library 'libbpf.so.1' via dlopen().
+[   49.466305] systemd[1]: sysinit.target: starting held back, waiting for: sys-kernel-tracing.mount
+[   49.476266] systemd[1]: systemd-pcrproduct.service: ConditionSecurity=measured-os failed.
+[   49.478244] (systemd-sysctl)[504]: systemd-sysctl.service: Loaded shared library 'libcryptsetup.so.12' via dlopen().
+[   49.483529] systemd[1]: systemd-pcrproduct.service: Starting requested but condition not met. Not starting unit.
+[   49.503524] (systemd-sysctl)[504]: systemd-sysctl.service: Loaded shared library 'libmount.so.1' via dlopen().
+[   49.508758] systemd[1]: systemd-pcrproduct.service: Job 21 systemd-pcrproduct.service/start finished, result=done
+[   49.508777] systemd[1]: TPM NvPCR Product ID Measurement skipped, unmet condition check ConditionSecurity=measured-os
+[   49.508860] systemd[1]: sysinit.target: starting held back, waiting for: sys-kernel-tracing.mount
+[   49.508871] systemd[1]: systemd-repart.service: starting held back, waiting for: systemd-tmpfiles-setup-dev.service
+[   49.508880] systemd[1]: systemd-tpm2-setup.service: starting held back, waiting for: systemd-remount-fs.service
+[   49.509044] systemd[1]: systemd-udev-load-credentials.service: Will spawn child (service_enter_start): udevadm
+[   49.510393] systemd[1]: systemd-udev-load-credentials.service: Passing 0 fds to service
+[   49.515141] (systemd-sysctl)[504]: systemd-sysctl.service: Loaded shared library 'libseccomp.so.2' via dlopen().
+[   49.519766] systemd[1]: systemd-udev-load-credentials.service: About to execute: udevadm control --load-credentials
+[   49.519818] systemd[1]: Serializing sd-executor-state to memfd.
+[   49.524795] systemd[1]: systemd-udev-load-credentials.service: Forked udevadm as 505 (via CLONE_INTO_CGROUP)
+[   49.527318] (systemd-sysctl)[504]: systemd-sysctl.service: Shared library 'libcrypto.so.4' is not available: libcrypto.so.4: cannot open shared object file: No such file or directory
+[   49.531629] systemd[1]: Closing set fd 107 (socket:[1564])
+[   49.531642] systemd[1]: Closing set fd 104 (socket:[1568])
+[   49.531648] systemd[1]: Closing set fd 102 (socket:[1566])
+[   49.534259] systemd[1]: systemd-udev-load-credentials.service: Changed dead -> start
+[   49.536285] (systemd-sysctl)[504]: systemd-sysctl.service: Loaded shared library 'libcrypto.so.3' via dlopen().
+[   49.536666] (systemd-sysctl)[504]: systemd-sysctl.service: systemd-sysctl.service: Executing: /usr/lib/systemd/systemd-sysctl
+[   49.538493] systemd[1]: Starting Load udev Rules from Credentials...
+[   49.606167] systemd[1]: systemd-udev-trigger.service: ConditionPathIsReadWrite=/sys succeeded.
+[   49.609718] systemd[1]: systemd-udev-trigger.service: Will spawn child (service_enter_start): udevadm
+[   49.612223] (udevadm)[505]: systemd-udev-load-credentials.service: Credential search path is: /etc/credstore:/run/credstore:/usr/local/lib/credstore:/usr/lib/credstore
+[   49.613352] systemd[1]: systemd-udev-trigger.service: Passing 0 fds to service
+[   49.615506] systemd[1]: systemd-udev-trigger.service: About to execute: udevadm trigger --type=all --action=add --prioritized-subsystem=module,block,tpmrm,net,tty,input
+[   49.616915] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   49.620928] (udevadm)[505]: systemd-udev-load-credentials.service: Credential search path is: /etc/credstore.encrypted:/run/credstore.encrypted:/usr/local/lib/credstore.encrypted:/usr/lib/credstore.encrypted
+[   49.624060] systemd[1]: Serializing sd-executor-state to memfd.
+[   49.629863] (udevadm)[505]: systemd-udev-load-credentials.service: Credential search path is: /etc/credstore:/run/credstore:/usr/local/lib/credstore:/usr/lib/credstore
+[   49.634790] systemd[1]: systemd-udev-trigger.service: Forked udevadm as 506 (via CLONE_INTO_CGROUP)
+[   49.649583] (udevadm)[505]: systemd-udev-load-credentials.service: Credential search path is: /etc/credstore.encrypted:/run/credstore.encrypted:/usr/local/lib/credstore.encrypted:/usr/lib/credstore.encrypted
+[   49.649821] systemd[1]: Closing set fd 104 (socket:[1566])
+[   49.649848] systemd[1]: Closing set fd 109 (socket:[1564])
+[   49.649855] systemd[1]: Closing set fd 107 (socket:[1568])
+[   49.649879] systemd[1]: systemd-udev-trigger.service: Changed dead -> start
+[   49.649893] systemd[1]: Starting Coldplug All udev Devices...
+[   49.709635] (udevadm)[505]: systemd-udev-load-credentials.service: Loaded shared library 'libacl.so.1' via dlopen().
+[   49.712718] (udevadm)[505]: systemd-udev-load-credentials.service: Successfully reconfigured credentials fs to be read only.
+[   49.717471] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   49.717584] (udevadm)[506]: systemd-udev-trigger.service: Loaded shared library 'libbpf.so.1' via dlopen().
+[   49.720374] (udevadm)[505]: systemd-udev-load-credentials.service: Loaded shared library 'libbpf.so.1' via dlopen().
+[   49.726576] (udevadm)[506]: systemd-udev-trigger.service: Loaded shared library 'libcryptsetup.so.12' via dlopen().
+[   49.740891] (udevadm)[505]: systemd-udev-load-credentials.service: Loaded shared library 'libcryptsetup.so.12' via dlopen().
+[   49.741013] (udevadm)[506]: systemd-udev-trigger.service: Loaded shared library 'libmount.so.1' via dlopen().
+[   49.741806] (udevadm)[506]: systemd-udev-trigger.service: Loaded shared library 'libseccomp.so.2' via dlopen().
+[   49.741972] (udevadm)[506]: systemd-udev-trigger.service: Shared library 'libcrypto.so.4' is not available: libcrypto.so.4: cannot open shared object file: No such file or directory
+[   49.741996] (udevadm)[506]: systemd-udev-trigger.service: Loaded shared library 'libcrypto.so.3' via dlopen().
+[   49.742179] (udevadm)[505]: systemd-udev-load-credentials.service: Loaded shared library 'libmount.so.1' via dlopen().
+[   49.742991] (udevadm)[506]: systemd-udev-trigger.service: systemd-udev-trigger.service: Executing: udevadm trigger --type=all --action=add --prioritized-subsystem=module,block,tpmrm,net,tty,input
+[   49.744189] (udevadm)[505]: systemd-udev-load-credentials.service: Loaded shared library 'libseccomp.so.2' via dlopen().
+[   49.744268] (udevadm)[505]: systemd-udev-load-credentials.service: Shared library 'libcrypto.so.4' is not available: libcrypto.so.4: cannot open shared object file: No such file or directory
+[   49.744285] (udevadm)[505]: systemd-udev-load-credentials.service: Loaded shared library 'libcrypto.so.3' via dlopen().
+[   49.744521] (udevadm)[505]: systemd-udev-load-credentials.service: systemd-udev-load-credentials.service: Executing: udevadm control --load-credentials
+[   49.886181] systemd[1]: systemd-udevd.service: starting held back, waiting for: systemd-sysusers.service
+[   49.895315] systemd[1]: systemd-update-done.service: starting held back, waiting for: systemd-journal-catalog-update.service
+[   49.904167] systemd[1]: systemd-update-utmp.service: starting held back, waiting for: systemd-remount-fs.service
+[   49.910307] systemd[1]: systemd-user-sessions.service: starting held back, waiting for: systemd-homed-activate.service
+[   49.923344] systemd[1]: systemd-coredumpd.service: starting held back, waiting for: local-fs.target
+[   49.937369] systemd[1]: system-systemd\x2dsysupdate.slice: Collecting.
+[   49.943317] systemd[1]: systemd-sysupdate@internal.service: Collecting.
+[   49.948806] systemd[1]: system-systemd\x2dsysinstall.slice: Collecting.
+[   49.957405] systemd[1]: systemd-sysinstall@internal.service: Collecting.
+[   49.962152] systemd[1]: var-lib-storage.mount: Collecting.
+[   49.976507] systemd[1]: system-systemd\x2dstorage\x2dfs.slice: Collecting.
+[   49.982086] systemd[1]: systemd-storage-fs@internal.service: Collecting.
+[   49.986048] systemd[1]: system-systemd\x2dstorage\x2dblock.slice: Collecting.
+[   49.991287] systemd[1]: systemd-storage-block@internal.service: Collecting.
+[   49.996214] systemd[1]: system-systemd\x2dreport.slice: Collecting.
+[   50.003400] systemd[1]: systemd-report@internal.service: Collecting.
+[   50.010804] systemd[1]: var-lib-systemd-report.sign.plain.mount: Collecting.
+[   50.024044] systemd[1]: system-systemd\x2dreport\x2dsign\x2dplain.slice: Collecting.
+[   50.033523] systemd[1]: systemd-report-sign-plain@internal.service: Collecting.
+[   50.045236] systemd[1]: system-systemd\x2dreport\x2dfiles.slice: Collecting.
+[   50.050791] systemd[1]: systemd-report-files@internal.service: Collecting.
+[   50.056318] systemd[1]: system-systemd\x2dreport\x2dcgroup.slice: Collecting.
+[   50.066007] systemd[1]: systemd-report-cgroup@internal.service: Collecting.
+[   50.071700] systemd[1]: system-systemd\x2dreport\x2dbasic.slice: Collecting.
+[   50.081426] systemd[1]: systemd-report-basic@internal.service: Collecting.
+[   50.088925] systemd[1]: system-systemd\x2drepart.slice: Collecting.
+[   50.093462] systemd[1]: systemd-repart@internal.service: Collecting.
+[   50.102053] systemd[1]: system-systemd\x2dmute\x2dconsole.slice: Collecting.
+[   50.110418] systemd[1]: systemd-mute-console@internal.service: Collecting.
+[   50.113878] systemd[1]: system-systemd\x2dfactory\x2dreset.slice: Collecting.
+[   50.125312] systemd[1]: systemd-factory-reset@internal.service: Collecting.
+[   50.132901] systemd[1]: system-systemd\x2dcryptenroll.slice: Collecting.
+[   50.136228] systemd[1]: systemd-cryptenroll@internal.service: Collecting.
+[   50.140784] systemd[1]: system-systemd\x2dcreds.slice: Collecting.
+[   50.144203] systemd[1]: systemd-creds@internal.service: Collecting.
+[   50.146975] systemd[1]: var.mount: Collecting.
+[   50.149563] systemd[1]: var-lib.mount: Collecting.
+[   50.152176] systemd[1]: var-lib-systemd.mount: Collecting.
+[   50.154856] systemd[1]: var-lib-systemd-coredump.mount: Collecting.
+[   50.159702] systemd[1]: system-systemd\x2dcoredump.slice: Collecting.
+[   50.165800] systemd[1]: systemd-coredump@internal.service: Collecting.
+[   50.169845] systemd[1]: system-systemd\x2dask\x2dpassword.slice: Collecting.
+[   50.173456] systemd[1]: systemd-ask-password@internal.service: Collecting.
+[   50.183943] systemd[1]: sys-kernel-tracing.mount: Changed mounting -> mounting-done
+[   50.189829] systemd[1]: sys-kernel-debug.mount: Changed mounting -> mounting-done
+[   50.193161] systemd[1]: sys-kernel-config.mount: Changed mounting -> mounting-done
+[   50.196299] systemd[1]: sys-fs-fuse-connections.mount: Changed mounting -> mounting-done
+[   50.198485] systemd[1]: dev-mqueue.mount: Changed mounting -> mounting-done
+[   50.206575] systemd[1]: dev-hugepages.mount: Changed mounting -> mounting-done
+[   50.209564] systemd[1]: tmp.mount: Changed mounting -> mounting-done
+[   50.212892] systemd[1]: Got handoff timestamp event for PID 496.
+[   50.217131] systemd[1]: Got handoff timestamp event for PID 495.
+[   50.228629] systemd[1]: Got handoff timestamp event for PID 497.
+[   50.231542] systemd[1]: Got handoff timestamp event for PID 492.
+[   50.235633] systemd[1]: Got handoff timestamp event for PID 493.
+[   50.242707] systemd[1]: Got handoff timestamp event for PID 494.
+[   50.247659] systemd[1]: Got handoff timestamp event for PID 498.
+[   50.251905] systemd[1]: Got handoff timestamp event for PID 499.
+[   50.255500] systemd[1]: Got handoff timestamp event for PID 500.
+[   50.260408] systemd[1]: Got handoff timestamp event for PID 502.
+[   50.267142] systemd[1]: Got handoff timestamp event for PID 503.
+[   50.271133] systemd[1]: Got handoff timestamp event for PID 504.
+[   50.273816] systemd[1]: Got handoff timestamp event for PID 506.
+[   50.276891] systemd[1]: Got handoff timestamp event for PID 505.
+[   50.281450] systemd[1]: systemd-journald.service: Got notification message from PID 500: READY=1, STATUS=Processing requests...
+[   50.290375] systemd[1]: systemd-journald.service: Too many messages being logged to kmsg, ignoring
+[   50.296424] audit: type=1130 audit(1793245014.554:2): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   50.326045] audit: type=1130 audit(1793245014.581:3): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=kmod-static-nodes comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   50.348774] audit: type=1130 audit(1793245014.604:4): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-network-generator comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   50.361374] audit: type=1130 audit(1793245014.617:5): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-remount-fs comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   50.375235] audit: type=1130 audit(1793245014.632:6): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-sysctl comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   50.399571] audit: type=1130 audit(1793245014.656:7): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-udev-load-credentials comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   50.436799] audit: type=1130 audit(1793245014.694:8): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   50.476685] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   50.501593] systemd-journald[500]: varlink: New incoming connection.
+[   50.501643] systemd-journald[500]: varlink: Connections of user 0: 0 (of 128 max)
+[   50.501665] systemd-journald[500]: varlink-20-20: Setting state idle-server
+[   50.501776] systemd-journald[500]: varlink-20-20: Received message: {"method":"io.systemd.Journal.FlushToVar"}
+[   50.502562] systemd-journald[500]: varlink-20-20: Changing state idle-server → processing-method
+[   50.502575] systemd-journald[500]: Received client request to flush runtime journal.
+[   50.507758] systemd-journald[500]: Fixed min_use=5.1M max_use=25.6M max_size=3.2M min_size=512K keep_free=12.8M n_max_files=100
+[   50.541639] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[   50.547770] systemd-journald[500]: Reserving 5831 entries in data hash table.
+[   50.556640] systemd-journald[500]: Journal file /run/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal is synchronously transitioning to offline.
+[   50.556646] systemd-journald[500]: Starting new synchronous offlining operation for journal file /run/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   50.559082] systemd-journald[500]: Flushing to /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8...
+[   50.559097] systemd-journald[500]: Considering root directory '/run/log/journal'.
+[   50.559146] systemd-journald[500]: Root directory /run/log/journal added.
+[   50.559157] systemd-journald[500]: Considering directory '/run/log/journal/9123fbe90a5b461e9cbf153ed0738cf8'.
+[   50.559199] systemd-journald[500]: Directory /run/log/journal/9123fbe90a5b461e9cbf153ed0738cf8 added.
+[   50.559272] systemd-journald[500]: Journal effective settings seal=no keyed_hash=yes compress=zstd compress_threshold_bytes=8B
+[   50.559709] systemd-journald[500]: File /run/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal added.
+[   50.559740] systemd-journald[500]: Considering root directory '/var/log/journal'.
+[   50.559742] systemd-journald[500]: Considering root directory '/var/log/journal/remote'.
+[   50.623430] systemd-journald[500]: mmap cache statistics: 116257 category cache hit, 3 window list hit, 1 miss, 1 files, 1 windows, 0 unused
+[   50.640955] systemd-journald[500]: Directory /run/log/journal/9123fbe90a5b461e9cbf153ed0738cf8 removed.
+[   50.641005] systemd-journald[500]: Root directory /run/log/journal removed.
+[   50.642634] systemd-journald[500]: Removed runtime journal directory /run/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   50.657296] systemd-journald[500]: Failed to determine whether '/run/log/journal/9123fbe90a5b461e9cbf153ed0738cf8' is the root file system: No such file or directory
+[   50.658277] audit: type=1130 audit(1793245014.914:9): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-random-seed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   50.660989] systemd-journald[500]: Failed to remove additional runtime journal directory /run/log/journal/9123fbe90a5b461e9cbf153ed0738cf8, ignoring: No such file or directory
+[   50.666418] audit: type=1334 audit(1793245014.924:10): prog-id=22 op=LOAD
+[   50.667535] systemd-journald[500]: Data hash table of /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal has a fill level at 120.3 (7016 of 5831 items, 3358720 file size, 478 bytes per hash table item), suggesting rotation.
+[   50.675171] audit: type=1334 audit(1793245014.924:11): prog-id=23 op=LOAD
+[   50.684170] systemd-journald[500]: /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   50.684177] systemd-journald[500]: Rotating journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   50.684502] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[   50.727244] systemd-journald[500]: Reserving 5831 entries in data hash table.
+[   50.732886] systemd-journald[500]: Journal effective settings seal=no keyed_hash=yes compress=zstd compress_threshold_bytes=512B
+[   50.743729] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000000001-00065ef26401b3bd.journal is asynchronously transitioning to archived.
+[   50.753163] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000000001-00065ef26401b3bd.journal.
+[   50.764024] systemd-journald[500]: Vacuuming...
+[   50.768196] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   50.776661] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000000001-00065ef26401b3bd.journal is synchronously transitioning to archived.
+[   50.790311] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000000001-00065ef26401b3bd.journal is already archived, waiting for offlining thread.
+[   50.807288] systemd-journald[500]: Joining journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000000001-00065ef26401b3bd.journal.
+[   50.815931] systemd-journald[500]: Journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000000001-00065ef26401b3bd.journal joined.
+[   50.826298] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal is asynchronously transitioning to offline.
+[   50.832210] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   50.841768] systemd-journald[500]: Vacuuming...
+[   50.848680] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   50.864508] systemd-journald[500]: Joining journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   50.870080] systemd-journald[500]: Journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal joined.
+[   50.875980] systemd-journald[500]: Client request to flush runtime journal completed.
+[   50.888252] systemd-journald[500]: varlink-20-20: Sending message: {}
+[   50.890679] systemd-journald[500]: varlink-20-20: Changing state processing-method → processed-method
+[   50.895427] systemd-journald[500]: varlink-20-20: Changing state processed-method → idle-server
+[   50.903410] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   50.910297] systemd-journald[500]: varlink-20-20: Got POLLHUP from socket.
+[   50.914067] systemd-journald[500]: varlink-20-20: Changing state idle-server → pending-disconnect
+[   50.914075] systemd-journald[500]: varlink-20-20: Changing state pending-disconnect → processing-disconnect
+[   50.914078] systemd-journald[500]: varlink-20-20: Changing state processing-disconnect → disconnected
+[   50.915332] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   50.915851] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   50.932762] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   50.986922] tun: Universal TUN/TAP device driver, 1.6
+[   51.041256] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   54.648044] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   54.810756] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   54.827865] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   54.855549] systemd-journald[500]: Data hash table of /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal has a fill level at 75.0 (4374 of 5831 items, 3358720 file size, 767 bytes per hash table item), suggesting rotation.
+[   54.867079] systemd-journald[500]: /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   54.873285] systemd-journald[500]: Rotating journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   54.880214] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[   54.894959] systemd-journald[500]: Reserving 5831 entries in data hash table.
+[   54.899931] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000000972-00065ef264199a44.journal is asynchronously transitioning to archived.
+[   54.914700] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000000972-00065ef264199a44.journal.
+[   54.932778] systemd[1]: varlink-api-88-88: Received message: {"method":"io.systemd.UserDatabase.GetMemberships","parameters":{"groupName":"kvm","service":"io.systemd.DynamicUser"},"more":true}
+[   54.935960] systemd-journald[500]: Vacuuming...
+[   54.954616] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   54.956954] systemd[1]: varlink-api-88-88: Changing state idle-server → processing-method-more
+[   55.147670] systemd-journald[500]: Loaded shared library 'libzstd.so.1' via dlopen().
+[   55.147736] systemd-journald[500]: Compressed data object 540 -> 195 using zstd
+[   55.638224] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   55.666706] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   55.686793] kauditd_printk_skb: 73 callbacks suppressed
+[   55.686806] audit: type=1334 audit(1793245019.944:45): prog-id=43 op=LOAD
+[   55.700297] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   55.700727] audit: type=1334 audit(1793245019.957:46): prog-id=44 op=LOAD
+[   55.729841] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   55.758623] audit: type=1334 audit(1793245020.012:47): prog-id=45 op=LOAD
+[   55.764817] audit: type=1334 audit(1793245020.012:48): prog-id=46 op=LOAD
+[   55.765910] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   55.774381] audit: type=1334 audit(1793245020.012:49): prog-id=47 op=LOAD
+[   55.806958] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   55.818242] audit: type=1130 audit(1793245020.075:50): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-resolved comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   55.838257] audit: type=1130 audit(1793245020.094:51): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-boot-random-seed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   55.849436] audit: type=1130 audit(1793245020.106:52): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-boot-update comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   55.868296] audit: type=1130 audit(1793245020.125:53): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-userdb-load-credentials comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   55.889980] systemd-journald[500]: Data hash table of /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal has a fill level at 75.0 (4374 of 5831 items, 3358720 file size, 767 bytes per hash table item), suggesting rotation.
+[   55.889995] systemd-journald[500]: /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   55.889998] systemd-journald[500]: Rotating journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   55.890124] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000000972-00065ef264199a44.journal is synchronously transitioning to archived.
+[   55.890128] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000000972-00065ef264199a44.journal is already archived, waiting for offlining thread.
+[   55.890130] systemd-journald[500]: Joining journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000000972-00065ef264199a44.journal.
+[   55.890148] systemd-journald[500]: Journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000000972-00065ef264199a44.journal joined.
+[   55.891992] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[   55.893691] systemd-journald[500]: Reserving 5831 entries in data hash table.
+[   55.893770] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000143b-00065ef2645c08ad.journal is asynchronously transitioning to archived.
+[   55.893773] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000143b-00065ef2645c08ad.journal.
+[   55.893844] systemd-journald[500]: Vacuuming...
+[   55.894007] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   56.011734] audit: type=1334 audit(1793245020.269:54): prog-id=48 op=LOAD
+[   56.053993] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   56.063668] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   56.270114] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   56.354319] systemd-journald[500]: Data hash table of /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal has a fill level at 75.0 (4375 of 5831 items, 3358720 file size, 767 bytes per hash table item), suggesting rotation.
+[   56.367078] systemd-journald[500]: /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   56.378678] systemd[1]: varlink-api: New incoming connection.
+[   56.379555] systemd-journald[500]: Rotating journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   56.379718] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000143b-00065ef2645c08ad.journal is synchronously transitioning to archived.
+[   56.379721] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000143b-00065ef2645c08ad.journal is already archived, waiting for offlining thread.
+[   56.379723] systemd-journald[500]: Joining journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000143b-00065ef2645c08ad.journal.
+[   56.379727] systemd-journald[500]: Journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000143b-00065ef2645c08ad.journal joined.
+[   56.380657] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[   56.396765] systemd[1]: varlink-api: Connections of user 0: 0 (of 128 max)
+[   56.412758] systemd-journald[500]: Reserving 5831 entries in data hash table.
+[   56.429627] systemd[1]: varlink-api-127-127: Setting state idle-server
+[   56.448467] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000001eed-00065ef2646bd01b.journal is asynchronously transitioning to archived.
+[   56.454637] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000001eed-00065ef2646bd01b.journal.
+[   56.461428] systemd-journald[500]: Vacuuming...
+[   56.463470] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   56.534349] systemd[1]: Failed to communicate with plymouth: Connection refused
+[   56.646580] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   56.693673] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   56.814906] systemd-journald[500]: Data hash table of /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal has a fill level at 75.0 (4374 of 5831 items, 3358720 file size, 767 bytes per hash table item), suggesting rotation.
+[   56.832697] systemd-journald[500]: /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   56.838523] systemd-journald[500]: Rotating journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   56.842639] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000001eed-00065ef2646bd01b.journal is synchronously transitioning to archived.
+[   56.853956] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000001eed-00065ef2646bd01b.journal is already archived, waiting for offlining thread.
+[   56.860335] systemd-journald[500]: Joining journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000001eed-00065ef2646bd01b.journal.
+[   56.872946] systemd-journald[500]: Journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000001eed-00065ef2646bd01b.journal joined.
+[   56.880316] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[   56.886669] systemd-journald[500]: Reserving 5831 entries in data hash table.
+[   56.893084] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000002acc-00065ef26472e7a7.journal is asynchronously transitioning to archived.
+[   56.904114] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000002acc-00065ef26472e7a7.journal.
+[   56.923441] systemd-journald[500]: Vacuuming...
+[   56.932942] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   57.078765] e1000 0000:00:03.0 enp0s3: renamed from eth0
+[   57.254517] systemd-journald[500]: Data hash table of /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal has a fill level at 75.0 (4374 of 5831 items, 3358720 file size, 767 bytes per hash table item), suggesting rotation.
+[   57.255885] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[   57.264255] systemd-journald[500]: /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   57.276231] systemd-journald[500]: Rotating journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   57.276358] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000002acc-00065ef26472e7a7.journal is synchronously transitioning to archived.
+[   57.276361] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000002acc-00065ef26472e7a7.journal is already archived, waiting for offlining thread.
+[   57.276364] systemd-journald[500]: Joining journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000002acc-00065ef26472e7a7.journal.
+[   57.276367] systemd-journald[500]: Journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000002acc-00065ef26472e7a7.journal joined.
+[   57.277333] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[   57.280668] systemd-journald[500]: Reserving 5831 entries in data hash table.
+[   57.288890] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[   57.291519] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-00000000000033a8-00065ef26479eeb0.journal is asynchronously transitioning to archived.
+[   57.297001] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[   57.304487] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-00000000000033a8-00065ef26479eeb0.journal.
+[   57.304564] systemd-journald[500]: Vacuuming...
+[   57.331339] faux_driver regulatory: Direct firmware load for regulatory.db failed with error -2
+[   57.336240] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   57.354840] cfg80211: failed to load regulatory.db
+[   57.478323] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   57.487009] systemd[1]: varlink-api: New incoming connection.
+[   57.570539] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   57.593409] loop1: detected capacity change from 0 to 4079680
+[   57.616413] systemd-journald[500]: Data hash table of /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal has a fill level at 75.2 (4382 of 5831 items, 3358720 file size, 766 bytes per hash table item), suggesting rotation.
+[   57.626417] loop1: detected capacity change from 0 to 4079680
+[   57.635550] systemd-journald[500]: /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   57.640922] systemd-journald[500]: Rotating journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   57.641512] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-00000000000033a8-00065ef26479eeb0.journal is synchronously transitioning to archived.
+[   57.641518] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-00000000000033a8-00065ef26479eeb0.journal is already archived, waiting for offlining thread.
+[   57.641520] systemd-journald[500]: Joining journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-00000000000033a8-00065ef26479eeb0.journal.
+[   57.641524] systemd-journald[500]: Journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-00000000000033a8-00065ef26479eeb0.journal joined.
+[   57.642710] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[   57.644148] systemd-journald[500]: Reserving 5831 entries in data hash table.
+[   57.645323]  loop1: p1 p2
+[   57.651957] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000003b91-00065ef26480a410.journal is asynchronously transitioning to archived.
+[   57.692059] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000003b91-00065ef26480a410.journal.
+[   57.703643] systemd-journald[500]: Vacuuming...
+[   57.715244] systemd[1]: systemd-networkd-persistent-storage.service: Forked networkctl as 623 (via CLONE_INTO_CGROUP)
+[   57.716562] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   57.733934] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   57.744988] systemd[1]: Closing set fd 143 (socket:[1564])
+[   57.760794] systemd[1]: Closing set fd 137 (socket:[1566])
+[   57.826046] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   57.943333] systemd-journald[500]: Data hash table of /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal has a fill level at 75.0 (4375 of 5831 items, 3358720 file size, 767 bytes per hash table item), suggesting rotation.
+[   57.943340] systemd-journald[500]: /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   57.943343] systemd-journald[500]: Rotating journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   57.943467] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000003b91-00065ef26480a410.journal is synchronously transitioning to archived.
+[   57.943470] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000003b91-00065ef26480a410.journal is already archived, waiting for offlining thread.
+[   57.943472] systemd-journald[500]: Joining journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000003b91-00065ef26480a410.journal.
+[   57.943476] systemd-journald[500]: Journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000003b91-00065ef26480a410.journal joined.
+[   57.943779] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[   57.945625] systemd-journald[500]: Reserving 5831 entries in data hash table.
+[   58.035957] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000004252-00065ef26485fbe6.journal is asynchronously transitioning to archived.
+[   58.035963] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000004252-00065ef26485fbe6.journal.
+[   58.036065] systemd-journald[500]: Vacuuming...
+[   58.040787] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   58.196526] mousedev: PS/2 mouse device common for all mice
+[   58.210600] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   58.262325] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   58.281570] systemd-journald[500]: Data hash table of /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal has a fill level at 75.0 (4374 of 5831 items, 3358720 file size, 767 bytes per hash table item), suggesting rotation.
+[   58.292432] systemd-journald[500]: /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   58.297609] systemd-journald[500]: Rotating journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   58.310009] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000004252-00065ef26485fbe6.journal is synchronously transitioning to archived.
+[   58.316883] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000004252-00065ef26485fbe6.journal is already archived, waiting for offlining thread.
+[   58.336659] systemd-journald[500]: Joining journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000004252-00065ef26485fbe6.journal.
+[   58.352242] systemd-journald[500]: Journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000004252-00065ef26485fbe6.journal joined.
+[   58.360217] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[   58.374053] systemd-journald[500]: Reserving 5831 entries in data hash table.
+[   58.378104] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-00000000000047d6-00065ef2648b26ba.journal is asynchronously transitioning to archived.
+[   58.390046] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-00000000000047d6-00065ef2648b26ba.journal.
+[   58.410767] systemd-journald[500]: Vacuuming...
+[   58.418255] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   58.531607] systemd-journald[500]: Data hash table of /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal has a fill level at 75.0 (4374 of 5831 items, 3358720 file size, 767 bytes per hash table item), suggesting rotation.
+[   58.544176] systemd-journald[500]: /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   58.551234] systemd-journald[500]: Rotating journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   58.560067] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-00000000000047d6-00065ef2648b26ba.journal is synchronously transitioning to archived.
+[   58.576578] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-00000000000047d6-00065ef2648b26ba.journal is already archived, waiting for offlining thread.
+[   58.582005] systemd-journald[500]: Joining journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-00000000000047d6-00065ef2648b26ba.journal.
+[   58.596847] systemd-journald[500]: Journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-00000000000047d6-00065ef2648b26ba.journal joined.
+[   58.622628] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[   58.628747] piix4_smbus 0000:00:07.0: SMBus Host Controller at 0x4100, revision 0
+[   58.647792] systemd-journald[500]: Reserving 5831 entries in data hash table.
+[   58.659195] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000004dbd-00065ef264904eae.journal is asynchronously transitioning to archived.
+[   58.673438] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000004dbd-00065ef264904eae.journal.
+[   58.691127] systemd-journald[500]: Vacuuming...
+[   58.702306] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   58.784558] systemd-journald[500]: Compressed data object 603 -> 260 using zstd
+[   58.791414] systemd-journald[500]: Compressed data object 592 -> 249 using zstd
+[   58.798207] systemd-journald[500]: Compressed data object 603 -> 260 using zstd
+[   58.830466] systemd-journald[500]: Compressed data object 603 -> 260 using zstd
+[   58.847812] Console: switching to colour dummy device 160x50
+[   58.856167] vmwgfx 0000:00:02.0: vgaarb: deactivate vga console
+[   58.861648] vmwgfx 0000:00:02.0: [drm] FIFO at 0x00000000be400000 size is 2048 KiB
+[   58.870092] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input6
+[   58.879346] vmwgfx 0000:00:02.0: [drm] VRAM at 0x00000000bc000000 size is 32768 KiB
+[   58.901525] vmwgfx 0000:00:02.0: [drm] Running on SVGA version 2.
+[   58.911758] input: PC Speaker as /devices/platform/pcspkr/input/input7
+[   58.928669] vmwgfx 0000:00:02.0: [drm] Capabilities: rect copy, cursor, cursor bypass, cursor bypass 2, alpha cursor, extended fifo, pitchlock, irq mask, gmr, traces, gmr2, screen object 2, command buffers, command buffers 2, gbobject, cap2 register, 
+[   58.944069] vmwgfx 0000:00:02.0: [drm] Capabilities2: cursor mob, 
+[   58.950356] vmwgfx 0000:00:02.0: [drm] *ERROR* vmwgfx seems to be running on an unsupported hypervisor.
+[   58.967440] vmwgfx 0000:00:02.0: [drm] *ERROR* This configuration is likely broken.
+[   58.978103] vmwgfx 0000:00:02.0: [drm] *ERROR* Please switch to a supported graphics device to avoid problems.
+[   59.006018] systemd-journald[500]: Data hash table of /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal has a fill level at 75.0 (4374 of 5831 items, 3358720 file size, 767 bytes per hash table item), suggesting rotation.
+[   59.012806] vmwgfx 0000:00:02.0: [drm] DMA map mode: Caching DMA mappings.
+[   59.020600] vmwgfx 0000:00:02.0: [drm] Legacy memory limits: VRAM = 32768 KiB, FIFO = 2048 KiB, surface = 491520 KiB
+[   59.022049] vmwgfx 0000:00:02.0: [drm] MOB limits: max mob size = 1048576 KiB, max mob pages = 262144
+[   59.022502] systemd-journald[500]: /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   59.031370] vmwgfx 0000:00:02.0: [drm] Max GMR ids is 8192
+[   59.034069] systemd-journald[500]: Rotating journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   59.044467] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000004dbd-00065ef264904eae.journal is synchronously transitioning to archived.
+[   59.051903] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000004dbd-00065ef264904eae.journal is already archived, waiting for offlining thread.
+[   59.059508] systemd-journald[500]: Joining journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000004dbd-00065ef264904eae.journal.
+[   59.075638] systemd-journald[500]: Journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000004dbd-00065ef264904eae.journal joined.
+[   59.090375] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[   59.097651] vmwgfx 0000:00:02.0: [drm] Max number of GMR pages is 1048576
+[   59.099767] systemd-journald[500]: Reserving 5831 entries in data hash table.
+[   59.103750] vmwgfx 0000:00:02.0: [drm] Maximum display memory size is 32768 KiB
+[   59.105243] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000522e-00065ef2649420b5.journal is asynchronously transitioning to archived.
+[   59.114309] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000522e-00065ef2649420b5.journal.
+[   59.123914] systemd-journald[500]: Vacuuming...
+[   59.130938] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   59.135308] vmwgfx 0000:00:02.0: [drm] Screen Target display unit initialized
+[   59.149414] vmwgfx 0000:00:02.0: [drm] Fifo max 0x00200000 min 0x00001000 cap 0x00000355
+[   59.154700] vmwgfx 0000:00:02.0: [drm] Using command buffers with DMA pool.
+[   59.155495] vmwgfx 0000:00:02.0: [drm] Available shader model: Legacy.
+[   59.167521] [drm] Initialized vmwgfx 2.21.0 for 0000:00:02.0 on minor 0
+[   59.190538] fbcon: vmwgfxdrmfb (fb0) is primary device
+[   59.203023] Console: switching to colour frame buffer device 160x50
+[   59.279757] intel_rapl_common: Found RAPL domain package
+[   59.279772] intel_rapl_common: Found RAPL domain core
+[   59.280957] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   59.386069] vmwgfx 0000:00:02.0: [drm] fb0: vmwgfxdrmfb frame buffer device
+[   59.488488] systemd-journald[500]: Data hash table of /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal has a fill level at 75.0 (4374 of 5831 items, 3358720 file size, 767 bytes per hash table item), suggesting rotation.
+[   59.503208] systemd-journald[500]: /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   59.518233] systemd-journald[500]: Rotating journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system.journal.
+[   59.537343] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000522e-00065ef2649420b5.journal is synchronously transitioning to archived.
+[   59.556704] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000522e-00065ef2649420b5.journal is already archived, waiting for offlining thread.
+[   59.570856] systemd-journald[500]: Joining journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000522e-00065ef2649420b5.journal.
+[   59.583902] systemd-journald[500]: Journal offlining thread for /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-000000000000522e-00065ef2649420b5.journal joined.
+[   59.612526] systemd-journald[500]: Reserving 1023 entries in field hash table.
+[   59.624982] systemd-journald[500]: Reserving 5831 entries in data hash table.
+[   59.625030] systemd-journald[500]: Journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000005895-00065ef2649b5dde.journal is asynchronously transitioning to archived.
+[   59.625033] systemd-journald[500]: Starting new asynchronous offlining operation for journal file /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8/system@a216df524cb24a5d8142b1d7bfc52076-0000000000005895-00065ef2649b5dde.journal.
+[   59.626185] systemd-journald[500]: Vacuuming...
+[   59.629571] systemd-journald[500]: Vacuuming done, freed 0B of archived journals from /var/log/journal/9123fbe90a5b461e9cbf153ed0738cf8.
+[   59.664619] snd_intel8x0 0000:00:05.0: intel8x0_measure_ac97_clock: measured 56452 usecs (2640 samples)
+[   59.673480] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
+[   59.687311] snd_intel8x0 0000:00:05.0: clocking to 49267
+[   59.839124] systemd-journald[500]: Successfully sent stream file descriptor to service manager.
