@@ -50,8 +50,11 @@ find "$PROFILE/efiboot" "$PROFILE/syslinux" -type f \( -name '*.conf' -o -name '
 # Add serial console to every boot entry: tty0 stays the primary,
 # ttyS0 mirrors it so headless CI (qemu -serial) can see the journal.
 find "$PROFILE/efiboot/loader" "$PROFILE/syslinux" -type f \( -name '*.conf' -o -name '*.cfg' \) -print0 |
-  xargs -0 -r sed -i -e 's/^\(options .*\)$/\1 console=tty0 console=ttyS0,115200n8/' \
-                     -e 's/^\(APPEND .*\)$/\1 console=tty0 console=ttyS0,115200n8/'
+  xargs -0 -r sed -i -e 's/^\(options .*\)$/\1 console=ttyS0,115200n8 console=tty0/' \
+                     -e 's/^\(APPEND .*\)$/\1 console=ttyS0,115200n8 console=tty0/'
+# tty0 LAST → /dev/console lands on VGA: systemd + the Initial Setup TUI
+# paint where human eyes are. ttyS0 earlier still carries the kernel log
+# for headless CI.
 
 # Enable the [pgos] custom repo if it has been built (make-repo.sh)
 REPO="$PGOS_ROOT/repo/x86_64"
