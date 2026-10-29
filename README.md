@@ -41,6 +41,8 @@ pgos/
 # on any recent Arch system (Omarchy counts):
 sudo pacman -S --needed archiso rsync
 sudo ./build.sh          # → build/out/pgos-*.iso  (maybe 10–20 min)
+sudo ./build.sh --debug  # → pgos-YYYY.MM.DD-debug-*.iso: kernel+systemd+udev
+                         #   debug tracing, journald debug retention
 ```
 
 Test it in a VM:

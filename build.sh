@@ -17,6 +17,11 @@ blu='\e[1;34m' red='\e[0;31m' nc='\e[0m'
 msg()  { printf "\n${blu}==> ${nc}%s\n" "$*"; }
 die()  { printf "${red}  xx ${nc}%s\n" "$*" >&2; exit 1; }
 
+DEBUG_MODE=0
+for arg in "$@"; do
+  [[ $arg == "--debug" ]] && DEBUG_MODE=1
+done
+
 if [[ ${1:-} == "--docker" ]]; then
   command -v docker >/dev/null || die "docker not found"
   msg "Building in a privileged container"
@@ -47,13 +52,27 @@ find "$PROFILE/efiboot" "$PROFILE/syslinux" -type f \( -name '*.conf' -o -name '
                      -e 's/^title   Arch Linux/title   pgOS/g' \
                      -e 's/^MENU TITLE Arch Linux/MENU TITLE pgOS/g'
 
-# Headless-CI serial witness (poll-mode earlyprintk, immune to console
-# handover and to the console-muter) + skip systemd-firstboot so the
-# live boot goes straight to root autologin (pg-install asks its own
+# cmdline tail — the headless-CI serial witness (poll-mode earlyprintk, immune
+# to console handover and to the console-muter) + skip systemd-firstboot so
+# the live boot goes straight to root autologin (pg-install asks its own
 # questions; no unattended TUI to hang on a serial console).
+# --debug cranks every observability knob: full systemd + udev traces.
+CMDLINE_TAIL="earlyprintk=serial,ttyS0,115200 keep_bootcon loglevel=7 systemd.firstboot=0"
+if [[ $DEBUG_MODE -eq 1 ]]; then
+  CMDLINE_TAIL="$CMDLINE_TAIL debug systemd.log_level=debug systemd.log_target=console+kmsg udev.log_level=debug rd.udev.debug=1"
+fi
 find "$PROFILE/efiboot/loader" "$PROFILE/syslinux" -type f \( -name '*.conf' -o -name '*.cfg' \) -print0 |
-  xargs -0 -r sed -i -e 's/^\(options .*\)$/\1 earlyprintk=serial,ttyS0,115200 keep_bootcon loglevel=7 systemd.firstboot=0/' \
-                     -e 's/^\(APPEND .*\)$/\1 earlyprintk=serial,ttyS0,115200 keep_bootcon loglevel=7 systemd.firstboot=0/'
+  xargs -0 -r sed -i -e "s|^\(options .*\)$|\1 $CMDLINE_TAIL|" \
+                     -e "s|^\(APPEND .*\)$|\1 $CMDLINE_TAIL|"
+
+# --debug: journald keeps debug-grade records on the live system too
+if [[ $DEBUG_MODE -eq 1 ]]; then
+  mkdir -p "$PROFILE/airootfs/etc/systemd/journald.conf.d"
+  printf '[Journal]\nMaxLevelStore=debug\nMaxLevelSyslog=debug\n' \
+    > "$PROFILE/airootfs/etc/systemd/journald.conf.d/00-pgos-debug.conf"
+  # Distinct artifact name — never collide with the QA'd release ISO.
+  sed -i 's|^iso_version=.*|iso_version="$(date --utc +%Y.%m.%d)-debug"|' "$PROFILE/profiledef.sh"
+fi
 # tty0 LAST → /dev/console lands on VGA: systemd + the Initial Setup TUI
 # paint where human eyes are. ttyS0 earlier still carries the kernel log
 # for headless CI.
