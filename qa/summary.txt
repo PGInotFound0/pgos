@@ -1,0 +1,12 @@
+=== pgOS 30-run campaign 2026-10-29T02:35:17+01:00 ===
+[campaign] snapshot 'pre-campaign' taken
+process=serial-witness-per-round
+round 1  : PASS : fw=bios type=headless : boot reached userspace (150 systemd events)
+round 2  : PASS : fw=bios type=headless : boot reached userspace (144 systemd events)
+round 3  : PASS : fw=bios type=headless : boot reached userspace (147 systemd events)
+round 4  : PASS : fw=bios type=headless : boot reached userspace (142 systemd events)
+round 5  : PASS : fw=bios type=headless : boot reached userspace (147 systemd events)
+round 6  : PASS : fw=bios type=headless : boot reached userspace (145 systemd events)
+round 7  : PASS : fw=bios type=headless : boot reached userspace (146 systemd events)
+round 8  : PASS : fw=bios type=headless : boot reached userspace (150 systemd events)
+round 9  : PASS : fw=bios type=headless : boot reached userspace (140 systemd events)

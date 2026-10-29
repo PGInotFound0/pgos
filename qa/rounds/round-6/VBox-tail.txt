@@ -1,0 +1,210 @@
+B - Core Performance Boost                            = 0 (0)
+00:00:00.226878   EffFreqRO - Read-only Effective Frequency Interface     = 0 (1)
+00:00:00.226879   ProcFdbkIf - Processor Feedback Interface               = 0 (0)
+00:00:00.226879   ProcPwrRep - Core power reporting interface support     = 0 (0)
+00:00:00.226880   ConnectedStandby - Connected Standby                    = 0 (1)
+00:00:00.226881   RAPL - Running average power limit                      = 0 (1)
+00:00:00.226882 Ext Features ext IDs EBX
+00:00:00.226882   Mnemonic - Description                                  = Guest (Host)
+00:00:00.226883   CLZERO - Clear zero instruction (cacheline)             = 0 (1)
+00:00:00.226883   IRPerf - Instructions retired count support             = 0 (1)
+00:00:00.226884   XSaveErPtr - Save/restore error pointers (FXSAVE/RSTOR) = 0 (1)
+00:00:00.226885   INVLPGB - INVLPGB and TLBSYNC instructions              = 0 (0)
+00:00:00.226885   RDPRU - RDPRU instruction                               = 0 (0)
+00:00:00.226886   BE - Bandwidth Enforcement extension                    = 0 (0)
+00:00:00.226887   MCOMMIT - MCOMMIT instruction                           = 0 (0)
+00:00:00.226888   WBNOINVD - WBNOINVD instruction                         = 0 (0)
+00:00:00.226889   IBPB - Supports the IBPB command in IA32_PRED_CMD       = 0 (1)
+00:00:00.226889   INT_WBINVD - WBINVD/WBNOINVD interruptible              = 0 (0)
+00:00:00.226890   IBRS - Indirect Branch Restricted Speculation           = 0 (0)
+00:00:00.226890   STIBP - Single Thread Indirect Branch Prediction        = 0 (0)
+00:00:00.226891   IbrsAlwaysOn - Processor prefers that IBRS be left on   = 0 (0)
+00:00:00.226892   StibpAlwaysOn - Processor prefers that STIBP be left on = 0 (0)
+00:00:00.226892   IbrsPreferred - IBRS preferred over software solution   = 0 (0)
+00:00:00.226893   IbrsSameMode - IBRS limits same mode speculation        = 0 (0)
+00:00:00.226893   EferLmsleUnsupported - EFER.LMSLE is unsupported        = 0 (0)
+00:00:00.226894   INVLPGBnestedPages - INVLPGB for nested translation     = 0 (0)
+00:00:00.226894   PPIN - Protected processor inventory number             = 0 (0)
+00:00:00.227090   SSBD - Speculative Store Bypass Disable                 = 0 (0)
+00:00:00.227091   SsbdVirtSpecCtrl - Use VIRT_SPEC_CTL for SSBD           = 0 (0)
+00:00:00.227092   SsbdNotRequired - SSBD not needed on this processor     = 1 (0)
+00:00:00.227092   CPPC - Collaborative Processor Performance Control      = 0 (0)
+00:00:00.227093   PSFD - Predictive Store Forward Disable                 = 0 (0)
+00:00:00.227094   BTC_NO - Unaffected by branch type confusion            = 0 (0)
+00:00:00.227094   IBPB_RET - Clears RA predictor when PRED_CMD.IBPB set   = 0 (0)
+00:00:00.227095 Physical Address Width:          48 bits
+00:00:00.227095 Virtual Address Width:           48 bits
+00:00:00.227096 Guest Physical Address Width:    48 bits (0)
+00:00:00.227096 Physical Core Count:             3
+00:00:00.227096 APIC ID size:                    3 (0x3)
+00:00:00.227097 Performance TSC size:            40 bits
+00:00:00.227097 Max page count for INVLPGB:      0x3030
+00:00:00.227097 Max ECX for RDPRU:               0x0
+00:00:00.227099 ********************* End of CPUID dump *********************
+00:00:00.226096 HM: fUsePauseFilter=false fUseLbrVirt=false fUseVGif=true fUseVirtVmsaveVmload=true
+00:00:00.227742 VMEmt: Halt method global1 (5)
+00:00:00.227785 VMEmt: HaltedGlobal1 config: cNsSpinBlockThresholdCfg=2000
+00:00:00.227826 Changing the VM state from 'CREATING' to 'CREATED'
+00:00:00.235238 NAT: DNS settings changed, triggering update
+00:00:00.235256 Nameserver is either on 127/8 network or failed to obtain from host. Falling back to libslirp DNS proxy.
+00:00:00.235258 fallback virtual nameserver: 50462730Changing the VM state from 'CREATED' to 'POWERING_ON'
+00:00:00.236285 Changing the VM state from 'POWERING_ON' to 'RUNNING'
+00:00:00.236290 Console: Machine state changed to 'Running'
+00:00:00.237375 VBoxHeadless: starting event loop
+00:00:00.237715 VMMDev: Guest Log: BIOS: VirtualBox 7.2.22
+00:00:00.237767 PCI: Setting up resources and interrupts
+00:00:00.237998 PIT: mode=2 count=0x10000 (65536) - 18.20 Hz (ch=0)
+00:00:00.264317 Display::i_handleDisplayResize: uScreenId=0 pvVRAM=0000000000000000 w=720 h=400 bpp=0 cbLine=0x0 flags=0x0 origin=0,0
+00:00:00.264670 VMMDev: Guest Log: CPUID EDX: 0x178bfbff
+00:00:00.264706 PIIX3 ATA: Ctl#0: RESET, DevSel=0 AIOIf=0 CmdIf0=0x00 (-1 usec ago) CmdIf1=0x00 (-1 usec ago)
+00:00:00.264746 PIIX3 ATA: Ctl#0: finished processing RESET
+00:00:00.264920 VMMDev: Guest Log: BIOS: ata0-0: PCHS=16383/16/63 LCHS=1024/255/63
+00:00:00.265538 PIIX3 ATA: Ctl#1: RESET, DevSel=0 AIOIf=0 CmdIf0=0x00 (-1 usec ago) CmdIf1=0x00 (-1 usec ago)
+00:00:00.265577 PIIX3 ATA: Ctl#1: finished processing RESET
+00:00:00.267818 PIT: mode=2 count=0x48d3 (18643) - 64.00 Hz (ch=0)
+00:00:00.292988 Display::i_handleDisplayResize: uScreenId=0 pvVRAM=00007f4b22800000 w=640 h=480 bpp=32 cbLine=0xA00 flags=0x0 origin=0,0
+00:00:02.744396 PIT: mode=2 count=0x10000 (65536) - 18.20 Hz (ch=0)
+00:00:02.744510 VMMDev: Guest Log: BIOS: Boot : bseqnr=1, bootseq=0231
+00:00:02.744592 VMMDev: Guest Log: BIOS: Boot from Floppy 0 failed
+00:00:02.744682 VMMDev: Guest Log: BIOS: Boot : bseqnr=2, bootseq=0023
+00:00:02.745017 VMMDev: Guest Log: BIOS: Booting from CD-ROM...
+00:00:02.752873 Display::i_handleDisplayResize: uScreenId=0 pvVRAM=0000000000000000 w=720 h=400 bpp=0 cbLine=0x0 flags=0x0 origin=0,0
+00:00:02.799436 Display::i_handleDisplayResize: uScreenId=0 pvVRAM=00007f4b22800000 w=640 h=480 bpp=24 cbLine=0x780 flags=0x0 origin=0,0
+00:00:18.672457 Display::i_handleDisplayResize: uScreenId=0 pvVRAM=0000000000000000 w=720 h=400 bpp=0 cbLine=0x0 flags=0x0 origin=0,0
+00:00:18.697029 VMMDev: Guest Log: BIOS: KBD: unsupported int 16h function 03
+00:00:18.697150 VMMDev: Guest Log: BIOS: AX=0305 BX=0000 CX=0000 DX=0000 
+00:00:18.697874 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=81
+00:00:18.698014 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=81
+00:00:18.698156 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=82
+00:00:18.698289 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=82
+00:00:18.698426 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=83
+00:00:18.698554 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=83
+00:00:18.698686 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=84
+00:00:18.698820 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=84
+00:00:18.698973 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=85
+00:00:18.699100 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=85
+00:00:18.699245 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=86
+00:00:18.699375 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=86
+00:00:18.699505 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=87
+00:00:18.699633 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=87
+00:00:18.699764 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=88
+00:00:18.699893 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=88
+00:00:18.700056 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=89
+00:00:18.700180 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=89
+00:00:18.700315 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=8a
+00:00:18.700440 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=8a
+00:00:18.700575 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=8b
+00:00:18.700699 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=8b
+00:00:18.700847 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=8c
+00:00:18.701023 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=8c
+00:00:18.701159 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=8d
+00:00:18.701284 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=8d
+00:00:18.701421 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=8e
+00:00:18.701549 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=8e
+00:00:18.701692 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=8f
+00:00:18.701816 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=8f
+00:00:18.969180 GIM: KVM: VCPU  0: Enabled system-time struct. at 0x0000000030203000 - u32TscScale=0x928f7c40 i8TscShift=-1 uVersion=2 fFlags=0x1 uTsc=0xf3c7a2f99 uVirtNanoTS=0x45c83ee40 TscKHz=3493438
+00:00:18.969275 TM: Switching TSC mode from 'VirtTSCEmulated' to 'RealTSCOffset'
+00:00:19.138808 GIM: KVM: Enabled wall-clock struct. at 0x0000000030202000 - u32Sec=1793238033 u32Nano=444558395 uVersion=2
+00:00:19.149618 PIT: mode=2 count=0x4a9 (1193) - 1000.15 Hz (ch=0)
+00:00:19.156950 IEM: rdmsr(0x87) -> #GP(0)
+00:00:19.313084 PIT: mode=0 count=0x10000 (65536) - 18.20 Hz (ch=0)
+00:00:19.338459 GIM: KVM: VCPU  1: Enabled system-time struct. at 0x0000000030203040 - u32TscScale=0x928f7c40 i8TscShift=-1 uVersion=2 fFlags=0x1 uTsc=0xf8962631c uVirtNanoTS=0x47287b275 TscKHz=3493438
+00:00:19.341784 GIM: KVM: VCPU  2: Enabled system-time struct. at 0x0000000030203080 - u32TscScale=0x928f7c40 i8TscShift=-1 uVersion=2 fFlags=0x1 uTsc=0xf8a141f62 uVirtNanoTS=0x472ba92f4 TscKHz=3493438
+00:00:19.560260 OHCI: Software reset
+00:00:19.634739 OHCI: USB Reset
+00:00:20.071378 OHCI: Software reset
+00:00:20.071516 OHCI: USB Operational
+00:00:20.087630 OHCI: USB Suspended
+00:00:20.092844 EHCI: Hardware reset
+00:00:20.096465 EHCI: USB Operational
+00:00:20.136842 EHCI: USB Suspended
+00:00:21.527109 PIIX3 ATA: Ctl#0: RESET, DevSel=0 AIOIf=0 CmdIf0=0xc4 (-1 usec ago) CmdIf1=0x00 (-1 usec ago)
+00:00:21.527198 PIIX3 ATA: Ctl#0: finished processing RESET
+00:00:21.527360 PIIX3 ATA: Ctl#1: RESET, DevSel=0 AIOIf=0 CmdIf0=0xa0 (-1 usec ago) CmdIf1=0x00 (-1 usec ago)
+00:00:21.527417 PIIX3 ATA: Ctl#1: finished processing RESET
+00:00:21.527583 VMMDev: Guest Log: vboxguest: host-version: 7.2.22r175245 0x8000000f
+00:00:21.528631 VMMDev: Guest Additions information report: Version 6.0.0 r127566 '6.0.0'
+00:00:21.528691 VMMDev: Guest Additions information report: Interface = 0x00010004 osType = 0x00053100 (Linux >= 2.6, 64-bit)
+00:00:21.528789 VMMDev: Guest Additions capability report: (0x0 -> 0x0) seamless: no, hostWindowMapping: no, graphics: no
+00:00:21.528834 VMMDev: vmmDevReqHandler_HeartbeatConfigure: No change (fHeartbeatActive=false)
+00:00:21.528843 VMMDev: Heartbeat flatline timer set to trigger after 4 000 000 000 ns
+00:00:21.529089 VMMDev: Guest Log: vbg_heartbeat_init: Setting up heartbeat to trigger every 2000 milliseconds
+00:00:31.048664 Display::i_handleDisplayResize: uScreenId=0 pvVRAM=00007f4b22800000 w=1024 h=768 bpp=32 cbLine=0x1000 flags=0x1 origin=0,0
+00:00:31.347370 AC97: Reset
+00:00:31.347398 AC97: Mixer reset (EAID=0x809, EACS=0x9)
+00:00:31.347401 AC97: Record select to left=mic, right=mic
+00:00:31.347404 Audio Mixer: MUTING master volume of 'AC'97 Mixer' -- channel volumes: ff ff ff ff ff ff ff ff ff ff ff ff
+00:00:31.347409 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.347412 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.347414 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.347417 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.347420 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.347422 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.347424 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.347554 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.347558 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.347605 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.347608 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.347687 AC97: Reset
+00:00:31.347689 AC97: Mixer reset (EAID=0x809, EACS=0x9)
+00:00:31.347691 AC97: Record select to left=mic, right=mic
+00:00:31.347692 Audio Mixer: MUTING master volume of 'AC'97 Mixer' -- channel volumes: ff ff ff ff ff ff ff ff ff ff ff ff
+00:00:31.347695 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.347720 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.347722 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.347725 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.347727 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.347729 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.347731 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348343 Audio Mixer: Setting master volume of 'AC'97 Mixer' -- channel volumes: ff ff ff ff ff ff ff ff ff ff ff ff
+00:00:31.348349 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348352 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348361 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348373 Audio Mixer: MUTING master volume of 'AC'97 Mixer' -- channel volumes: ff ff ff ff ff ff ff ff ff ff ff ff
+00:00:31.348375 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348378 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348380 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348400 Audio Mixer: MUTING master volume of 'AC'97 Mixer' -- channel volumes: ff ff ff ff ff ff ff ff ff ff ff ff
+00:00:31.348402 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348404 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348407 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348423 Audio Mixer: MUTING master volume of 'AC'97 Mixer' -- channel volumes: 83 83 83 83 83 83 83 83 83 83 83 83
+00:00:31.348426 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348428 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348430 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348446 Audio Mixer: MUTING master volume of 'AC'97 Mixer' -- channel volumes: bf bf bf bf bf bf bf bf bf bf bf bf
+00:00:31.348449 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348451 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348453 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348483 Audio Mixer: MUTING master volume of 'AC'97 Mixer' -- channel volumes: 83 83 83 83 83 83 83 83 83 83 83 83
+00:00:31.348485 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348487 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.348490 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.349010 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.349032 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.349046 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.349054 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.349081 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.349103 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.349106 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.349118 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.349120 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.349133 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.349136 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.349145 AC97: Record select to left=mic, right=mic
+00:00:31.349158 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.349161 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.351723 ALSA: Using output device "default"
+00:00:31.915429 Audio Mixer: MUTING master volume of 'AC'97 Mixer' -- channel volumes: c7 c7 c7 c7 c7 c7 c7 c7 c7 c7 c7 c7
+00:00:31.915462 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.915465 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.915467 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.915484 Audio Mixer: Setting master volume of 'AC'97 Mixer' -- channel volumes: c7 c7 c7 c7 c7 c7 c7 c7 c7 c7 c7 c7
+00:00:31.915487 Audio Mixer: Setting sink 'AC'97 Mixer/Line In' -- channel volumes: c7 c7 c7 c7 c7 c7 c7 c7 c7 c7 c7 c7
+00:00:31.915488 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.915490 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.915643 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:31.915658 Audio Mixer: Setting sink 'AC'97 Mixer/PCM Output' -- channel volumes: c7 c7 c7 c7 c7 c7 c7 c7 c7 c7 c7 c7
+00:00:31.915773 Audio Mixer: Setting sink 'AC'97 Mixer/Line In' -- channel volumes: c7 c7 c7 c7 c7 c7 c7 c7 c7 c7 c7 c7
+00:00:31.915776 Audio Mixer: Setting sink 'AC'97 Mixer/Line In' -- channel volumes: c7 c7 c7 c7 c7 c7 c7 c7 c7 c7 c7 c7

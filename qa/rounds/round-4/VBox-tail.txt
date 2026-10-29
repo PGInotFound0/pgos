@@ -1,0 +1,248 @@
+ VME - Virtual 8086 Mode Enhancements                    = 1 (1)
+00:00:00.241763   DE - Debugging extensions                               = 1 (1)
+00:00:00.241764   PSE - Page Size Extension                               = 1 (1)
+00:00:00.241765   TSC - Time Stamp Counter                                = 1 (1)
+00:00:00.241766   MSR - K86 Model Specific Registers                      = 1 (1)
+00:00:00.241767   PAE - Physical Address Extension                        = 1 (1)
+00:00:00.241768   MCE - Machine Check Exception                           = 0 (1)
+00:00:00.241769   CX8 - CMPXCHG8B instruction                             = 1 (1)
+00:00:00.241770   APIC - APIC On-Chip                                     = 1 (1)
+00:00:00.241771   SEP - SYSCALL/SYSRET                                    = 1 (1)
+00:00:00.241772   MTRR - Memory Type Range Registers                      = 1 (1)
+00:00:00.241773   PGE - PTE Global Bit                                    = 1 (1)
+00:00:00.241774   MCA - Machine Check Architecture                        = 1 (1)
+00:00:00.241775   CMOV - Conditional Move instructions                    = 1 (1)
+00:00:00.241776   PAT - Page Attribute Table                              = 1 (1)
+00:00:00.241777   PSE-36 - 36-bit Page Size Extension                     = 1 (1)
+00:00:00.241778   NX - No-Execute/Execute-Disable                         = 1 (1)
+00:00:00.241779   AXMMX - AMD Extensions to MMX instructions              = 1 (1)
+00:00:00.241780   MMX - Intel MMX Technology                              = 1 (1)
+00:00:00.241781   FXSR - FXSAVE and FXRSTOR Instructions                  = 1 (1)
+00:00:00.241782   FFXSR - AMD fast FXSAVE and FXRSTOR instructions        = 1 (1)
+00:00:00.241782   Page1GB - 1 GB large page                               = 0 (1)
+00:00:00.241783   RDTSCP - RDTSCP instruction                             = 1 (1)
+00:00:00.241784   LM - AMD64 Long Mode                                    = 1 (1)
+00:00:00.241786   3DNOWEXT - AMD Extensions to 3DNow                      = 0 (0)
+00:00:00.241787   3DNOW - AMD 3DNow                                       = 0 (0)
+00:00:00.241788   LahfSahf - LAHF/SAHF support in 64-bit mode             = 1 (1)
+00:00:00.241789   CmpLegacy - Core multi-processing legacy mode           = 1 (1)
+00:00:00.241790   SVM - AMD Secure Virtual Machine extensions             = 0 (1)
+00:00:00.241790   EXTAPIC - AMD Extended APIC registers                   = 0 (1)
+00:00:00.241791   CR8L - AMD LOCK MOV CR0 means MOV CR8                   = 1 (1)
+00:00:00.241792   ABM - AMD Advanced Bit Manipulation                     = 1 (1)
+00:00:00.241793   SSE4A - SSE4A instructions                              = 1 (1)
+00:00:00.241794   MISALIGNSSE - AMD Misaligned SSE mode                   = 1 (1)
+00:00:00.241795   3DNOWPRF - AMD PREFETCH and PREFETCHW instructions      = 1 (1)
+00:00:00.241796   OSVW - AMD OS Visible Workaround                        = 0 (1)
+00:00:00.241797   IBS - Instruct Based Sampling                           = 0 (0)
+00:00:00.241798   XOP - Extended Operation support                        = 0 (0)
+00:00:00.241799   SKINIT - SKINIT, STGI, and DEV support                  = 0 (1)
+00:00:00.241800   WDT - AMD Watchdog Timer support                        = 0 (1)
+00:00:00.241801   LWP - Lightweight Profiling support                     = 0 (0)
+00:00:00.241801   FMA4 - Four operand FMA instruction support             = 0 (0)
+00:00:00.241802   TCE - Translation Cache Extension support               = 0 (1)
+00:00:00.241803   NodeId - NodeId in MSR C001_100C                        = 0 (0)
+00:00:00.241804   TBM - Trailing Bit Manipulation instructions            = 0 (0)
+00:00:00.241805   TOPOEXT - Topology Extensions                           = 0 (1)
+00:00:00.241806   PRFEXTCORE - Performance Counter Extensions support     = 0 (1)
+00:00:00.241807   PRFEXTNB - NB Performance Counter Extensions support    = 0 (1)
+00:00:00.241807   DATABPEXT - Data-access Breakpoint Extension            = 0 (1)
+00:00:00.241808   PERFTSC - Performance Time Stamp Counter                = 0 (0)
+00:00:00.241809   PCX_L2I - L2I/L3 Performance Counter Extensions         = 0 (1)
+00:00:00.241810   MONITORX - MWAITX and MONITORX instructions             = 0 (1)
+00:00:00.241811   AddrMaskExt - BP Addressing masking extended to bit 31  = 0 (0)
+00:00:00.241812 SVM Feature Identification (leaf A)
+00:00:00.241812   Mnemonic - Description                                  = Guest (Host)
+00:00:00.241813   NP - Nested Paging                                      = 0 (1)
+00:00:00.241815   LbrVirt - Last Branch Record Virtualization             = 0 (1)
+00:00:00.241815   SVML - SVM Lock                                         = 0 (1)
+00:00:00.241817   NRIPS - NextRIP Save                                    = 0 (1)
+00:00:00.241818   TscRateMsr - MSR based TSC rate control                 = 0 (1)
+00:00:00.241819   VmcbClean - VMCB clean bits                             = 0 (1)
+00:00:00.241820   FlushByASID - Flush by ASID                             = 0 (1)
+00:00:00.241821   DecodeAssists - Decode Assists                          = 0 (1)
+00:00:00.241822   PauseFilter - Pause intercept filter                    = 0 (1)
+00:00:00.241823   11 - Reserved                                           = 0 (1)
+00:00:00.241846   PauseFilterThreshold - Pause filter threshold           = 0 (1)
+00:00:00.241847   AVIC - Advanced Virtual Interrupt Controller            = 0 (1)
+00:00:00.241848   VMSAVEVirt - VMSAVE and VMLOAD Virtualization           = 0 (1)
+00:00:00.241848   VGIF - Virtual Global-Interrupt Flag                    = 0 (1)
+00:00:00.241849   GMET - Guest Mode Execute Trap Extension                = 0 (0)
+00:00:00.241850   x2AVIC - AVIC support for x2APIC mode                   = 0 (0)
+00:00:00.241851   SSSCheck - SVM supervisor shadow stack restrictions     = 0 (0)
+00:00:00.241852   SpecCtrl - SPEC_CTRL virtualization                     = 0 (0)
+00:00:00.241853   ROGPT - Read-Only Guest Page Table feature support      = 0 (0)
+00:00:00.241853   HOST_MCE_OVERRIDE - Guest #MC can be intercepted        = 0 (0)
+00:00:00.241854   TlbiCtl - INVLPGB/TLBSYNC enable and intercept          = 0 (0)
+00:00:00.241855   VNMI - NMI Virtualization                               = 0 (0)
+00:00:00.241856   IbsVirt - IBS Virtualization                            = 0 (0)
+00:00:00.241857   ExtLvtAvicAccessChg - Extended LVT AVIC access changes  = 0 (0)
+00:00:00.241858   NestedVirtVmcbAddrChk - Guest VMCB address check        = 0 (0)
+00:00:00.241858   BusLockThreshold - Bus Lock Threshold                   = 0 (0)
+00:00:00.241860 Full Name:                       "AMD Ryzen 3 2200G with Radeon Vega Graphics    "
+00:00:00.241860 TLB 2/4M Instr/Uni:              fully  64 entries
+00:00:00.241861 TLB 2/4M Data:                   fully  64 entries
+00:00:00.241861 TLB 4K Instr/Uni:                fully  64 entries
+00:00:00.241862 TLB 4K Data:                     fully  64 entries
+00:00:00.241863 L1 Instr Cache Line Size:        64 bytes
+00:00:00.241863 L1 Instr Cache Lines Per Tag:    1
+00:00:00.241864 L1 Instr Cache Associativity:    4 way
+00:00:00.241864 L1 Instr Cache Size:             64 KB
+00:00:00.241865 L1 Data Cache Line Size:         64 bytes
+00:00:00.241865 L1 Data Cache Lines Per Tag:     1
+00:00:00.241865 L1 Data Cache Associativity:     8 way
+00:00:00.241865 L1 Data Cache Size:              32 KB
+00:00:00.241866 L2 TLB 2/4M Instr/Uni:           8 way  1024 entries
+00:00:00.241867 L2 TLB 2/4M Data:                2 way  1536 entries
+00:00:00.241867 L2 TLB 4K Instr/Uni:             8 way  1024 entries
+00:00:00.241868 L2 TLB 4K Data:                  8 way  1536 entries
+00:00:00.241868 L2 Cache Line Size:              64 bytes
+00:00:00.241868 L2 Cache Lines Per Tag:          1
+00:00:00.241869 L2 Cache Associativity:          8 way 
+00:00:00.241869 L2 Cache Size:                   512 KB
+00:00:00.241869 L3 Cache Line Size:              64 bytes
+00:00:00.241870 L3 Cache Lines Per Tag:          1
+00:00:00.241870 L3 Cache Associativity:          16 way
+00:00:00.241870 L3 Cache Size:                   4096 KB
+00:00:00.241871 APM Features EDX
+00:00:00.241871   Mnemonic - Description                                  = Guest (Host)
+00:00:00.241873   TS - Temperature Sensor                                 = 0 (1)
+00:00:00.241874   FID - Frequency ID control                              = 0 (0)
+00:00:00.241875   VID - Voltage ID control                                = 0 (0)
+00:00:00.241876   TTP - Thermal Trip                                      = 0 (1)
+00:00:00.241877   TM - Hardware Thermal Control (HTC)                     = 0 (1)
+00:00:00.241878   100MHzSteps - 100 MHz Multiplier control                = 0 (0)
+00:00:00.241879   HwPstate - Hardware P-state control                     = 0 (1)
+00:00:00.241880   TscInvariant - Invariant Time Stamp Counter             = 1 (1)
+00:00:00.241881   CPB - Core Performance Boost                            = 0 (0)
+00:00:00.241882   EffFreqRO - Read-only Effective Frequency Interface     = 0 (1)
+00:00:00.241882   ProcFdbkIf - Processor Feedback Interface               = 0 (0)
+00:00:00.241883   ProcPwrRep - Core power reporting interface support     = 0 (0)
+00:00:00.241884   ConnectedStandby - Connected Standby                    = 0 (1)
+00:00:00.241885   RAPL - Running average power limit                      = 0 (1)
+00:00:00.241886 Ext Features ext IDs EBX
+00:00:00.241886   Mnemonic - Description                                  = Guest (Host)
+00:00:00.241888   CLZERO - Clear zero instruction (cacheline)             = 0 (1)
+00:00:00.241889   IRPerf - Instructions retired count support             = 0 (1)
+00:00:00.241889   XSaveErPtr - Save/restore error pointers (FXSAVE/RSTOR) = 0 (1)
+00:00:00.241890   INVLPGB - INVLPGB and TLBSYNC instructions              = 0 (0)
+00:00:00.241891   RDPRU - RDPRU instruction                               = 0 (0)
+00:00:00.241892   BE - Bandwidth Enforcement extension                    = 0 (0)
+00:00:00.241893   MCOMMIT - MCOMMIT instruction                           = 0 (0)
+00:00:00.241894   WBNOINVD - WBNOINVD instruction                         = 0 (0)
+00:00:00.241895   IBPB - Supports the IBPB command in IA32_PRED_CMD       = 0 (1)
+00:00:00.241896   INT_WBINVD - WBINVD/WBNOINVD interruptible              = 0 (0)
+00:00:00.241897   IBRS - Indirect Branch Restricted Speculation           = 0 (0)
+00:00:00.241897   STIBP - Single Thread Indirect Branch Prediction        = 0 (0)
+00:00:00.241898   IbrsAlwaysOn - Processor prefers that IBRS be left on   = 0 (0)
+00:00:00.241899   StibpAlwaysOn - Processor prefers that STIBP be left on = 0 (0)
+00:00:00.241899   IbrsPreferred - IBRS preferred over software solution   = 0 (0)
+00:00:00.241900   IbrsSameMode - IBRS limits same mode speculation        = 0 (0)
+00:00:00.241901   EferLmsleUnsupported - EFER.LMSLE is unsupported        = 0 (0)
+00:00:00.241902   INVLPGBnestedPages - INVLPGB for nested translation     = 0 (0)
+00:00:00.241902   PPIN - Protected processor inventory number             = 0 (0)
+00:00:00.241903   SSBD - Speculative Store Bypass Disable                 = 0 (0)
+00:00:00.241904   SsbdVirtSpecCtrl - Use VIRT_SPEC_CTL for SSBD           = 0 (0)
+00:00:00.241905   SsbdNotRequired - SSBD not needed on this processor     = 1 (0)
+00:00:00.241906   CPPC - Collaborative Processor Performance Control      = 0 (0)
+00:00:00.241906   PSFD - Predictive Store Forward Disable                 = 0 (0)
+00:00:00.241907   BTC_NO - Unaffected by branch type confusion            = 0 (0)
+00:00:00.241908   IBPB_RET - Clears RA predictor when PRED_CMD.IBPB set   = 0 (0)
+00:00:00.241909 Physical Address Width:          48 bits
+00:00:00.241909 Virtual Address Width:           48 bits
+00:00:00.241909 Guest Physical Address Width:    48 bits (0)
+00:00:00.241910 Physical Core Count:             3
+00:00:00.241910 APIC ID size:                    3 (0x3)
+00:00:00.241911 Performance TSC size:            40 bits
+00:00:00.241911 Max page count for INVLPGB:      0x3030
+00:00:00.241912 Max ECX for RDPRU:               0x0
+00:00:00.241914 ********************* End of CPUID dump *********************
+00:00:00.240950 HM: fUsePauseFilter=false fUseLbrVirt=false fUseVGif=true fUseVirtVmsaveVmload=true
+00:00:00.242226 VMEmt: Halt method global1 (5)
+00:00:00.242282 VMEmt: HaltedGlobal1 config: cNsSpinBlockThresholdCfg=2000
+00:00:00.242340 Changing the VM state from 'CREATING' to 'CREATED'
+00:00:00.251093 NAT: DNS settings changed, triggering update
+00:00:00.251111 Nameserver is either on 127/8 network or failed to obtain from host. Falling back to libslirp DNS proxy.
+00:00:00.251112 fallback virtual nameserver: 50462730Changing the VM state from 'CREATED' to 'POWERING_ON'
+00:00:00.254355 Changing the VM state from 'POWERING_ON' to 'RUNNING'
+00:00:00.254363 Console: Machine state changed to 'Running'
+00:00:00.255399 VBoxHeadless: starting event loop
+00:00:00.256052 VMMDev: Guest Log: BIOS: VirtualBox 7.2.22
+00:00:00.256122 PCI: Setting up resources and interrupts
+00:00:00.256311 PIT: mode=2 count=0x10000 (65536) - 18.20 Hz (ch=0)
+00:00:00.282559 Display::i_handleDisplayResize: uScreenId=0 pvVRAM=0000000000000000 w=720 h=400 bpp=0 cbLine=0x0 flags=0x0 origin=0,0
+00:00:00.282559 VMMDev: Guest Log: CPUID EDX: 0x178bfbff
+00:00:00.282559 PIIX3 ATA: Ctl#0: RESET, DevSel=0 AIOIf=0 CmdIf0=0x00 (-1 usec ago) CmdIf1=0x00 (-1 usec ago)
+00:00:00.282559 PIIX3 ATA: Ctl#0: finished processing RESET
+00:00:00.282559 VMMDev: Guest Log: BIOS: ata0-0: PCHS=16383/16/63 LCHS=1024/255/63
+00:00:00.282559 PIIX3 ATA: Ctl#1: RESET, DevSel=0 AIOIf=0 CmdIf0=0x00 (-1 usec ago) CmdIf1=0x00 (-1 usec ago)
+00:00:00.282559 PIIX3 ATA: Ctl#1: finished processing RESET
+00:00:00.285867 PIT: mode=2 count=0x48d3 (18643) - 64.00 Hz (ch=0)
+00:00:00.311308 Display::i_handleDisplayResize: uScreenId=0 pvVRAM=00007fba22600000 w=640 h=480 bpp=32 cbLine=0xA00 flags=0x0 origin=0,0
+00:00:02.770983 Display::i_handleDisplayResize: uScreenId=0 pvVRAM=0000000000000000 w=720 h=400 bpp=0 cbLine=0x0 flags=0x0 origin=0,0
+00:00:02.775405 PIT: mode=2 count=0x10000 (65536) - 18.20 Hz (ch=0)
+00:00:02.775695 VMMDev: Guest Log: BIOS: Boot : bseqnr=1, bootseq=0231
+00:00:02.775900 VMMDev: Guest Log: BIOS: Boot from Floppy 0 failed
+00:00:02.776132 VMMDev: Guest Log: BIOS: Boot : bseqnr=2, bootseq=0023
+00:00:02.776591 VMMDev: Guest Log: BIOS: Booting from CD-ROM...
+00:00:02.885355 Display::i_handleDisplayResize: uScreenId=0 pvVRAM=00007fba22600000 w=640 h=480 bpp=24 cbLine=0x780 flags=0x0 origin=0,0
+00:00:18.708694 Display::i_handleDisplayResize: uScreenId=0 pvVRAM=0000000000000000 w=720 h=400 bpp=0 cbLine=0x0 flags=0x0 origin=0,0
+00:00:18.758337 VMMDev: Guest Log: BIOS: KBD: unsupported int 16h function 03
+00:00:18.758452 VMMDev: Guest Log: BIOS: AX=0305 BX=0000 CX=0000 DX=0000 
+00:00:18.759158 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=81
+00:00:18.759290 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=81
+00:00:18.759432 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=82
+00:00:18.759582 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=82
+00:00:18.759710 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=83
+00:00:18.759835 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=83
+00:00:18.759961 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=84
+00:00:18.760094 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=84
+00:00:18.760229 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=85
+00:00:18.760352 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=85
+00:00:18.760481 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=86
+00:00:18.760615 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=86
+00:00:18.760750 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=87
+00:00:18.760869 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=87
+00:00:18.761019 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=88
+00:00:18.761146 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=88
+00:00:18.761278 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=89
+00:00:18.761405 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=89
+00:00:18.761557 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=8a
+00:00:18.761685 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=8a
+00:00:18.761816 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=8b
+00:00:18.761942 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=8b
+00:00:18.762078 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=8c
+00:00:18.762201 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=8c
+00:00:18.762337 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=8d
+00:00:18.762460 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=8d
+00:00:18.762611 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=8e
+00:00:18.762741 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=8e
+00:00:18.762871 VMMDev: Guest Log: int13_harddisk_ext: function 41, unmapped device for ELDL=8f
+00:00:18.763000 VMMDev: Guest Log: int13_harddisk: function 02, unmapped device for ELDL=8f
+00:00:19.028468 GIM: KVM: VCPU  0: Enabled system-time struct. at 0x000000012b003000 - u32TscScale=0x928f7c40 i8TscShift=-1 uVersion=2 fFlags=0x1 uTsc=0xf45109bb6 uVirtNanoTS=0x45ef93b2d TscKHz=3493438
+00:00:19.028552 TM: Switching TSC mode from 'VirtTSCEmulated' to 'RealTSCOffset'
+00:00:19.200874 GIM: KVM: Enabled wall-clock struct. at 0x000000012b002000 - u32Sec=1793237967 u32Nano=758278381 uVersion=2
+00:00:19.210585 PIT: mode=2 count=0x4a9 (1193) - 1000.15 Hz (ch=0)
+00:00:19.217355 IEM: rdmsr(0x87) -> #GP(0)
+00:00:19.366174 PIT: mode=0 count=0x10000 (65536) - 18.20 Hz (ch=0)
+00:00:19.383293 GIM: KVM: VCPU  1: Enabled system-time struct. at 0x000000012b003040 - u32TscScale=0x928f7c40 i8TscShift=-1 uVersion=2 fFlags=0x1 uTsc=0xf8ef73c56 uVirtNanoTS=0x47420b4d4 TscKHz=3493438
+00:00:19.386648 GIM: KVM: VCPU  2: Enabled system-time struct. at 0x000000012b003080 - u32TscScale=0x928f7c40 i8TscShift=-1 uVersion=2 fFlags=0x1 uTsc=0xf8faa1a51 uVirtNanoTS=0x47453e841 TscKHz=3493438
+00:00:19.645906 OHCI: Software reset
+00:00:19.722192 EHCI: Hardware reset
+00:00:19.724497 EHCI: USB Operational
+00:00:20.234842 OHCI: USB Reset
+00:00:20.249652 EHCI: USB Suspended
+00:00:20.743783 OHCI: Software reset
+00:00:20.743880 OHCI: USB Operational
+00:00:20.764924 OHCI: USB Suspended
+00:00:21.617334 VMMDev: Guest Log: vboxguest: host-version: 7.2.22r175245 0x8000000f
+00:00:21.623673 VMMDev: Guest Additions information report: Version 6.0.0 r127566 '6.0.0'
+00:00:21.623732 VMMDev: Guest Additions information report: Interface = 0x00010004 osType = 0x00053100 (Linux >= 2.6, 64-bit)
+00:00:21.623811 VMMDev: Guest Additions capability report: (0x0 -> 0x0) seamless: no, hostWindowMapping: no, graphics: no
+00:00:21.623855 VMMDev: vmmDevReqHandler_HeartbeatConfigure: No change (fHeartbeatActive=false)
+00:00:21.623865 VMMDev: Heartbeat flatline timer set to trigger after 4 000 000 000 ns
+00:00:21.624105 VMMDev: Guest Log: vbg_heartbeat_init: Setting up heartbeat to trigger every 2000 milliseconds
+00:00:21.652536 PIIX3 ATA: Ctl#1: RESET, DevSel=0 AIOIf=0 CmdIf0=0xa0 (-1 usec ago) CmdIf1=0x00 (-1 usec ago)
+00:00:21.652536 PIIX3 ATA: Ctl#1: finished processing RESET
+00:00:21.652536 PIIX3 ATA: Ctl#0: RESET, DevSel=0 AIOIf=0 CmdIf0=0xc4 (-1 usec ago) CmdIf1=0x00 (-1 usec ago)
+00:00:21.652536 PIIX3 ATA: Ctl#0: finished processing RESET
