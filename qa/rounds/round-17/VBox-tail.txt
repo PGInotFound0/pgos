@@ -1,0 +1,226 @@
+ DXE_CORE
+00:00:00.428319 EFI: VBoxDbg> loadimage64 'DxeCore.efi' 0xdf0e8000 LB 0x0
+00:00:00.428970 EFI: debug point DXE_CORE_LATE
+00:00:00.432092 EFI: VBoxDbg> loadimage64 'DevicePathDxe.efi' 0xde187000 LB 0xa540
+00:00:00.432488 EFI: VBoxDbg> loadimage64 'PcdDxe.efi' 0xde198000 LB 0x2f40
+00:00:00.432976 EFI: VBoxDbg> loadimage64 'FvbServicesRuntimeDxe.efi' 0xde8ea000 LB 0x2660
+00:00:00.434505 EFI: VBoxDbg> loadimage64 'ReportStatusCodeRouterRuntimeDxe.efi' 0xde8e8000 LB 0x14e0
+00:00:00.434898 EFI: VBoxDbg> loadimage64 'RuntimeDxe.efi' 0xde8e6000 LB 0x1420
+00:00:00.436026 EFI: VBoxDbg> loadimage64 'SecurityStubDxe.efi' 0xddfb7000 LB 0xe7f60
+00:00:00.436422 EFI: VBoxDbg> loadimage64 'EbcDxe.efi' 0xde17d000 LB 0x4260
+00:00:00.437887 EFI: VBoxDbg> loadimage64 'CpuIo2Dxe.efi' 0xde183000 LB 0x1400
+00:00:00.438402 EFI: VBoxDbg> loadimage64 'IncompatiblePciDeviceSupportDxe.efi' 0xde185000 LB 0x820
+00:00:00.438804 EFI: VBoxDbg> loadimage64 'PciHotPlugInitDxe.efi' 0xde177000 LB 0x2c20
+00:00:00.439296 EFI: VBoxDbg> loadimage64 'ResetSystemRuntimeDxe.efi' 0xde8e4000 LB 0x1720
+00:00:00.439720 EFI: VBoxDbg> loadimage64 'Metronome.efi' 0xde17b000 LB 0xce0
+00:00:00.440206 EFI: VBoxDbg> loadimage64 'HiiDatabase.efi' 0xde13d000 LB 0x1c160
+00:00:00.440643 EFI: VBoxDbg> loadimage64 'AcpiTableDxe.efi' 0xde16b000 LB 0x5100
+00:00:00.440994 EFI: VBoxDbg> loadimage64 'TdxDxe.efi' 0xde168000 LB 0x2100
+00:00:00.441364 EFI: VBoxDbg> loadimage64 'DpcDxe.efi' 0xde175000 LB 0xb20
+00:00:00.441729 EFI: VBoxDbg> loadimage64 'IoMmuDxe.efi' 0xde160000 LB 0x36c0
+00:00:00.442197 EFI: VBoxDbg> loadimage64 'EmuVariableFvbRuntimeDxe.efi' 0xde8e3000 LB 0xf20
+00:00:00.442603 EFI: VBoxDbg> unload 'EmuVariableFvbRuntimeDxe.efi' # 0xde8e3000 LB 0xf20
+00:00:00.443441 EFI: VBoxDbg> loadimage64 'VariableRuntimeDxe.efi' 0xde7f6000 LB 0xeddc0
+00:00:00.456838 EFI: VBoxDbg> loadimage64 'TcgDxe.efi' 0xde138000 LB 0x41e0
+00:00:00.457215 EFI: VBoxDbg> unload 'TcgDxe.efi' # 0xde138000 LB 0x41e0
+00:00:00.457635 EFI: VBoxDbg> loadimage64 'RngDxe.efi' 0xde166000 LB 0x1ae0
+00:00:00.458344 EFI: VBoxDbg> loadimage64 'StatusCodeHandlerRuntimeDxe.efi' 0xde7f5000 LB 0xbc0
+00:00:00.458701 EFI: VBoxDbg> loadimage64 'CpuDxe.efi' 0xde10a000 LB 0x18fe0
+00:00:00.470279 EFI: debug point DXE_AP
+00:00:00.470343 EFI: debug point DXE_AP
+00:00:00.471161 EFI: VBoxDbg> loadimage64 'SetupBrowser.efi' 0xde0d3000 LB 0x14980
+00:00:00.471608 EFI: VBoxDbg> loadimage64 'SmbiosDxe.efi' 0xde13a000 LB 0x2f60
+00:00:00.472066 EFI: VBoxDbg> loadimage64 'AcpiPlatform.efi' 0xde15b000 LB 0x760
+00:00:00.472534 EFI: VBoxDbg> unload 'AcpiPlatform.efi' # 0xde15b000 LB 0x760
+00:00:00.472917 EFI: VBoxDbg> loadimage64 'LogoDxe.efi' 0xde0c7000 LB 0xb860
+00:00:00.473431 EFI: VBoxDbg> loadimage64 'FaultTolerantWriteDxe.efi' 0xde127000 LB 0x3180
+00:00:00.474504 EFI: VBoxDbg> loadimage64 'TdTcg2Dxe.efi' 0xde0bb000 LB 0x5a80
+00:00:00.474884 EFI: VBoxDbg> unload 'TdTcg2Dxe.efi' # 0xde0bb000 LB 0x5a80
+00:00:00.475298 EFI: VBoxDbg> loadimage64 'Tcg2Dxe.efi' 0xde0a9000 LB 0xede0
+00:00:00.475669 EFI: VBoxDbg> unload 'Tcg2Dxe.efi' # 0xde0a9000 LB 0xede0
+00:00:00.476170 EFI: VBoxDbg> loadimage64 'LocalApicTimerDxe.efi' 0xde125000 LB 0x1420
+00:00:00.476701 EFI: VBoxDbg> loadimage64 'PciHostBridgeDxe.efi' 0xde0bb000 LB 0x5de0
+00:00:00.487520 EFI: debug point DXE_AP
+00:00:00.487569 EFI: debug point DXE_AP
+00:00:00.494293 EFI: VBoxDbg> loadimage64 'PcRtc.efi' 0xde7f2000 LB 0x2a80
+00:00:00.495455 EFI: VBoxDbg> loadimage64 'SecureBootConfigDxe.efi' 0xdd66e000 LB 0xc8e00
+00:00:00.496058 EFI: VBoxDbg> loadimage64 'MonotonicCounterRuntimeDxe.efi' 0xde7f1000 LB 0x840
+00:00:00.496963 EFI: VBoxDbg> loadimage64 'CapsuleRuntimeDxe.efi' 0xde7f0000 LB 0x920
+00:00:00.497441 EFI: VBoxDbg> loadimage64 'DriverHealthManagerDxe.efi' 0xde0b1000 LB 0x4380
+00:00:00.497820 EFI: VBoxDbg> loadimage64 'BdsDxe.efi' 0xdda71000 LB 0x18560
+00:00:00.498233 EFI: VBoxDbg> loadimage64 'RamDiskDxe.efi' 0xde09f000 LB 0x8760
+00:00:00.498694 EFI: VBoxDbg> loadimage64 'DisplayEngine.efi' 0xdda60000 LB 0x10ea0
+00:00:00.499406 EFI: VBoxDbg> loadimage64 'SmbiosPlatformDxe.efi' 0xddaa1000 LB 0x1700
+00:00:00.499813 EFI: VBoxDbg> unload 'SmbiosPlatformDxe.efi' # 0xddaa1000 LB 0x1700
+00:00:00.500258 EFI: VBoxDbg> loadimage64 'PlatformDxe.efi' 0xdda99000 LB 0x4300
+00:00:00.500726 EFI: VBoxDbg> loadimage64 'WatchdogTimer.efi' 0xde0a8000 LB 0x820
+00:00:00.501159 EFI: VBoxDbg> loadimage64 'QemuKernelLoaderFsDxe.efi' 0xdda95000 LB 0x3580
+00:00:00.501591 EFI: VBoxDbg> unload 'QemuKernelLoaderFsDxe.efi' # 0xdda95000 LB 0x3580
+00:00:00.502086 EFI: VBoxDbg> loadimage64 'PciBusDxe.efi' 0xdda54000 LB 0xb940
+00:00:00.502507 EFI: VBoxDbg> loadimage64 'VirtioPciDeviceDxe.efi' 0xdda9f000 LB 0x11e0
+00:00:00.502943 EFI: VBoxDbg> loadimage64 'Virtio10.efi' 0xdda93000 LB 0x2820
+00:00:00.503358 EFI: VBoxDbg> loadimage64 'VirtioScsiDxe.efi' 0xdda90000 LB 0x2060
+00:00:00.503778 EFI: VBoxDbg> loadimage64 'MptScsiDxe.efi' 0xdda8e000 LB 0x1900
+00:00:00.504269 EFI: VBoxDbg> loadimage64 'ConPlatformDxe.efi' 0xdda8c000 LB 0x1d80
+00:00:00.504807 EFI: VBoxDbg> loadimage64 'ConSplitterDxe.efi' 0xdda46000 LB 0x60a0
+00:00:00.505457 EFI: VBoxDbg> loadimage64 'GraphicsConsoleDxe.efi' 0xdda41000 LB 0x4120
+00:00:00.505976 EFI: VBoxDbg> loadimage64 'TerminalDxe.efi' 0xdda35000 LB 0x53a0
+00:00:00.506397 EFI: VBoxDbg> loadimage64 'DiskIoDxe.efi' 0xdda3e000 LB 0x21c0
+00:00:00.506808 EFI: VBoxDbg> loadimage64 'PartitionDxe.efi' 0xdda29000 LB 0x5480
+00:00:00.507285 EFI: VBoxDbg> loadimage64 'EnglishDxe.efi' 0xdda52000 LB 0xd60
+00:00:00.507667 EFI: VBoxDbg> loadimage64 'ScsiBus.efi' 0xdda32000 LB 0x2140
+00:00:00.508065 EFI: VBoxDbg> loadimage64 'ScsiDisk.efi' 0xdda15000 LB 0x9100
+00:00:00.508496 EFI: VBoxDbg> loadimage64 'SataController.efi' 0xdda30000 LB 0x1660
+00:00:00.508961 EFI: VBoxDbg> loadimage64 'AtaAtapiPassThruDxe.efi' 0xdda0d000 LB 0x7e00
+00:00:00.509368 EFI: VBoxDbg> loadimage64 'AtaBusDxe.efi' 0xdda21000 LB 0x3d40
+00:00:00.509787 EFI: VBoxDbg> loadimage64 'NvmExpressDxe.efi' 0xdd7f8000 LB 0x7aa0
+00:00:00.510151 EFI: VBoxDbg> loadimage64 'SioBusDxe.efi' 0xdda27000 LB 0x15c0
+00:00:00.510578 EFI: VBoxDbg> loadimage64 'PciSioSerialDxe.efi' 0xdda02000 LB 0x5000
+00:00:00.511022 EFI: VBoxDbg> loadimage64 'Ps2KeyboardDxe.efi' 0xdd7f4000 LB 0x3b80
+00:00:00.511411 EFI: VBoxDbg> loadimage64 'VBoxVgaDxe.efi' 0xdd7f0000 LB 0x3840
+00:00:00.511750 EFI: VBoxDbg> loadimage64 'VBoxHfs.efi' 0xdd7e2000 LB 0x6500
+00:00:00.512143 EFI: VBoxDbg> loadimage64 'VBoxSysTables.efi' 0xdda25000 LB 0xac0
+00:00:00.536429 EFI: VBoxDbg> loadimage64 'VBoxAppleSim.efi' 0xdda07000 LB 0x2ae0
+00:00:00.537055 EFI: VBoxDbg> loadimage64 'VBoxApfsJmpStartDxe.efi' 0xdda0b000 LB 0x1180
+00:00:00.537613 EFI: VBoxDbg> loadimage64 'BootGraphicsResourceTableDxe.efi' 0xdda0a000 LB 0xf40
+00:00:00.538030 EFI: VBoxDbg> loadimage64 'Fat.efi' 0xdd7d2000 LB 0x7660
+00:00:00.538472 EFI: VBoxDbg> loadimage64 'UdfDxe.efi' 0xdd7dd000 LB 0x4200
+00:00:00.538872 EFI: VBoxDbg> loadimage64 'VirtioFsDxe.efi' 0xdd7cb000 LB 0x6180
+00:00:00.539257 EFI: VBoxDbg> loadimage64 'Hash2DxeCrypto.efi' 0xdd7ea000 LB 0x2ba0
+00:00:00.539701 EFI: VBoxDbg> loadimage64 'SnpDxe.efi' 0xdd7bf000 LB 0x57a0
+00:00:00.540172 EFI: VBoxDbg> loadimage64 'VlanConfigDxe.efi' 0xdd7b9000 LB 0x55a0
+00:00:00.540559 EFI: VBoxDbg> loadimage64 'MnpDxe.efi' 0xdd7a9000 LB 0x7380
+00:00:00.540959 EFI: VBoxDbg> loadimage64 'ArpDxe.efi' 0xdd7b5000 LB 0x35c0
+00:00:00.541356 EFI: VBoxDbg> loadimage64 'Dhcp4Dxe.efi' 0xdd797000 LB 0x87a0
+00:00:00.541762 EFI: VBoxDbg> loadimage64 'Ip4Dxe.efi' 0xdd771000 LB 0x12680
+00:00:00.542207 EFI: VBoxDbg> loadimage64 'Udp4Dxe.efi' 0xdd78f000 LB 0x7660
+00:00:00.543051 EFI: VBoxDbg> loadimage64 'Mtftp4Dxe.efi' 0xdd787000 LB 0x7c20
+00:00:00.543462 EFI: VBoxDbg> loadimage64 'Dhcp6Dxe.efi' 0xdd768000 LB 0x8940
+00:00:00.543878 EFI: VBoxDbg> loadimage64 'Ip6Dxe.efi' 0xdd654000 LB 0x194e0
+00:00:00.544273 EFI: VBoxDbg> loadimage64 'Udp6Dxe.efi' 0xdd760000 LB 0x7340
+00:00:00.545098 EFI: VBoxDbg> loadimage64 'Mtftp6Dxe.efi' 0xdd758000 LB 0x7ea0
+00:00:00.545513 EFI: VBoxDbg> loadimage64 'UefiPxeBcDxe.efi' 0xdd643000 LB 0x109e0
+00:00:00.545969 EFI: VBoxDbg> loadimage64 'IScsiDxe.efi' 0xdd625000 LB 0x1d100
+00:00:00.546361 EFI: VBoxDbg> unload 'IScsiDxe.efi' # 0xdd625000 LB 0x1d100
+00:00:00.546886 EFI: VBoxDbg> loadimage64 'VirtioNetDxe.efi' 0xdd7a4000 LB 0x4300
+00:00:00.547272 EFI: VBoxDbg> loadimage64 'E1kNetDxe.efi' 0xdd7b2000 LB 0x2e60
+00:00:00.547678 EFI: VBoxDbg> loadimage64 'UhciDxe.efi' 0xdd74e000 LB 0x4580
+00:00:00.548111 EFI: VBoxDbg> loadimage64 'EhciDxe.efi' 0xdd749000 LB 0x4f00
+00:00:00.548529 EFI: VBoxDbg> loadimage64 'XhciDxe.efi' 0xdd737000 LB 0x8660
+00:00:00.548951 EFI: VBoxDbg> loadimage64 'UsbBusDxe.efi' 0xdd63d000 LB 0x5260
+00:00:00.549339 EFI: VBoxDbg> loadimage64 'UsbKbDxe.efi' 0xdd744000 LB 0x4020
+00:00:00.549801 EFI: VBoxDbg> loadimage64 'UsbMassStorageDxe.efi' 0xdd638000 LB 0x4380
+00:00:00.550212 EFI: VBoxDbg> loadimage64 'TcpDxe.efi' 0xdd61e000 LB 0xce80
+00:00:00.636271 Display::i_handleDisplayResize: uScreenId=0 pvVRAM=00007f2c25800000 w=1024 h=768 bpp=32 cbLine=0x1000 flags=0x0 origin=0,0
+00:00:00.722709 PS2K: Selected scan set 2
+00:00:00.723448 EHCI: Hardware reset
+00:00:00.723479 EHCI: USB Operational
+00:00:00.757833 ATA: LUN#0: EXECUTE DEVICE DIAGNOSTIC, status 50
+00:00:00.759151 ATA: LUN#0: INITIALIZE DEVICE PARAMETERS: 63 sectors per track, 16 heads
+00:00:00.760328 ATA: LUN#2: EXECUTE DEVICE DIAGNOSTIC, status 00
+00:00:00.862304 EFI: VBoxDbg> loadimage64 '.efi' 0x101300000 LB 0x2d000
+00:00:17.601352 EFI: VBoxDbg> loadimage64 '.efi' 0xd9a93000 LB 0x10de000
+00:00:18.361956 EHCI: USB Suspended
+00:00:18.361987 EHCI: Hardware reset
+00:00:18.373346 EFI: debug point DXE_AP
+00:00:18.373829 EFI: debug point DXE_AP
+00:00:18.397511 GIM: KVM: VCPU  0: Enabled system-time struct. at 0x0000000149a03000 - u32TscScale=0x928f7c40 i8TscShift=-1 uVersion=2 fFlags=0x1 uTsc=0xec767c4d8 uVirtNanoTS=0x43b00dec1 TscKHz=3493438
+00:00:18.397565 TM: Switching TSC mode from 'VirtTSCEmulated' to 'RealTSCOffset'
+00:00:18.563731 GIM: KVM: Enabled wall-clock struct. at 0x0000000149a02000 - u32Sec=1793238766 u32Nano=677654911 uVersion=2
+00:00:18.566494 PIT: mode=2 count=0x4a9 (1193) - 1000.15 Hz (ch=0)
+00:00:18.571674 IEM: rdmsr(0x87) -> #GP(0)
+00:00:18.578477 EFI: relocate module to 0xfffffffefe4ea000 from 0xde8ea000
+00:00:18.578528 EFI: relocate module to 0xfffffffefe4e8000 from 0xde8e8000
+00:00:18.578561 EFI: relocate module to 0xfffffffefe4e4000 from 0xde8e4000
+00:00:18.578587 EFI: relocate module to 0xfffffffefe3f6000 from 0xde7f6000
+00:00:18.578665 EFI: relocate module to 0xfffffffefe3f5000 from 0xde7f5000
+00:00:18.578702 EFI: relocate module to 0xfffffffefe3f2000 from 0xde7f2000
+00:00:18.578728 EFI: relocate module to 0xfffffffefe3f1000 from 0xde7f1000
+00:00:18.578760 EFI: relocate module to 0xfffffffefe3f0000 from 0xde7f0000
+00:00:18.713786 PIT: mode=0 count=0x10000 (65536) - 18.20 Hz (ch=0)
+00:00:18.729200 GIM: KVM: VCPU  1: Enabled system-time struct. at 0x0000000149a03040 - u32TscScale=0x928f7c40 i8TscShift=-1 uVersion=2 fFlags=0x1 uTsc=0xf0c7c3e81 uVirtNanoTS=0x44ec7116e TscKHz=3493438
+00:00:18.732950 GIM: KVM: VCPU  2: Enabled system-time struct. at 0x0000000149a03080 - u32TscScale=0x928f7c40 i8TscShift=-1 uVersion=2 fFlags=0x1 uTsc=0xf0d443175 uVirtNanoTS=0x44f004dbf TscKHz=3493438
+00:00:19.030760 OHCI: Software reset
+00:00:19.109193 EHCI: Hardware reset
+00:00:19.110064 EHCI: USB Operational
+00:00:19.133023 OHCI: USB Reset
+00:00:19.146226 EHCI: USB Suspended
+00:00:19.184256 OHCI: Software reset
+00:00:19.184317 OHCI: USB Operational
+00:00:19.191857 OHCI: USB Suspended
+00:00:21.033721 VMMDev: Guest Log: vboxguest: host-version: 7.2.22r175245 0x8000000f
+00:00:21.066558 VMMDev: Guest Additions information report: Version 6.0.0 r127566 '6.0.0'
+00:00:21.066604 VMMDev: Guest Additions information report: Interface = 0x00010004 osType = 0x00053100 (Linux >= 2.6, 64-bit)
+00:00:21.066678 VMMDev: Guest Additions capability report: (0x0 -> 0x0) seamless: no, hostWindowMapping: no, graphics: no
+00:00:21.066722 VMMDev: vmmDevReqHandler_HeartbeatConfigure: No change (fHeartbeatActive=false)
+00:00:21.066731 VMMDev: Heartbeat flatline timer set to trigger after 4 000 000 000 ns
+00:00:21.067018 VMMDev: Guest Log: vbg_heartbeat_init: Setting up heartbeat to trigger every 2000 milliseconds
+00:00:21.097962 PIIX3 ATA: Ctl#1: RESET, DevSel=0 AIOIf=0 CmdIf0=0xa0 (-1 usec ago) CmdIf1=0x00 (-1 usec ago)
+00:00:21.098034 PIIX3 ATA: Ctl#1: finished processing RESET
+00:00:21.098320 PIIX3 ATA: Ctl#0: RESET, DevSel=0 AIOIf=0 CmdIf0=0xc8 (-1 usec ago) CmdIf1=0x00 (-1 usec ago)
+00:00:21.098398 PIIX3 ATA: Ctl#0: finished processing RESET
+00:00:33.595482 AC97: Reset
+00:00:33.595515 AC97: Mixer reset (EAID=0x809, EACS=0x9)
+00:00:33.595517 AC97: Record select to left=mic, right=mic
+00:00:33.595520 Audio Mixer: MUTING master volume of 'AC'97 Mixer' -- channel volumes: ff ff ff ff ff ff ff ff ff ff ff ff
+00:00:33.595525 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.595528 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.595531 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.595533 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.595536 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.595538 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.595540 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.595613 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.595616 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.595644 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.595647 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.595672 AC97: Reset
+00:00:33.595673 AC97: Mixer reset (EAID=0x809, EACS=0x9)
+00:00:33.595675 AC97: Record select to left=mic, right=mic
+00:00:33.595676 Audio Mixer: MUTING master volume of 'AC'97 Mixer' -- channel volumes: ff ff ff ff ff ff ff ff ff ff ff ff
+00:00:33.595678 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.595680 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.595683 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.595685 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.595687 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.595689 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.595698 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596213 Audio Mixer: Setting master volume of 'AC'97 Mixer' -- channel volumes: ff ff ff ff ff ff ff ff ff ff ff ff
+00:00:33.596219 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596222 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596224 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596236 Audio Mixer: MUTING master volume of 'AC'97 Mixer' -- channel volumes: ff ff ff ff ff ff ff ff ff ff ff ff
+00:00:33.596238 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596240 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596248 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596280 Audio Mixer: MUTING master volume of 'AC'97 Mixer' -- channel volumes: ff ff ff ff ff ff ff ff ff ff ff ff
+00:00:33.596283 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596285 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596287 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596295 Audio Mixer: MUTING master volume of 'AC'97 Mixer' -- channel volumes: 83 83 83 83 83 83 83 83 83 83 83 83
+00:00:33.596297 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596299 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596301 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596322 Audio Mixer: MUTING master volume of 'AC'97 Mixer' -- channel volumes: bf bf bf bf bf bf bf bf bf bf bf bf
+00:00:33.596325 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596327 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596329 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596352 Audio Mixer: MUTING master volume of 'AC'97 Mixer' -- channel volumes: 83 83 83 83 83 83 83 83 83 83 83 83
+00:00:33.596354 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596356 Audio Mixer: MUTING sink 'AC'97 Mixer/Microphone In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596359 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596862 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596880 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596893 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596901 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596931 Audio Mixer: MUTING sink 'AC'97 Mixer/PCM Output' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596948 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596950 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596962 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596965 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596986 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596988 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.596997 AC97: Record select to left=mic, right=mic
+00:00:33.597004 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.597006 Audio Mixer: MUTING sink 'AC'97 Mixer/Line In' -- channel volumes: 00 00 00 00 00 00 00 00 00 00 00 00
+00:00:33.599360 ALSA: Using output device "default"

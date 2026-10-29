@@ -1,0 +1,250 @@
+- Invariant Time Stamp Counter             = 1 (1)
+00:00:01.350140   CPB - Core Performance Boost                            = 0 (0)
+00:00:01.350141   EffFreqRO - Read-only Effective Frequency Interface     = 0 (1)
+00:00:01.350142   ProcFdbkIf - Processor Feedback Interface               = 0 (0)
+00:00:01.350143   ProcPwrRep - Core power reporting interface support     = 0 (0)
+00:00:01.350143   ConnectedStandby - Connected Standby                    = 0 (1)
+00:00:01.350144   RAPL - Running average power limit                      = 0 (1)
+00:00:01.350145 Ext Features ext IDs EBX
+00:00:01.350145   Mnemonic - Description                                  = Guest (Host)
+00:00:01.350146   CLZERO - Clear zero instruction (cacheline)             = 0 (1)
+00:00:01.350147   IRPerf - Instructions retired count support             = 0 (1)
+00:00:01.350148   XSaveErPtr - Save/restore error pointers (FXSAVE/RSTOR) = 0 (1)
+00:00:01.350148   INVLPGB - INVLPGB and TLBSYNC instructions              = 0 (0)
+00:00:01.350149   RDPRU - RDPRU instruction                               = 0 (0)
+00:00:01.350150   BE - Bandwidth Enforcement extension                    = 0 (0)
+00:00:01.350150   MCOMMIT - MCOMMIT instruction                           = 0 (0)
+00:00:01.350151   WBNOINVD - WBNOINVD instruction                         = 0 (0)
+00:00:01.350152   IBPB - Supports the IBPB command in IA32_PRED_CMD       = 0 (1)
+00:00:01.350153   INT_WBINVD - WBINVD/WBNOINVD interruptible              = 0 (0)
+00:00:01.350153   IBRS - Indirect Branch Restricted Speculation           = 0 (0)
+00:00:01.350154   STIBP - Single Thread Indirect Branch Prediction        = 0 (0)
+00:00:01.350155   IbrsAlwaysOn - Processor prefers that IBRS be left on   = 0 (0)
+00:00:01.350155   StibpAlwaysOn - Processor prefers that STIBP be left on = 0 (0)
+00:00:01.350156   IbrsPreferred - IBRS preferred over software solution   = 0 (0)
+00:00:01.350156   IbrsSameMode - IBRS limits same mode speculation        = 0 (0)
+00:00:01.350157   EferLmsleUnsupported - EFER.LMSLE is unsupported        = 0 (0)
+00:00:01.350157   INVLPGBnestedPages - INVLPGB for nested translation     = 0 (0)
+00:00:01.350158   PPIN - Protected processor inventory number             = 0 (0)
+00:00:01.350159   SSBD - Speculative Store Bypass Disable                 = 0 (0)
+00:00:01.350159   SsbdVirtSpecCtrl - Use VIRT_SPEC_CTL for SSBD           = 0 (0)
+00:00:01.350160   SsbdNotRequired - SSBD not needed on this processor     = 1 (0)
+00:00:01.350161   CPPC - Collaborative Processor Performance Control      = 0 (0)
+00:00:01.350161   PSFD - Predictive Store Forward Disable                 = 0 (0)
+00:00:01.350162   BTC_NO - Unaffected by branch type confusion            = 0 (0)
+00:00:01.350162   IBPB_RET - Clears RA predictor when PRED_CMD.IBPB set   = 0 (0)
+00:00:01.350163 Physical Address Width:          48 bits
+00:00:01.350163 Virtual Address Width:           48 bits
+00:00:01.350164 Guest Physical Address Width:    48 bits (0)
+00:00:01.350164 Physical Core Count:             3
+00:00:01.350164 APIC ID size:                    3 (0x3)
+00:00:01.350165 Performance TSC size:            40 bits
+00:00:01.350165 Max page count for INVLPGB:      0x3030
+00:00:01.350165 Max ECX for RDPRU:               0x0
+00:00:01.350166 ********************* End of CPUID dump *********************
+00:00:01.349506 HM: fUsePauseFilter=false fUseLbrVirt=false fUseVGif=true fUseVirtVmsaveVmload=true
+00:00:01.350267 VMEmt: Halt method global1 (5)
+00:00:01.351360 VMEmt: HaltedGlobal1 config: cNsSpinBlockThresholdCfg=2000
+00:00:01.351457 Changing the VM state from 'CREATING' to 'CREATED'
+00:00:01.360935 NAT: DNS settings changed, triggering update
+00:00:01.360955 Nameserver is either on 127/8 network or failed to obtain from host. Falling back to libslirp DNS proxy.
+00:00:01.360957 fallback virtual nameserver: 50462730Changing the VM state from 'CREATED' to 'POWERING_ON'
+00:00:01.361826 Changing the VM state from 'POWERING_ON' to 'RUNNING'
+00:00:01.361832 Console: Machine state changed to 'Running'
+00:00:01.363277 EFI: debug point SEC_PREMEM
+00:00:01.424520 GUI: UIMachineViewNormal::resendSizeHint: Restoring guest size-hint for screen 0 to 1024x768
+00:00:01.433102 GUI: UIMachineLogicNormal::sltCheckForRequestedVisualStateType: Requested-state=1, Machine-state=6
+00:00:01.490301 EFI: VBoxDbg> loadimage64 'SecMain.efi' 0xfffcc094 LB 0x0
+00:00:01.490673 EFI: VBoxDbg> loadimage64 'PeiCore.efi' 0x2020120 LB 0x0
+00:00:01.491080 EFI: VBoxDbg> loadimage64 'PcdPeim.efi' 0x2028760 LB 0x27e0
+00:00:01.491571 EFI: VBoxDbg> loadimage64 'ReportStatusCodeRouterPei.efi' 0x202afa0 LB 0xa40
+00:00:01.492009 EFI: VBoxDbg> loadimage64 'StatusCodeHandlerPei.efi' 0x202baa0 LB 0x800
+00:00:01.492363 EFI: VBoxDbg> loadimage64 'TdTcg2Pei.efi' 0x202c3a0 LB 0x2060
+00:00:01.492723 EFI: VBoxDbg> loadimage64 'PlatformPei.efi' 0x202e4a0 LB 0x10160
+00:00:01.501087 EFI: debug point SEC_POSTMEM
+00:00:01.503348 EFI: VBoxDbg> loadimage64 'PeiCore.efi' 0xdf165000 LB 0x8460
+00:00:01.503847 EFI: VBoxDbg> loadimage64 'PcdPeim.efi' 0xdf162000 LB 0x27e0
+00:00:01.504409 EFI: VBoxDbg> loadimage64 'DxeIpl.efi' 0xdf15f000 LB 0x2460
+00:00:01.505140 EFI: VBoxDbg> loadimage64 'S3Resume2Pei.efi' 0xdf15c000 LB 0x2420
+00:00:01.505639 EFI: VBoxDbg> loadimage64 'CpuMpPei.efi' 0xdf14d000 LB 0xe940
+00:00:01.538033 EFI: VBoxDbg> loadimage64 'TpmMmioSevDecryptPei.efi' 0xdf123000 LB 0x17e0
+00:00:01.538639 EFI: VBoxDbg> loadimage64 'Tcg2ConfigPei.efi' 0xdf121000 LB 0x1b20
+00:00:01.539277 EFI: VBoxDbg> loadimage64 'TcgPei.efi' 0xdf11d000 LB 0x3120
+00:00:01.539794 EFI: VBoxDbg> loadimage64 'Tcg2Pei.efi' 0xdf111000 LB 0xb2e0
+00:00:01.540344 EFI: VBoxDbg> loadimage64 'Tcg2PlatformPei.efi' 0xdf10e000 LB 0x2560
+00:00:01.540927 EFI: VBoxDbg> loadimage64 'DxeCore.efi' 0xdf0e8000 LB 0x25ec0
+00:00:01.569162 EFI: debug point DXE_CORE
+00:00:01.571142 EFI: VBoxDbg> loadimage64 'DxeCore.efi' 0xdf0e8000 LB 0x0
+00:00:01.571973 EFI: debug point DXE_CORE_LATE
+00:00:01.575568 EFI: VBoxDbg> loadimage64 'DevicePathDxe.efi' 0xde187000 LB 0xa540
+00:00:01.575928 EFI: VBoxDbg> loadimage64 'PcdDxe.efi' 0xde198000 LB 0x2f40
+00:00:01.576393 EFI: VBoxDbg> loadimage64 'FvbServicesRuntimeDxe.efi' 0xde8ea000 LB 0x2660
+00:00:01.577790 EFI: VBoxDbg> loadimage64 'ReportStatusCodeRouterRuntimeDxe.efi' 0xde8e8000 LB 0x14e0
+00:00:01.578172 EFI: VBoxDbg> loadimage64 'RuntimeDxe.efi' 0xde8e6000 LB 0x1420
+00:00:01.579384 EFI: VBoxDbg> loadimage64 'SecurityStubDxe.efi' 0xddfb7000 LB 0xe7f60
+00:00:01.579790 EFI: VBoxDbg> loadimage64 'EbcDxe.efi' 0xde17d000 LB 0x4260
+00:00:01.581281 EFI: VBoxDbg> loadimage64 'CpuIo2Dxe.efi' 0xde183000 LB 0x1400
+00:00:01.581790 EFI: VBoxDbg> loadimage64 'IncompatiblePciDeviceSupportDxe.efi' 0xde185000 LB 0x820
+00:00:01.582161 EFI: VBoxDbg> loadimage64 'PciHotPlugInitDxe.efi' 0xde177000 LB 0x2c20
+00:00:01.582339 EFI: VBoxDbg> loadimage64 'ResetSystemRuntimeDxe.efi' 0xde8e4000 LB 0x1720
+00:00:01.582339 EFI: VBoxDbg> loadimage64 'Metronome.efi' 0xde17b000 LB 0xce0
+00:00:01.583460 EFI: VBoxDbg> loadimage64 'HiiDatabase.efi' 0xde13d000 LB 0x1c160
+00:00:01.583860 EFI: VBoxDbg> loadimage64 'AcpiTableDxe.efi' 0xde16b000 LB 0x5100
+00:00:01.584271 EFI: VBoxDbg> loadimage64 'TdxDxe.efi' 0xde168000 LB 0x2100
+00:00:01.584660 EFI: VBoxDbg> loadimage64 'DpcDxe.efi' 0xde175000 LB 0xb20
+00:00:01.585019 EFI: VBoxDbg> loadimage64 'IoMmuDxe.efi' 0xde160000 LB 0x36c0
+00:00:01.585431 EFI: VBoxDbg> loadimage64 'EmuVariableFvbRuntimeDxe.efi' 0xde8e3000 LB 0xf20
+00:00:01.585826 EFI: VBoxDbg> unload 'EmuVariableFvbRuntimeDxe.efi' # 0xde8e3000 LB 0xf20
+00:00:01.586580 EFI: VBoxDbg> loadimage64 'VariableRuntimeDxe.efi' 0xde7f6000 LB 0xeddc0
+00:00:01.599993 EFI: VBoxDbg> loadimage64 'TcgDxe.efi' 0xde138000 LB 0x41e0
+00:00:01.600365 EFI: VBoxDbg> unload 'TcgDxe.efi' # 0xde138000 LB 0x41e0
+00:00:01.600762 EFI: VBoxDbg> loadimage64 'RngDxe.efi' 0xde166000 LB 0x1ae0
+00:00:01.601478 EFI: VBoxDbg> loadimage64 'StatusCodeHandlerRuntimeDxe.efi' 0xde7f5000 LB 0xbc0
+00:00:01.601829 EFI: VBoxDbg> loadimage64 'CpuDxe.efi' 0xde10a000 LB 0x18fe0
+00:00:01.613254 EFI: debug point DXE_AP
+00:00:01.613287 EFI: debug point DXE_AP
+00:00:01.613976 EFI: VBoxDbg> loadimage64 'SetupBrowser.efi' 0xde0d3000 LB 0x14980
+00:00:01.614393 EFI: VBoxDbg> loadimage64 'SmbiosDxe.efi' 0xde13a000 LB 0x2f60
+00:00:01.614824 EFI: VBoxDbg> loadimage64 'AcpiPlatform.efi' 0xde15b000 LB 0x760
+00:00:01.615258 EFI: VBoxDbg> unload 'AcpiPlatform.efi' # 0xde15b000 LB 0x760
+00:00:01.615629 EFI: VBoxDbg> loadimage64 'LogoDxe.efi' 0xde0c7000 LB 0xb860
+00:00:01.616105 EFI: VBoxDbg> loadimage64 'FaultTolerantWriteDxe.efi' 0xde127000 LB 0x3180
+00:00:01.617119 EFI: VBoxDbg> loadimage64 'TdTcg2Dxe.efi' 0xde0bb000 LB 0x5a80
+00:00:01.617468 EFI: VBoxDbg> unload 'TdTcg2Dxe.efi' # 0xde0bb000 LB 0x5a80
+00:00:01.617857 EFI: VBoxDbg> loadimage64 'Tcg2Dxe.efi' 0xde0a9000 LB 0xede0
+00:00:01.618215 EFI: VBoxDbg> unload 'Tcg2Dxe.efi' # 0xde0a9000 LB 0xede0
+00:00:01.618725 EFI: VBoxDbg> loadimage64 'LocalApicTimerDxe.efi' 0xde125000 LB 0x1420
+00:00:01.619214 EFI: VBoxDbg> loadimage64 'PciHostBridgeDxe.efi' 0xde0bb000 LB 0x5de0
+00:00:01.629798 EFI: debug point DXE_AP
+00:00:01.629828 EFI: debug point DXE_AP
+00:00:01.636310 EFI: VBoxDbg> loadimage64 'PcRtc.efi' 0xde7f2000 LB 0x2a80
+00:00:01.637693 EFI: VBoxDbg> loadimage64 'SecureBootConfigDxe.efi' 0xdd66e000 LB 0xc8e00
+00:00:01.638259 EFI: VBoxDbg> loadimage64 'MonotonicCounterRuntimeDxe.efi' 0xde7f1000 LB 0x840
+00:00:01.639233 EFI: VBoxDbg> loadimage64 'CapsuleRuntimeDxe.efi' 0xde7f0000 LB 0x920
+00:00:01.639731 EFI: VBoxDbg> loadimage64 'DriverHealthManagerDxe.efi' 0xde0b1000 LB 0x4380
+00:00:01.640161 EFI: VBoxDbg> loadimage64 'BdsDxe.efi' 0xdda71000 LB 0x18560
+00:00:01.640592 EFI: VBoxDbg> loadimage64 'RamDiskDxe.efi' 0xde09f000 LB 0x8760
+00:00:01.641039 EFI: VBoxDbg> loadimage64 'DisplayEngine.efi' 0xdda60000 LB 0x10ea0
+00:00:01.641723 EFI: VBoxDbg> loadimage64 'SmbiosPlatformDxe.efi' 0xddaa1000 LB 0x1700
+00:00:01.642118 EFI: VBoxDbg> unload 'SmbiosPlatformDxe.efi' # 0xddaa1000 LB 0x1700
+00:00:01.642334 EFI: VBoxDbg> loadimage64 'PlatformDxe.efi' 0xdda99000 LB 0x4300
+00:00:01.642334 EFI: VBoxDbg> loadimage64 'WatchdogTimer.efi' 0xde0a8000 LB 0x820
+00:00:01.643440 EFI: VBoxDbg> loadimage64 'QemuKernelLoaderFsDxe.efi' 0xdda95000 LB 0x3580
+00:00:01.643860 EFI: VBoxDbg> unload 'QemuKernelLoaderFsDxe.efi' # 0xdda95000 LB 0x3580
+00:00:01.644332 EFI: VBoxDbg> loadimage64 'PciBusDxe.efi' 0xdda54000 LB 0xb940
+00:00:01.644735 EFI: VBoxDbg> loadimage64 'VirtioPciDeviceDxe.efi' 0xdda9f000 LB 0x11e0
+00:00:01.645101 EFI: VBoxDbg> loadimage64 'Virtio10.efi' 0xdda93000 LB 0x2820
+00:00:01.645519 EFI: VBoxDbg> loadimage64 'VirtioScsiDxe.efi' 0xdda90000 LB 0x2060
+00:00:01.645880 EFI: VBoxDbg> loadimage64 'MptScsiDxe.efi' 0xdda8e000 LB 0x1900
+00:00:01.646331 EFI: VBoxDbg> loadimage64 'ConPlatformDxe.efi' 0xdda8c000 LB 0x1d80
+00:00:01.647042 EFI: VBoxDbg> loadimage64 'ConSplitterDxe.efi' 0xdda46000 LB 0x60a0
+00:00:01.647590 EFI: VBoxDbg> loadimage64 'GraphicsConsoleDxe.efi' 0xdda41000 LB 0x4120
+00:00:01.648022 EFI: VBoxDbg> loadimage64 'TerminalDxe.efi' 0xdda35000 LB 0x53a0
+00:00:01.648419 EFI: VBoxDbg> loadimage64 'DiskIoDxe.efi' 0xdda3e000 LB 0x21c0
+00:00:01.648838 EFI: VBoxDbg> loadimage64 'PartitionDxe.efi' 0xdda29000 LB 0x5480
+00:00:01.649327 EFI: VBoxDbg> loadimage64 'EnglishDxe.efi' 0xdda52000 LB 0xd60
+00:00:01.649730 EFI: VBoxDbg> loadimage64 'ScsiBus.efi' 0xdda32000 LB 0x2140
+00:00:01.650130 EFI: VBoxDbg> loadimage64 'ScsiDisk.efi' 0xdda15000 LB 0x9100
+00:00:01.650552 EFI: VBoxDbg> loadimage64 'SataController.efi' 0xdda30000 LB 0x1660
+00:00:01.651003 EFI: VBoxDbg> loadimage64 'AtaAtapiPassThruDxe.efi' 0xdda0d000 LB 0x7e00
+00:00:01.651402 EFI: VBoxDbg> loadimage64 'AtaBusDxe.efi' 0xdda21000 LB 0x3d40
+00:00:01.651827 EFI: VBoxDbg> loadimage64 'NvmExpressDxe.efi' 0xdd7f8000 LB 0x7aa0
+00:00:01.652174 EFI: VBoxDbg> loadimage64 'SioBusDxe.efi' 0xdda27000 LB 0x15c0
+00:00:01.652609 EFI: VBoxDbg> loadimage64 'PciSioSerialDxe.efi' 0xdda02000 LB 0x5000
+00:00:01.653039 EFI: VBoxDbg> loadimage64 'Ps2KeyboardDxe.efi' 0xdd7f4000 LB 0x3b80
+00:00:01.653438 EFI: VBoxDbg> loadimage64 'VBoxVgaDxe.efi' 0xdd7f0000 LB 0x3840
+00:00:01.653788 EFI: VBoxDbg> loadimage64 'VBoxHfs.efi' 0xdd7e2000 LB 0x6500
+00:00:01.654181 EFI: VBoxDbg> loadimage64 'VBoxSysTables.efi' 0xdda25000 LB 0xac0
+00:00:01.677996 EFI: VBoxDbg> loadimage64 'VBoxAppleSim.efi' 0xdda07000 LB 0x2ae0
+00:00:01.678596 EFI: VBoxDbg> loadimage64 'VBoxApfsJmpStartDxe.efi' 0xdda0b000 LB 0x1180
+00:00:01.679171 EFI: VBoxDbg> loadimage64 'BootGraphicsResourceTableDxe.efi' 0xdda0a000 LB 0xf40
+00:00:01.679591 EFI: VBoxDbg> loadimage64 'Fat.efi' 0xdd7d2000 LB 0x7660
+00:00:01.679990 EFI: VBoxDbg> loadimage64 'UdfDxe.efi' 0xdd7dd000 LB 0x4200
+00:00:01.680374 EFI: VBoxDbg> loadimage64 'VirtioFsDxe.efi' 0xdd7cb000 LB 0x6180
+00:00:01.680764 EFI: VBoxDbg> loadimage64 'Hash2DxeCrypto.efi' 0xdd7ea000 LB 0x2ba0
+00:00:01.681149 EFI: VBoxDbg> loadimage64 'SnpDxe.efi' 0xdd7bf000 LB 0x57a0
+00:00:01.681545 EFI: VBoxDbg> loadimage64 'VlanConfigDxe.efi' 0xdd7b9000 LB 0x55a0
+00:00:01.681906 EFI: VBoxDbg> loadimage64 'MnpDxe.efi' 0xdd7a9000 LB 0x7380
+00:00:01.682260 EFI: VBoxDbg> loadimage64 'ArpDxe.efi' 0xdd7b5000 LB 0x35c0
+00:00:01.682647 EFI: VBoxDbg> loadimage64 'Dhcp4Dxe.efi' 0xdd797000 LB 0x87a0
+00:00:01.683015 EFI: VBoxDbg> loadimage64 'Ip4Dxe.efi' 0xdd771000 LB 0x12680
+00:00:01.683394 EFI: VBoxDbg> loadimage64 'Udp4Dxe.efi' 0xdd78f000 LB 0x7660
+00:00:01.684183 EFI: VBoxDbg> loadimage64 'Mtftp4Dxe.efi' 0xdd787000 LB 0x7c20
+00:00:01.684581 EFI: VBoxDbg> loadimage64 'Dhcp6Dxe.efi' 0xdd768000 LB 0x8940
+00:00:01.684970 EFI: VBoxDbg> loadimage64 'Ip6Dxe.efi' 0xdd654000 LB 0x194e0
+00:00:01.685363 EFI: VBoxDbg> loadimage64 'Udp6Dxe.efi' 0xdd760000 LB 0x7340
+00:00:01.686158 EFI: VBoxDbg> loadimage64 'Mtftp6Dxe.efi' 0xdd758000 LB 0x7ea0
+00:00:01.686602 EFI: VBoxDbg> loadimage64 'UefiPxeBcDxe.efi' 0xdd643000 LB 0x109e0
+00:00:01.687045 EFI: VBoxDbg> loadimage64 'IScsiDxe.efi' 0xdd625000 LB 0x1d100
+00:00:01.687498 EFI: VBoxDbg> unload 'IScsiDxe.efi' # 0xdd625000 LB 0x1d100
+00:00:01.688011 EFI: VBoxDbg> loadimage64 'VirtioNetDxe.efi' 0xdd7a4000 LB 0x4300
+00:00:01.688408 EFI: VBoxDbg> loadimage64 'E1kNetDxe.efi' 0xdd7b2000 LB 0x2e60
+00:00:01.688851 EFI: VBoxDbg> loadimage64 'UhciDxe.efi' 0xdd74e000 LB 0x4580
+00:00:01.689270 EFI: VBoxDbg> loadimage64 'EhciDxe.efi' 0xdd749000 LB 0x4f00
+00:00:01.689731 EFI: VBoxDbg> loadimage64 'XhciDxe.efi' 0xdd737000 LB 0x8660
+00:00:01.690181 EFI: VBoxDbg> loadimage64 'UsbBusDxe.efi' 0xdd63d000 LB 0x5260
+00:00:01.690604 EFI: VBoxDbg> loadimage64 'UsbKbDxe.efi' 0xdd744000 LB 0x4020
+00:00:01.691074 EFI: VBoxDbg> loadimage64 'UsbMassStorageDxe.efi' 0xdd638000 LB 0x4380
+00:00:01.691501 EFI: VBoxDbg> loadimage64 'TcpDxe.efi' 0xdd61e000 LB 0xce80
+00:00:01.727639 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:01.779144 Display::i_handleDisplayResize: uScreenId=0 pvVRAM=00007fb246a00000 w=1024 h=768 bpp=32 cbLine=0x1000 flags=0x0 origin=0,0
+00:00:01.879207 PS2K: Selected scan set 2
+00:00:01.880044 EHCI: Hardware reset
+00:00:01.880098 EHCI: USB Operational
+00:00:01.915633 ATA: LUN#0: EXECUTE DEVICE DIAGNOSTIC, status 50
+00:00:01.916946 ATA: LUN#0: INITIALIZE DEVICE PARAMETERS: 63 sectors per track, 16 heads
+00:00:01.918106 ATA: LUN#2: EXECUTE DEVICE DIAGNOSTIC, status 00
+00:00:02.031246 EFI: VBoxDbg> loadimage64 '.efi' 0x101300000 LB 0x2d000
+00:00:18.773297 EFI: VBoxDbg> loadimage64 '.efi' 0xd9a93000 LB 0x10de000
+00:00:19.530882 EHCI: USB Suspended
+00:00:19.530916 EHCI: Hardware reset
+00:00:19.541485 EFI: debug point DXE_AP
+00:00:19.541531 EFI: debug point DXE_AP
+00:00:19.565834 GIM: KVM: VCPU  0: Enabled system-time struct. at 0x000000007dc03000 - u32TscScale=0x928f7c40 i8TscShift=-1 uVersion=2 fFlags=0x1 uTsc=0xece523468 uVirtNanoTS=0x43cfba8b9 TscKHz=3493438
+00:00:19.565898 TM: Switching TSC mode from 'VirtTSCEmulated' to 'RealTSCOffset'
+00:00:19.733149 GIM: KVM: Enabled wall-clock struct. at 0x000000007dc02000 - u32Sec=1793239029 u32Nano=826725036 uVersion=2
+00:00:19.736939 PIT: mode=2 count=0x4a9 (1193) - 1000.15 Hz (ch=0)
+00:00:19.743032 IEM: rdmsr(0x87) -> #GP(0)
+00:00:19.749856 EFI: relocate module to 0xfffffffefe4ea000 from 0xde8ea000
+00:00:19.749906 EFI: relocate module to 0xfffffffefe4e8000 from 0xde8e8000
+00:00:19.749933 EFI: relocate module to 0xfffffffefe4e4000 from 0xde8e4000
+00:00:19.749960 EFI: relocate module to 0xfffffffefe3f6000 from 0xde7f6000
+00:00:19.750037 EFI: relocate module to 0xfffffffefe3f5000 from 0xde7f5000
+00:00:19.750063 EFI: relocate module to 0xfffffffefe3f2000 from 0xde7f2000
+00:00:19.750099 EFI: relocate module to 0xfffffffefe3f1000 from 0xde7f1000
+00:00:19.750125 EFI: relocate module to 0xfffffffefe3f0000 from 0xde7f0000
+00:00:19.883625 PIT: mode=0 count=0x10000 (65536) - 18.20 Hz (ch=0)
+00:00:19.897426 GIM: KVM: VCPU  1: Enabled system-time struct. at 0x000000007dc03040 - u32TscScale=0x928f7c40 i8TscShift=-1 uVersion=2 fFlags=0x1 uTsc=0xf136226fb uVirtNanoTS=0x450c08f9c TscKHz=3493438
+00:00:19.900127 GIM: KVM: VCPU  2: Enabled system-time struct. at 0x000000007dc03080 - u32TscScale=0x928f7c40 i8TscShift=-1 uVersion=2 fFlags=0x1 uTsc=0xf13f289b7 uVirtNanoTS=0x450e9e43a TscKHz=3493438
+00:00:20.108887 OHCI: Software reset
+00:00:20.176622 EHCI: Hardware reset
+00:00:20.177736 EHCI: USB Operational
+00:00:20.359982 OHCI: USB Reset
+00:00:20.378183 EHCI: USB Suspended
+00:00:20.410887 OHCI: Software reset
+00:00:20.410947 OHCI: USB Operational
+00:00:20.419785 OHCI: USB Suspended
+00:00:22.408075 PIIX3 ATA: Ctl#0: RESET, DevSel=0 AIOIf=0 CmdIf0=0xc8 (-1 usec ago) CmdIf1=0x00 (-1 usec ago)
+00:00:22.408144 PIIX3 ATA: Ctl#0: finished processing RESET
+00:00:22.408299 PIIX3 ATA: Ctl#1: RESET, DevSel=0 AIOIf=0 CmdIf0=0xa0 (-1 usec ago) CmdIf1=0x00 (-1 usec ago)
+00:00:22.408538 PIIX3 ATA: Ctl#1: finished processing RESET
+00:00:22.411167 VMMDev: Guest Log: vboxguest: host-version: 7.2.22r175245 0x8000000f
+00:00:22.413258 VMMDev: Guest Additions information report: Version 6.0.0 r127566 '6.0.0'
+00:00:22.413312 VMMDev: Guest Additions information report: Interface = 0x00010004 osType = 0x00053100 (Linux >= 2.6, 64-bit)
+00:00:22.413448 VMMDev: Guest Additions capability report: (0x0 -> 0x0) seamless: no, hostWindowMapping: no, graphics: no
+00:00:22.413499 VMMDev: vmmDevReqHandler_HeartbeatConfigure: No change (fHeartbeatActive=false)
+00:00:22.413511 VMMDev: Heartbeat flatline timer set to trigger after 4 000 000 000 ns
+00:00:22.413760 VMMDev: Guest Log: vbg_heartbeat_init: Setting up heartbeat to trigger every 2000 milliseconds
+00:00:22.415529 GUI: UISession::sltAdditionsChange: GA state doesn't really changed, still notifying listeners.
+00:00:22.415569 GUI: UIMachineLogicNormal::sltCheckForRequestedVisualStateType: Requested-state=1, Machine-state=6
+00:00:22.415742 GUI: UISession::sltAdditionsChange: GA state doesn't really changed, still notifying listeners.
+00:00:22.415745 GUI: UIMachineLogicNormal::sltCheckForRequestedVisualStateType: Requested-state=1, Machine-state=6
+00:00:22.417838 GUI: UISession::sltAdditionsChange: GA state really changed, notifying listeners.
+00:00:22.431124 GUI: UIMachineViewNormal::adjustGuestScreenSize: Adjust guest-screen size if necessary
+00:00:22.431166 GUI: UIMachineView::sltPerformGuestResize: Sending guest size-hint to screen 0 as 738x453
+00:00:22.431179 VMMDev: SetVideoModeHint: Got a video mode hint (738x453x32)@(0x0),(1;0) at 0
+00:00:22.431208 GUI: UIMachineLogicNormal::sltCheckForRequestedVisualStateType: Requested-state=1, Machine-state=6
+00:00:33.067718 GUI: UISession::sltAdditionsChange: GA state really changed, notifying listeners.
+00:00:33.074280 Display::i_handleDisplayResize: uScreenId=0 pvVRAM=00007fb246a00000 w=736 h=453 bpp=32 cbLine=0xB80 flags=0x1 origin=0,0
+00:00:33.088815 GUI: UIMachineViewNormal::adjustGuestScreenSize: Adjust guest-screen size if necessary
+00:00:33.089392 GUI: UIMachineLogicNormal::sltCheckForRequestedVisualStateType: Requested-state=1, Machine-state=6
