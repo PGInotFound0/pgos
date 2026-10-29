@@ -1514,3 +1514,39 @@ Poking KASLR using RDRAND RDTSC...
 [   51.673666] systemd-journald[497]: Starting new asynchronous offlining operation for journal file /var/log/journal/4df5735888d844d4a4b36ebf1e769721/system@327b29135eaf4024870d79b1897c532e-0000000000006367-00065ef7f481487c.journal.
 [   51.686003] systemd-journald[497]: Vacuuming...
 [   51.691745] systemd-journald[497]: Vacuuming done, freed 0B of archived journals from /var/log/journal/4df5735888d844d4a4b36ebf1e769721.
+[   53.729617] systemd-journald[497]: Successfully sent stream file descriptor to service manager.
+[   61.625104] kauditd_printk_skb: 30 callbacks suppressed
+[   61.625108] audit: type=1130 audit(1793268924.133:108): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=pacman-init comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   67.299586] audit: type=1100 audit(1793268929.808:109): pid=723 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_shells,pam_faillock,pam_permit,pam_faillock acct="root" exe="/usr/bin/login" hostname=archlinux addr=? terminal=/dev/tty1 res=success'
+[   67.317377] audit: type=1101 audit(1793268929.808:110): pid=723 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_access,pam_unix,pam_permit,pam_time acct="root" exe="/usr/bin/login" hostname=archlinux addr=? terminal=/dev/tty1 res=success'
+[   67.324327] audit: type=1103 audit(1793268929.808:111): pid=723 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_shells,pam_faillock,pam_permit,pam_faillock acct="root" exe="/usr/bin/login" hostname=archlinux addr=? terminal=/dev/tty1 res=success'
+[   67.334667] audit: type=1006 audit(1793268929.808:112): pid=723 uid=0 old-auid=4294967295 auid=0 tty=tty1 old-ses=4294967295 ses=1 res=1
+[   67.334672] audit: type=1300 audit(1793268929.808:112): arch=c000003e syscall=1 success=yes exit=1 a0=4 a1=7ffffd9342d0 a2=1 a3=0 items=0 ppid=1 pid=723 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=tty1 ses=1 comm="login" exe="/usr/bin/login" key=(null)
+[   67.334676] audit: type=1327 audit(1793268929.808:112): proctitle=2F62696E2F6C6F67696E000000000000726F6F74
+[   67.379984] systemd-journald[497]: Successfully sent stream file descriptor to service manager.
+[   67.428965] audit: type=1130 audit(1793268929.935:113): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=user-runtime-dir@0 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   67.446797] systemd-journald[497]: Successfully sent stream file descriptor to service manager.
+[   67.461709] audit: type=1101 audit(1793268929.970:114): pid=952 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_access,pam_unix,pam_permit,pam_time acct="root" exe="/usr/lib/systemd/systemd-executor" hostname=? addr=? terminal=? res=success'
+[   67.466517] audit: type=1103 audit(1793268929.974:115): pid=952 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=? acct="root" exe="/usr/lib/systemd/systemd-executor" hostname=? addr=? terminal=? res=failed'
+[   67.472371] audit: type=1006 audit(1793268929.974:116): pid=952 uid=0 old-auid=4294967295 auid=0 tty=(none) old-ses=4294967295 ses=2 res=1
+[   67.505346] systemd-journald[497]: Data hash table of /var/log/journal/4df5735888d844d4a4b36ebf1e769721/system.journal has a fill level at 75.0 (4375 of 5831 items, 3358720 file size, 767 bytes per hash table item), suggesting rotation.
+[   67.512440] systemd-journald[497]: /var/log/journal/4df5735888d844d4a4b36ebf1e769721/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   67.517271] systemd-journald[497]: Rotating journal file /var/log/journal/4df5735888d844d4a4b36ebf1e769721/system.journal.
+[   67.522499] systemd-journald[497]: Journal file /var/log/journal/4df5735888d844d4a4b36ebf1e769721/system@327b29135eaf4024870d79b1897c532e-0000000000006367-00065ef7f481487c.journal is synchronously transitioning to archived.
+[   67.530990] systemd-journald[497]: Journal file /var/log/journal/4df5735888d844d4a4b36ebf1e769721/system@327b29135eaf4024870d79b1897c532e-0000000000006367-00065ef7f481487c.journal is already archived, waiting for offlining thread.
+[   67.541368] systemd-journald[497]: Joining journal offlining thread for /var/log/journal/4df5735888d844d4a4b36ebf1e769721/system@327b29135eaf4024870d79b1897c532e-0000000000006367-00065ef7f481487c.journal.
+[   67.547844] systemd-journald[497]: Journal offlining thread for /var/log/journal/4df5735888d844d4a4b36ebf1e769721/system@327b29135eaf4024870d79b1897c532e-0000000000006367-00065ef7f481487c.journal joined.
+[   67.551316] loop1: detected capacity change from 0 to 4079680
+[   67.578220] systemd-journald[497]: Reserving 1023 entries in field hash table.
+[   67.586708] systemd-journald[497]: Reserving 5831 entries in data hash table.
+[   67.591993] loop1: detected capacity change from 0 to 4079680
+[   67.604546] systemd-journald[497]: Journal file /var/log/journal/4df5735888d844d4a4b36ebf1e769721/system@327b29135eaf4024870d79b1897c532e-00000000000069f9-00065ef7f48d9794.journal is asynchronously transitioning to archived.
+[   67.614679] systemd-journald[497]: Starting new asynchronous offlining operation for journal file /var/log/journal/4df5735888d844d4a4b36ebf1e769721/system@327b29135eaf4024870d79b1897c532e-00000000000069f9-00065ef7f48d9794.journal.
+[   67.622606] systemd-journald[497]: Vacuuming...
+[   67.627718] systemd-journald[497]: Vacuuming done, freed 0B of archived journals from /var/log/journal/4df5735888d844d4a4b36ebf1e769721.
+[   67.637560] systemd-journald[497]: Successfully sent stream file descriptor to service manager.
+[   67.637584]  loop1: p1 p2
+[   67.773227] systemd-journald[497]: Successfully sent stream file descriptor to service manager.
+[   81.397461] kauditd_printk_skb: 97 callbacks suppressed
+[   81.397484] audit: type=1131 audit(1793268943.906:152): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   81.693785] audit: type=1334 audit(1793268944.202:153): prog-id=62 op=UNLOAD
