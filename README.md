@@ -113,19 +113,19 @@ control. That's the fun part.
 
 ## Status
 
-✅ **v0.1.3** — boot-tested release, 2026-10-29. Serial-verified end-to-end;
-`console=tty0` last so systemd + the Initial Setup TUI paint on VGA
-(VirtualBox verified live: pgOS firstboot prompts visible in-window).
+✅ **v0.1.4** — "determinism" release, 2026-10-29. Full serial-verified boot:
+kernel → archiso hooks → switch_root → 160 systemd units → logind live,
+zero failures. No interactive stage: boots straight to root autologin.
 
 ```
-953ff28025dc43159b3e9c3f85a2e6311de9c467043ff1a5751d1b0b192732d3  pgos-2026.10.29-x86_64.iso
+984f3338374f2d62b9d3e44596ddc5d1e4470c394d1d9bc8e8081d6951b024d7  pgos-2026.10.29-x86_64.iso
 ```
 
 Notable: the ISO carries the custom `[pgos]` repository — including
 `pgos-wlogout 1.2.2-1`, shipped the day Arch dropped it from the official
 repos, and applied offline during install via `/opt/pgos/packages/`.
-v0.1.1: fixed live-root unlock + missing archiso initramfs hooks + serial
-console for CI.
-v0.1.2: complete initramfs (nbd, mkinitcpio-nfs-utils, pv for the PXE
-hook suite — no more "image may not be complete" warnings).
+v0.1.1: live-root unlock + archiso hooks. v0.1.2: complete initramfs (PXE).
+v0.1.3: console order (tty0 last). v0.1.4: skip systemd-firstboot TUI
+(`systemd.firstboot=0`) — the live boot has no interactive stage to hang on;
+serial witness via `earlyprintk=serial,ttyS0,115200 keep_bootcon loglevel=7`.
 v0.1.3: console order fix (tty0 last) — visible boot in VirtualBox/QEMU GUI.
