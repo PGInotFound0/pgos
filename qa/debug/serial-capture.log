@@ -1452,3 +1452,27 @@ Poking KASLR using RDRAND RDTSC...
 [   94.391711] systemd-journald[498]: Starting new asynchronous offlining operation for journal file /var/log/journal/5374e3532939423ca69e639ac8013ac1/system@d243130b9a10496b9a9433258a5e682b-0000000000007101-00065ef2dcbdb069.journal.
 [   94.421723] systemd-journald[498]: Vacuuming...
 [   94.430980] systemd-journald[498]: Vacuuming done, freed 0B of archived journals from /var/log/journal/5374e3532939423ca69e639ac8013ac1.
+[  131.342681] audit: type=1131 audit(1793247083.837:156): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=gpg-agent@etc-pacman.d-gnupg comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  131.402740]  sda: sda1
+[  132.710120]  sda: sda1 sda2
+[  133.898177] EXT4-fs (sda2): mounted filesystem 477f5c00-c43f-40e5-aa24-eafdb08bd8b8 r/w with ordered data mode. Quota mode: none.
+[  137.450222] systemd-journald[498]: Sent WATCHDOG=1 notification.
+[  160.614912] systemd-journald[498]: Data hash table of /var/log/journal/5374e3532939423ca69e639ac8013ac1/system.journal has a fill level at 75.0 (4374 of 5831 items, 3358720 file size, 767 bytes per hash table item), suggesting rotation.
+[  160.628722] systemd-journald[498]: /var/log/journal/5374e3532939423ca69e639ac8013ac1/system.journal: Journal header limits reached or header out-of-date, rotating.
+[  160.641542] systemd-journald[498]: Rotating journal file /var/log/journal/5374e3532939423ca69e639ac8013ac1/system.journal.
+[  160.660134] systemd-journald[498]: Journal file /var/log/journal/5374e3532939423ca69e639ac8013ac1/system@d243130b9a10496b9a9433258a5e682b-0000000000007101-00065ef2dcbdb069.journal is synchronously transitioning to archived.
+[  160.660138] systemd-journald[498]: Journal file /var/log/journal/5374e3532939423ca69e639ac8013ac1/system@d243130b9a10496b9a9433258a5e682b-0000000000007101-00065ef2dcbdb069.journal is already archived, waiting for offlining thread.
+[  160.660141] systemd-journald[498]: Joining journal offlining thread for /var/log/journal/5374e3532939423ca69e639ac8013ac1/system@d243130b9a10496b9a9433258a5e682b-0000000000007101-00065ef2dcbdb069.journal.
+[  160.660144] systemd-journald[498]: Journal offlining thread for /var/log/journal/5374e3532939423ca69e639ac8013ac1/system@d243130b9a10496b9a9433258a5e682b-0000000000007101-00065ef2dcbdb069.journal joined.
+[  160.662124] systemd-journald[498]: Reserving 1023 entries in field hash table.
+[  160.663581] systemd-journald[498]: Reserving 5831 entries in data hash table.
+[  160.663619] systemd-journald[498]: Journal file /var/log/journal/5374e3532939423ca69e639ac8013ac1/system@d243130b9a10496b9a9433258a5e682b-00000000000077b0-00065ef2dd2ed423.journal is asynchronously transitioning to archived.
+[  160.663622] systemd-journald[498]: Starting new asynchronous offlining operation for journal file /var/log/journal/5374e3532939423ca69e639ac8013ac1/system@d243130b9a10496b9a9433258a5e682b-00000000000077b0-00065ef2dd2ed423.journal.
+[  160.663799] systemd-journald[498]: Vacuuming...
+[  160.666005] systemd-journald[498]: Deleted archived journal /var/log/journal/5374e3532939423ca69e639ac8013ac1/system@d243130b9a10496b9a9433258a5e682b-0000000000000001-00065ef2da4a1379.journal (1.4M).
+[  160.666157] systemd-journald[498]: Deleted archived journal /var/log/journal/5374e3532939423ca69e639ac8013ac1/system@d243130b9a10496b9a9433258a5e682b-00000000000008e9-00065ef2da603d02.journal (1.5M).
+[  160.666170] systemd-journald[498]: Vacuuming done, freed 2.9M of archived journals from /var/log/journal/5374e3532939423ca69e639ac8013ac1.
+[  243.569285] systemd-journald[498]: Sent WATCHDOG=1 notification.
+[  323.603770] systemd-journald[498]: Sent WATCHDOG=1 notification.
+[  348.866397] systemd-journald[498]: Journal file /var/log/journal/5374e3532939423ca69e639ac8013ac1/system.journal is asynchronously transitioning to offline.
+[  348.882335] systemd-journald[498]: Starting new asynchronous offlining operation for journal file /var/log/journal/5374e3532939423ca69e639ac8013ac1/system.journal.
