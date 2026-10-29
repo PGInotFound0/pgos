@@ -278,4 +278,5 @@ umount -R "$MOUNT"
 
 echo
 printf "${GRN}  pb ^v^ ${NC} pgOS is installed. Reboot and meet yourself.\n"
+warn "If you booted from the live ISO in a VM, detach the ISO (or power off and remove the DVD) before rebooting — the optical drive outranks the disk in boot order and the reboot would land back in the live environment."
 confirm "Reboot now?" && reboot
